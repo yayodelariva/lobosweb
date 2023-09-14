@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+}
+.header {
+display: flex;
+width: 100%;
+justify-content: space-around;
+background: linear-gradient(black, transparent);
+position: absolute;
+margin-top: 0;
+}
+.header > ul {
+    display: flex;
+    gap: 80px;
+    list-style-type: none;
+    color: white;
+}
+.header > .logolobos {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    width: 20%;
+    height: auto;
+
+}
+.header > .logolobos > img {
+    width: inherit;
+    height: auto;
+}
+.topcontainer {
+    display: flex;
+    width: 100%;
+    margin-top: 0;
+}
+.topcontainer > img {
+    width: inherit;
+    height: auto;
+}
+.historiasectioncontainer {
+    padding: 80px 450px;
+}
+.fotosmaincontainer {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+.fotosmaincontainer > .fotoscontainer > .fotos > iframe {
+    border-radius: 50px;
+}
+.fotoscontainer {
+    padding: 50px 100px;
+}
+.fotos {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1300px;
+}
+.contactocontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    gap: 20px;
+    color: blueviolet;
+}
+.contacto {
+    display: flex;
+    align-items: center;
+    gap: 250px;
+}
+.contacto > ul {
+    list-style-type: none;
+}
+footer {
+    background-color: black;
+    height: 80px;
+    width: 100%;
+}
