@@ -12,15 +12,18 @@ margin-top: 0;
 .header > ul {
     display: flex;
     gap: 80px;
+    font-size: 2vmin;
     list-style-type: none;
     color: white;
+    padding-top: 20px;
 }
 .header > .logolobos {
     display: flex;
     justify-content: center;
-    padding-top: 20px;
     width: 20%;
     height: auto;
+    position: absolute;
+    top: 45%
 
 }
 .header > .logolobos > img {
@@ -29,20 +32,46 @@ margin-top: 0;
 }
 .topcontainer {
     display: flex;
+    max-width: 1920;
     width: 100%;
     margin-top: 0;
+    flex-shrink: 0;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+.slogan {
+    position: absolute;
+    padding-bottom: 150px;
+    font-size: 10vmin;
+    color: beige;
+}
+.since {
+    position: absolute;
+    font-size: 16px;
+    color: beige;
 }
 .topcontainer > img {
     width: inherit;
     height: auto;
 }
 .historiasectioncontainer {
-    padding: 80px 450px;
+    padding: 80px 200px;
+    color: green
 }
-.fotosmaincontainer {
-    background-color: black;
+.historiacontainer {
     display: flex;
     justify-content: center;
+}
+.historiatext {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+}
+.fotosmaincontainer {
+    display: flex;
+    justify-content: center;
+    background-image: url(images/lobos2.png);
 }
 .fotosmaincontainer > .fotoscontainer > .fotos > iframe {
     border-radius: 50px;
@@ -66,16 +95,139 @@ margin-top: 0;
     gap: 20px;
     color: blueviolet;
 }
+.entrenacontainer {
+    font-size: 60px;
+}
 .contacto {
     display: flex;
     align-items: center;
-    gap: 250px;
+    gap: 430px;
 }
 .contacto > ul {
     list-style-type: none;
 }
+
+/* ///NUESTROS EQUIPOS/// */
+.pushwrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 266px;
+}
+.teamscontainer {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 200px;
+}
+.equiposimg {
+    width: 500px;
+    height: auto;
+    border-radius: 20px;
+}
+.equipomixtocontainer {
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+    height: inherit;
+}
+.leyendaequipomixto {
+    position: absolute;
+    top: 500px;
+    font-size: 60px;
+}
+.equipomixtocontainer > span {
+    display: flex;
+    justify-content: center;
+}
+.equipofemenilcontainer {
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+    height: inherit;
+}
+.leyendaequipofemenil {
+    position: absolute;
+    top: 500px;
+    font-size: 60px;
+}
+.equipofemenilcontainer > span {
+    display: flex;
+    justify-content: center;
+}
+.equipovaronilcontainer {
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+    height: inherit;
+}
+.leyendaequipovaronil {
+    position: absolute;
+    top: 500px;
+    font-size: 60px;
+}
+.equipovaronilcontainer > span {
+    display: flex;
+    justify-content: center;
+}
+
+
 footer {
     background-color: black;
     height: 80px;
     width: 100%;
 }
+
+/* ROSTER JUGADORES */
+
+.equiposwrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 200px;
+    padding-bottom: 80px;
+    background-color: gray;
+}
+.tituloequipo {
+    font-size: 100px;
+    padding-bottom: 80px;
+}
+.wrapperrosterA {
+    display: flex;
+    flex-direction: column;
+}
+.titulorosterA {
+    font-size: 80px;
+    padding-bottom: 15px;
+}
+.rosterA {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+}
+.rosterA > img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+.wrapperrosterB {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+.titulorosterB {
+    font-size: 80px;
+    padding-bottom: 15px;
+}
+.rosterB {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+}
+.rosterB > img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
