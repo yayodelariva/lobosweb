@@ -11,23 +11,45 @@
 <body>
     <!-- //barra de arriba -->
     <div class="header">
+        <div class="dropdown">
+
+            <button class="dropbtn">Menu
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="index.html">Home</a>
+                <a href="equipos/index.html">Equipos</a>
+                <a href="palmares/index.html">Palmarés</a>
+                <a href="#fotos">Fotos</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+            
+        </div>
         <ul class="listleft">
-            <li>thing 1</li>
-            <li>thing 2</li>
+            <a href="equipos/index.html">
+                <li>Equipos</li>
+            </a>
+            <a href="palmares/index.html">
+                <li>Palmares</li>
+            </a>
         </ul>
         <div class="logolobos">
             <img src="images/loboslogo.jpg">
         </div>
         <ul class="listright">
-            <li>thing 3</li>
-            <li>thing 4</li>
+            <a href="#fotos">
+                <li>Fotos</li>
+            </a>
+            <a href="#contacto">
+                <li>Contacto</li>
+            </a>
         </ul>
     </div>
 
     <!-- //foto grandota -->
     <div class="topcontainer">
-        <div class="slogan">Lobos</div>
-        <div class="since">Est.2018</div>
+            <div class="slogan">Lobos</div>
+            <div class="since">Est.2018</div>
         <img src="images/lobos.png">
     </div>
     <div class="historiasectioncontainer">
@@ -46,7 +68,7 @@
         </div>
     </div>
     <div class="fotosmaincontainer">
-        <div class="fotoscontainer">
+        <div class="fotoscontainer" id="fotos">
             <!-- poner foto de fondo (negra discreta) -->
             <div class="fotos">
                 <iframe width="320" height="440" src="https://www.instagram.com/p/Cv258LBA7XI/embed/"
@@ -66,7 +88,7 @@
         <!-- //fotos -->
     </div>
     <div class="contactocontainer">
-        <div class="entrenacontainer">Unete a la manada!</div>
+        <div class="entrenacontainer" id="contacto">Unete a la manada!</div>
         <div class="contacto">
             <div class="direccion">Calle Av. Division del Norte #89</div>
             <ul class="telefonos">Telefonos:
