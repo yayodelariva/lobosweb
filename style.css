@@ -1,4 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito&family=Quicksand&display=swap');
+
+
+
 body {
+    font-family: 'Gabarito', cursive;
     margin: 0;
 }
 
@@ -28,7 +33,7 @@ body {
   
   /* Add a red background color to navbar links on hover */
   .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
+    background-color: gray;
   }
   
   /* Dropdown content (hidden by default) */
@@ -130,6 +135,20 @@ display: none;
     align-items: center;
 }
 
+@media (max-width: 500px) {
+    .topcontainer {
+        display: flex;
+        max-width: 1920;
+        width: 100%;
+        margin-top: 0;
+        flex-shrink: 0;
+        flex-grow: 1;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+}
+
 .slogan {
     position: absolute;
     padding-bottom: 150px;
@@ -140,9 +159,9 @@ display: none;
 @media (max-width:500px) {
     .slogan {
         position: absolute;
-        top: 7%;
+        top: 37%;
         padding-bottom: 150px;
-        font-size: 8vmin;
+        font-size: 25vmin;
         color: beige;
     }
 }
@@ -153,11 +172,6 @@ display: none;
     color: beige;
 }
 
-.topcontainer>img {
-    width: inherit;
-    height: auto;
-}
-
 @media (max-width: 500px) {
     .since {
         position: absolute;
@@ -166,8 +180,20 @@ display: none;
     }
 }
 
+.topcontainer>img {
+    width: inherit;
+    height: auto;
+}
+
+@media (max-width: 500px) {
+    .topcontainer > img {
+        width: fit-content;
+        height: 100%
+    }
+}
+
 .historiasectioncontainer {
-    color: green
+    color: black
 }
 
 .historiacontainer {
@@ -177,6 +203,8 @@ display: none;
 
 .historiatext {
     width: 88%;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 200;
     font-size: 2vw;
     padding-top: 4%;
     padding-bottom: 4%;
@@ -184,8 +212,8 @@ display: none;
 
 @media (max-width: 500px) {
     .historiatext {
-        width: 65%;
-        font-size: 2vw;
+        width: 75%;
+        font-size: 4vw;
     }
 }
 
@@ -195,8 +223,9 @@ display: none;
     background-image: url(images/lobos2.png);
 }
 
-.fotosmaincontainer>.fotoscontainer>.fotos>iframe {
+.fotosmaincontainer>.fotoscontainer>.fotos>.fotostodas>iframe {
     border-radius: 50px;
+    box-shadow: 2px 2px 20px white;
 }
 
 .fotoscontainer {
@@ -209,6 +238,35 @@ display: none;
     flex-wrap: wrap;
     justify-content: center;
     max-width: 1300px;
+}
+
+.fotostodas {
+    display: flex;
+    gap: 40px;
+}
+
+@media (max-width: 500px) {
+    .fotostodas {
+        display: none;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 500px) {
+    .primeras3 {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 500px) {
+    .fotos {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1300px;
+}
 }
 
 .contactocontainer {
@@ -281,6 +339,9 @@ display: none;
     position: absolute;
     top: 500px;
     font-size: 60px;
+    height: 64px;
+    width: 500px;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgb(117, 117, 117));
 }
 
 @media (max-width: 500px) {
@@ -294,7 +355,7 @@ display: none;
 
 .equipomixtocontainer>span {
     display: flex;
-    justify-content: center;
+    justify-content: start
 }
 
 .equipofemenilcontainer {
@@ -308,6 +369,8 @@ display: none;
     position: absolute;
     top: 500px;
     font-size: 60px;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgb(117, 117, 117));
+    height: 63px;
 }
 
 @media (max-width: 500px) {
@@ -335,6 +398,8 @@ display: none;
     position: absolute;
     top: 500px;
     font-size: 60px;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgb(117, 117, 117));
+    height: 64px;
 }
 
 @media (max-width: 500px) {
@@ -428,19 +493,20 @@ footer {
 }
 
 .player {
-    max-width: 200px;
+    max-width: 186px;
     height: 200px;
     display: flex;
     align-items: flex-end;
     position: relative;
     transition: 0.6s ease-out;
     box-shadow: 0 1px 10px wheat;
+    border-radius: 10px;
 }
 
 @media (max-width: 500px) {
     .player {
-        max-width: 104px;
-        height: 84px;
+        max-width: 95px;
+        height: 103px;
         display: flex;
         align-items: flex-end;
         position: relative;
@@ -610,17 +676,34 @@ footer {
     }
 }
 
+.yearlist > hr {
+    margin: 0;
+    width: 35%;
+    margin-bottom: 16px;
+}
+
 .yearnumber {
 font-size: 48px;
+font-weight: 800;
+}
+
+.fuerza {
+    font-size: 40px;
+    background-color: aliceblue;
+}
+
+.categoria {
+    font-size: 32px;
 }
 
 @media (max-width: 500px) {
     .yearnumber {
         font-size: 3vh;
+        font-weight: 800;
     }
 }
 
-.yearlist>ul {
+.categoria>ul {
 font-size: 20px;
 }
 
