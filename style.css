@@ -192,8 +192,8 @@ body {
 
 @media (max-width: 500px) {
     .topcontainer>img {
-        width: fit-content;
-        height: 100%
+        height: 100%;
+        object-fit: cover;
     }
 }
 
@@ -226,6 +226,7 @@ body {
     display: flex;
     justify-content: center;
     background-image: url(images/lobos2.png);
+    object-fit: cover;
 }
 
 .fotosmaincontainer>.fotoscontainer>.fotos>.fotostodas>iframe {
@@ -234,7 +235,8 @@ body {
 }
 
 .fotoscontainer {
-    padding: 50px 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .fotos {
@@ -671,6 +673,20 @@ gap: 46vh;
     }
 }
 
+.midsectionsubtitulo {
+    text-align: center;
+    font-size: 28px;
+    padding-bottom: 10px;
+}
+
+@media (max-width: 500px) {
+    .midsectionsubtitulo {
+        text-align: center;
+        font-size: 1.5vh;
+        padding-bottom: 10px;
+    }
+}
+
 .years {
     display: flex;
     flex-direction: column;
@@ -718,7 +734,7 @@ gap: 46vh;
 .yearcontent > hr {
     margin: 0;
     width: 350px;
-    margin-bottom: 16px;
+    margin-bottom: 4px;
 }
 
 @media (max-width: 500px) {
@@ -756,7 +772,6 @@ gap: 46vh;
 /* Links inside the dropdown */
 .yearcontent div {
     color: black;
-    padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
@@ -780,6 +795,7 @@ gap: 46vh;
     font-weight: bold;
     background-color: rgb(212, 163, 163);
     width: 320px;
+    padding: 12px 16px;
 }
 
 @media (max-width: 500px) {
@@ -791,6 +807,9 @@ gap: 46vh;
 
 .categoria {
     font-size: 32px;
+    padding-left: 16px;
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 
 @media (max-width: 500px) {
@@ -802,6 +821,8 @@ gap: 46vh;
 .categoria>ul {
     font-size: 20px;
     list-style-type: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 
