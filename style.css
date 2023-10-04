@@ -308,7 +308,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 266px;
+    gap: 120px;
 }
 
 .teamscontainer {
@@ -325,12 +325,13 @@ body {
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
-        padding-top: 15%;
+        padding-top: 22%;
+        gap: 2%;
     }
 }
 
 .equiposimg {
-    width: 500px;
+    width: 100%;
     height: auto;
     border-radius: 20px;
 }
@@ -338,91 +339,72 @@ body {
 .equipomixtocontainer {
     display: flex;
     flex-direction: column;
-    width: inherit;
-    height: inherit;
+    position: relative;
+
 }
 
 .leyendaequipomixto {
     position: absolute;
-    top: 500px;
-    font-size: 60px;
-    height: 64px;
-    width: 500px;
+    top: 76.5%;
+    font-size: 4vw;
+    height: 22%;
+
     background: linear-gradient(rgba(255, 255, 255, 0), rgb(117, 117, 117));
 }
 
 @media (max-width: 500px) {
     .leyendaequipomixto {
-        position: relative;
-        top: 336px;
-        left: -117px;
-        font-size: 60px;
+        position: absolute;
+        top: 76%;
+        font-size: 6vh;
     }
-}
-
-.equipomixtocontainer>span {
-    display: flex;
-    justify-content: start
 }
 
 .equipofemenilcontainer {
     display: flex;
     flex-direction: column;
-    width: inherit;
-    height: inherit;
+    position: relative;
+
 }
 
 .leyendaequipofemenil {
     position: absolute;
-    top: 500px;
-    font-size: 60px;
+    top: 78.8%;
+    font-size: 4vw;
     background: linear-gradient(rgba(255, 255, 255, 0), rgb(117, 117, 117));
-    height: 63px;
+    height: 20.5%
 }
 
 @media (max-width: 500px) {
     .leyendaequipofemenil {
-        position: relative;
-        top: 404px;
-        left: -78px;
-        font-size: 60px;
+        position: absolute;
+        top: 78%;
+        font-size: 6vh;
     }
-}
-
-.equipofemenilcontainer>span {
-    display: flex;
-    justify-content: center;
 }
 
 .equipovaronilcontainer {
     display: flex;
     flex-direction: column;
-    width: inherit;
-    height: inherit;
+    position: relative;
+
 }
 
 .leyendaequipovaronil {
     position: absolute;
-    top: 500px;
-    font-size: 60px;
+    top: 76.5%;
+    font-size: 4vw;
     background: linear-gradient(rgba(255, 255, 255, 0), rgb(117, 117, 117));
-    height: 64px;
+    height: 22%;
 }
 
 @media (max-width: 500px) {
     .leyendaequipovaronil {
-        position: relative;
-        top: 333px;
-        left: -78px;
-        font-size: 60px;
+        position: absolute;
+        top: 76.5%;
+        font-size: 6vh;
     }
 }
-
-.equipovaronilcontainer>span {
-    display: flex;
-    justify-content: center;
-}
-
 
 footer {
     background-color: black;
