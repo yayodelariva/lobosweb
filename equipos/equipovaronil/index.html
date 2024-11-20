@@ -9,41 +9,35 @@
 </head>
 
 <body>
+    <!-- MOBILE MENU -->
     <div class="header">
         <div class="dropdown">
-
-            <button class="dropbtn">Menu
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="../../index.html">Home</a>
-                <a href="../../equipos/index.html">Equipos</a>
-                <a href="../../palmares/index.html">Palmarés</a>
-                <a href="../../index.html#fotos">Fotos</a>
-                <a href="../../index.html#contacto">Contacto</a>
-            </div>
-            
+          <button class="dropbtn">
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a class="homeMobile"></a>
+            <a class="equiposMobile"></a>
+            <a class="palmaresMobile"></a>
+            <a class="fotosMobile"></a>
+            <a class="contactoMobile"></a>
+          </div>
         </div>
+  
+        <!-- DESKTOP MENU -->
         <ul class="listleft">
-            <a href="../index.html">
-                <li>Equipos</li>
-            </a>
-            <a href="../../palmares/index.html">
-                <li>Palmares</li>
-            </a>
+          <a class="equiposDesktop"> </a>
+          <a class="palmaresDesktop"> </a>
         </ul>
-        <div class="logolobos">
-            <img src="../../images/loboslogo.jpg">
-        </div>
+        <a class="homeDesktop">
+          <div class="logoLobosContainer"></div>
+        </a>
         <ul class="listright">
-            <a href="../../index.html#fotos">
-                <li>Fotos</li>
-            </a>
-            <a href="../../index.html#contacto">
-                <li>Contacto</li>
-            </a>
+          <a class="fotosDesktop"> </a>
+          <a class="contactoDesktop"> </a>
         </ul>
-    </div>
+      </div>
+
     </div>
     <div class="equiposwrapper">
         <div class="tituloequipo">Equipos Varoniles</div>
@@ -159,5 +153,6 @@
     </footer>
 
 </body>
+<script src="../../scripts/navbar.js"></script>
 
 </html>

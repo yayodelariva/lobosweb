@@ -1,135 +1,143 @@
-@import url('https://fonts.googleapis.com/css2?family=Gabarito&family=Quicksand&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Gabarito&family=Quicksand&display=swap");
 
 body {
-    font-family: 'Gabarito', cursive;
-    margin: 0;
+  font-family: "Gabarito", cursive;
+  margin: 0;
 }
 
 .dropdown {
-    display: none;
+  display: none;
 }
 
 @media (max-width: 500px) {
-    .dropdown {
-        display: block;
-        float: left;
-        overflow: hidden;
-        width: 62%;
-    }
+  .dropdown {
+    display: block;
+    float: left;
+    overflow: hidden;
+    width: 62%;
+  }
 }
 
 .dropdown .dropbtn {
-    font-size: 16px;
-    position: relative;
-    left: 70%;
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    /* Important for vertical align on mobile phones */
-    margin: 0;
-    /* Important for vertical align on mobile phones */
+  font-size: 16px;
+  position: relative;
+  left: 70%;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  /* Important for vertical align on mobile phones */
+  margin: 0;
+  /* Important for vertical align on mobile phones */
 }
 
 /* Add a red background color to navbar links on hover */
 .navbar a:hover,
 .dropdown:hover .dropbtn {
-    background-color: gray;
+  background-color: gray;
 }
 
 /* Dropdown content (hidden by default) */
 .dropdown-content {
-    display: none;
-    position: absolute;
-    z-index: 2;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    left: 0%;
-    top: 102%;
-    width: 100%;
-
-
+  display: none;
+  position: absolute;
+  z-index: 2;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  left: 0%;
+  top: 102%;
+  width: 100%;
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    border-top: 1px solid;
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border-top: 1px solid;
 }
 
 /* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
-    background-color: #ddd;
+  background-color: #ddd;
 }
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
-    display: block;
+  display: block;
 }
 
 .header {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    background: linear-gradient(black, transparent);
-    position: absolute;
-    margin-top: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  background: linear-gradient(black, transparent);
+  position: absolute;
+  margin-top: 0;
 }
 
-.header>ul {
-    display: flex;
-    gap: 80px;
-    font-size: 2vmin;
-    list-style-type: none;
-    padding-top: 20px;
+.header > ul {
+  display: flex;
+  gap: 80px;
+  font-size: 2vmin;
+  list-style-type: none;
+  padding-top: 20px;
 }
 
 @media (max-width: 500px) {
-    .header>ul {
-        display: none;
-    }
+  .header > ul {
+    display: none;
+  }
 }
 
-.header>ul>a {
-    text-decoration: none;
-    color: white;
+.header > ul > a {
+  text-decoration: none;
+  color: white;
 }
 
-.header>.logolobos {
-    display: flex;
-    justify-content: center;
+.header > .logolobos {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  height: auto;
+  position: absolute;
+  top: 45%;
+}
+
+@media (max-width: 500px) {
+  .header > .logolobos {
     width: 20%;
     height: auto;
     position: absolute;
-    top: 45%
+    top: 45%;
+    left: 10%;
+  }
 }
 
-@media (max-width: 500px) {
-    .header>.logolobos {
-        width: 20%;
-        height: auto;
-        position: absolute;
-        top: 45%;
-        left: 10%;
-    }
-}
-
-.header>.logolobos>img {
-    width: inherit;
-    height: auto;
+.header > .logolobos > img {
+  width: inherit;
+  height: auto;
 }
 
 .topcontainer {
+  display: flex;
+  max-width: 1920;
+  width: 100%;
+  margin-top: 0;
+  flex-shrink: 0;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 500px) {
+  .topcontainer {
     display: flex;
     max-width: 1920;
     width: 100%;
@@ -138,695 +146,680 @@ body {
     flex-grow: 1;
     justify-content: center;
     align-items: center;
-}
-
-@media (max-width: 500px) {
-    .topcontainer {
-        display: flex;
-        max-width: 1920;
-        width: 100%;
-        margin-top: 0;
-        flex-shrink: 0;
-        flex-grow: 1;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
+    height: 100vh;
+  }
 }
 
 .slogan {
-    position: absolute;
-    padding-bottom: 150px;
-    font-size: 10vmin;
-    color: beige;
+  position: absolute;
+  padding-bottom: 150px;
+  font-size: 10vmin;
+  color: beige;
 }
 
-@media (max-width:500px) {
-    .slogan {
-        position: absolute;
-        top: 37%;
-        padding-bottom: 150px;
-        font-size: 25vmin;
-        color: beige;
-    }
+@media (max-width: 500px) {
+  .slogan {
+    position: absolute;
+    top: 37%;
+    padding-bottom: 150px;
+    font-size: 25vmin;
+    color: beige;
+  }
 }
 
 .since {
+  position: absolute;
+  font-size: 16px;
+  color: beige;
+}
+
+@media (max-width: 500px) {
+  .since {
     position: absolute;
-    font-size: 16px;
+    font-size: 12px;
     color: beige;
+  }
+}
+
+.topcontainer > img {
+  width: inherit;
+  height: auto;
 }
 
 @media (max-width: 500px) {
-    .since {
-        position: absolute;
-        font-size: 12px;
-        color: beige;
-    }
-}
-
-.topcontainer>img {
-    width: inherit;
-    height: auto;
-}
-
-@media (max-width: 500px) {
-    .topcontainer>img {
-        height: 100%;
-        object-fit: cover;
-    }
+  .topcontainer > img {
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .historiasectioncontainer {
-    color: black
+  color: black;
 }
 
 .historiacontainer {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .historiatext {
-    width: 88%;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 200;
-    font-size: 2vw;
-    padding-top: 4%;
-    padding-bottom: 4%;
+  width: 88%;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 200;
+  font-size: 2vw;
+  padding-top: 4%;
+  padding-bottom: 4%;
 }
 
 @media (max-width: 500px) {
-    .historiatext {
-        width: 75%;
-        font-size: 4vw;
-    }
+  .historiatext {
+    width: 75%;
+    font-size: 4vw;
+  }
 }
 
 .fotosmaincontainer {
-    display: flex;
-    justify-content: center;
-    background-image: url(images/lobos2.png);
-    object-fit: cover;
+  display: flex;
+  justify-content: center;
+  background-image: url(images/lobos2.png);
+  object-fit: cover;
 }
 
-.fotosmaincontainer>.fotoscontainer>.fotos>.fotostodas>iframe {
-    border-radius: 50px;
-    box-shadow: 2px 2px 20px white;
+.fotosmaincontainer > .fotoscontainer > .fotos > .fotostodas > iframe {
+  border-radius: 50px;
+  box-shadow: 2px 2px 20px white;
 }
 
 .fotoscontainer {
-    padding-top: 50px;
-    padding-bottom: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .fotos {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1300px;
+}
+
+.fotostodas {
+  display: flex;
+  gap: 40px;
+}
+
+@media (max-width: 500px) {
+  .fotostodas {
+    display: none;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .primeras3 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .fotos {
     display: flex;
     gap: 40px;
     flex-wrap: wrap;
     justify-content: center;
     max-width: 1300px;
-}
-
-.fotostodas {
-    display: flex;
-    gap: 40px;
-}
-
-@media (max-width: 500px) {
-    .fotostodas {
-        display: none;
-        gap: 40px;
-    }
-}
-
-@media (max-width: 500px) {
-    .primeras3 {
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 500px) {
-    .fotos {
-        display: flex;
-        gap: 40px;
-        flex-wrap: wrap;
-        justify-content: center;
-        max-width: 1300px;
-    }
+  }
 }
 
 .contactocontainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    gap: 20px;
-    color: blueviolet;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  gap: 20px;
+  color: blueviolet;
 }
 
 .entrenacontainer {
-    font-size: 60px;
+  font-size: 60px;
 }
 
 .contacto {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 55%;
 }
 
-.contacto>ul {
-    list-style-type: none;
+.contacto > ul {
+  list-style-type: none;
 }
 
 /* ///NUESTROS EQUIPOS/// */
 
 .pushwrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 120px;
 }
 
 .teamscontainer {
-    display: flex;
-    /* flex-direction: column; */
-    align-items: center;
-    justify-content: space-around;
-    padding-top: 200px;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 200px;
 }
 
 @media (max-width: 500px) {
-    .teamscontainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        padding-top: 22%;
-        gap: 2%;
-    }
+  .teamscontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 22%;
+    gap: 2%;
+  }
 }
 
 .equiposimg {
-    width: 100%;
-    height: auto;
-    border-radius: 20px;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
 }
 
 .equipomixtocontainer {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .leyendaequipomixto {
-    position: absolute;
-    top: 76.5%;
-    font-size: 4vw;
-    height: 22%;
+  position: absolute;
+  top: 76.5%;
+  font-size: 4vw;
+  height: 22%;
 
-    background: linear-gradient(rgba(255, 255, 255, 0), rgb(117, 117, 117));
+  background: linear-gradient(rgba(255, 255, 255, 0), rgb(117, 117, 117));
 }
 
 @media (max-width: 500px) {
-    .leyendaequipomixto {
-        position: absolute;
-        top: 76%;
-        font-size: 6vh;
-    }
+  .leyendaequipomixto {
+    position: absolute;
+    top: 76%;
+    font-size: 6vh;
+  }
 }
 
 .equipofemenilcontainer {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .leyendaequipofemenil {
-    position: absolute;
-    top: 78.8%;
-    font-size: 4vw;
-    background: linear-gradient(rgba(255, 255, 255, 0), rgb(117, 117, 117));
-    height: 20.5%
+  position: absolute;
+  top: 78.8%;
+  font-size: 4vw;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgb(117, 117, 117));
+  height: 20.5%;
 }
 
 @media (max-width: 500px) {
-    .leyendaequipofemenil {
-        position: absolute;
-        top: 78%;
-        font-size: 6vh;
-    }
+  .leyendaequipofemenil {
+    position: absolute;
+    top: 78%;
+    font-size: 6vh;
+  }
 }
 
 .equipovaronilcontainer {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .leyendaequipovaronil {
-    position: absolute;
-    top: 76.5%;
-    font-size: 4vw;
-    background: linear-gradient(rgba(255, 255, 255, 0), rgb(117, 117, 117));
-    height: 22%;
+  position: absolute;
+  top: 76.5%;
+  font-size: 4vw;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgb(117, 117, 117));
+  height: 22%;
 }
 
 @media (max-width: 500px) {
-    .leyendaequipovaronil {
-        position: absolute;
-        top: 76.5%;
-        font-size: 6vh;
-    }
+  .leyendaequipovaronil {
+    position: absolute;
+    top: 76.5%;
+    font-size: 6vh;
+  }
 }
 
 footer {
-    background-color: black;
-    height: 80px;
-    width: 100%;
+  background-color: yellow;
+  height: 80px;
+  width: 100%;
 }
 
 /* ROSTER JUGADORES */
 
 .equiposwrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 200px;
+  padding-bottom: 80px;
+  background-color: gray;
+}
+
+@media (max-width: 500px) {
+  .equiposwrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 200px;
-    padding-bottom: 80px;
+    padding-top: 15%;
+    padding-bottom: 0;
     background-color: gray;
-}
-
-@media (max-width: 500px) {
-    .equiposwrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 15%;
-        padding-bottom: 0;
-        background-color: gray;
-    }
+  }
 }
 
 .tituloequipo {
-    font-size: 100px;
-    padding-bottom: 80px;
-    text-align: center;
+  font-size: 100px;
+  padding-bottom: 80px;
+  text-align: center;
 }
 
 @media (max-width: 500px) {
-    .tituloequipo {
-        font-size: 5vh;
-        padding-bottom: 10%;
-    }
+  .tituloequipo {
+    font-size: 5vh;
+    padding-bottom: 10%;
+  }
 }
 
 .wrapperrosterA {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .titulorosterA {
-    font-size: 80px;
-    padding-bottom: 15px;
+  font-size: 80px;
+  padding-bottom: 15px;
 }
 
 @media (max-width: 500px) {
-    .titulorosterA {
-        font-size: 2vh;
-        padding-bottom: 30px;
-    }
+  .titulorosterA {
+    font-size: 2vh;
+    padding-bottom: 30px;
+  }
 }
 
 .rosterA {
-    display: grid;
-    height: 500px;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 50px;
+  display: grid;
+  height: 500px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
 }
 
 @media (max-width: 500px) {
-    .rosterA {
-        display: grid;
-        height: 245px;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 22px;
-        margin-bottom: 10%;
-    }
+  .rosterA {
+    display: grid;
+    height: 245px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-bottom: 10%;
+  }
 }
 
 .player {
-    max-width: 186px;
-    height: 200px;
+  max-width: 186px;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  transition: 0.6s ease-out;
+  box-shadow: 0 1px 10px wheat;
+  border-radius: 10px;
+}
+
+@media (max-width: 500px) {
+  .player {
+    max-width: 95px;
+    height: 103px;
     display: flex;
     align-items: flex-end;
     position: relative;
     transition: 0.6s ease-out;
     box-shadow: 0 1px 10px wheat;
-    border-radius: 10px;
-}
-
-@media (max-width: 500px) {
-    .player {
-        max-width: 95px;
-        height: 103px;
-        display: flex;
-        align-items: flex-end;
-        position: relative;
-        transition: 0.6s ease-out;
-        box-shadow: 0 1px 10px wheat;
-    }
+  }
 }
 
 .player:hover {
-    transform: translateY(15px);
+  transform: translateY(15px);
 }
 
 .player:hover:before {
-    opacity: 1;
-
+  opacity: 1;
 }
 
 .player:hover .playerinfo {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .player:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, rgb(26, 25, 25), transparent);
-    border-radius: 10px;
-    z-index: 2;
-    transition: 0.5s;
-    opacity: 0;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgb(26, 25, 25), transparent);
+  border-radius: 10px;
+  z-index: 2;
+  transition: 0.5s;
+  opacity: 0;
 }
 
 .player .playerinfo {
-    position: relative;
-    z-index: 3;
-    color: #fff;
-    opacity: 0;
-    transform: translateY(60px);
-    transition: 0.5s;
+  position: relative;
+  z-index: 3;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: 0.5s;
 }
 
-.player>img {
-    position: absolute;
-    width: 186px;
-    height: auto;
-    border-radius: 10px;
+.player > img {
+  position: absolute;
+  width: 186px;
+  height: auto;
+  border-radius: 10px;
 }
 
 @media (max-width: 500px) {
-    .player>img {
-        position: absolute;
-        width: 95px;
-        height: auto;
-        border-radius: 10px;
-    }
+  .player > img {
+    position: absolute;
+    width: 95px;
+    height: auto;
+    border-radius: 10px;
+  }
 }
 
 .playerinfo {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    color: white;
-    text-shadow: 1px 1px 2px black;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: white;
+  text-shadow: 1px 1px 2px black;
 }
 
 .playername {
-    font-size: 20px;
-    font-weight: 700;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .edad {
-    padding-top: 10px;
-    font-size: 18px;
+  padding-top: 10px;
+  font-size: 18px;
 }
 
 .wrapperrosterB {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .titulorosterB {
-    font-size: 80px;
-    padding-bottom: 15px;
+  font-size: 80px;
+  padding-bottom: 15px;
 }
 
 @media (max-width: 500px) {
-    .titulorosterB {
-        font-size: 2vh;
-        padding-bottom: 30px;
-    }
+  .titulorosterB {
+    font-size: 2vh;
+    padding-bottom: 30px;
+  }
 }
 
 .rosterB {
-    display: grid;
-    height: 500px;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 50px;
+  display: grid;
+  height: 500px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
 }
 
 @media (max-width: 500px) {
-    .rosterB {
-        display: grid;
-        height: 245px;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 22px;
-    }
+  .rosterB {
+    display: grid;
+    height: 245px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
 }
 
 /* ///PALMARES/// */
 
 .wrapmidsecfooter {
-display: flex;
-flex-direction: column;
-gap: 46vh;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (max-width: 500px) {
-    .wrapmidsecfooter {
-        gap: 49vh;
-        }
+  .wrapmidsecfooter {
+    gap: 49vh;
+  }
 }
 
 .midsectioncontainer {
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-image: url(images/lobosbgEDIT.png);
 }
 
 .midsectioncontent {
-    border: 6px solid black;
-    padding: 1% 100px 4% 100px;
-    margin: 8%;
+  padding-top: 15rem;
+  padding-right: 9rem;
+  padding-left: 9rem;
+  padding-bottom: 10rem;
 }
 
 @media (max-width: 500px) {
-    .midsectioncontent {
-        border: 6px solid black;
-        width: 81%;
-        padding: 0;
-        margin-top: 10vh;
-    }
+  .midsectioncontent {
+    border: 6px solid black;
+    width: 81%;
+    padding: 0;
+    margin-top: 10vh;
+  }
 }
 
 .midsectiontitulo {
-    text-align: center;
-    font-size: 120px;
+  color: white;
+  text-align: center;
+  font-size: 120px;
+  text-shadow: #000 1px 0 20px;
 }
 
 @media (max-width: 500px) {
-    .midsectiontitulo {
-        text-align: center;
-        font-size: 6vh;
-
-    }
+  .midsectiontitulo {
+    text-align: center;
+    font-size: 6vh;
+  }
 }
 
 .midsectionsubtitulo {
-    text-align: center;
-    font-size: 28px;
-    padding-bottom: 10px;
+  text-align: center;
+  font-size: 28px;
+  padding-bottom: 10px;
 }
 
 @media (max-width: 500px) {
-    .midsectionsubtitulo {
-        text-align: center;
-        font-size: 1.5vh;
-        padding-bottom: 10px;
-    }
+  .midsectionsubtitulo {
+    text-align: center;
+    font-size: 1.5vh;
+    padding-bottom: 10px;
+  }
 }
 
 .years {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 500px) {
-    .years {
-        display: flex;
-        flex-direction: column;
-    }
+  .years {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /* Dropdown Button */
 .yearnumber {
-    background-color: aliceblue;
-    color: black;
-    padding: 16px;
-    font-size: 48px;
-    font-weight: 800;
-    border: none;
-    cursor: pointer;
-    width: 100%;
+  background-color: aliceblue;
+  color: black;
+  padding: 16px;
+  font-size: 48px;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  width: 100%;
   text-align: start;
 }
 
 @media (max-width: 500px) {
-    .yearnumber {
-        font-size: 3vh;
-        font-weight: 800;
-    }
+  .yearnumber {
+    font-size: 3vh;
+    font-weight: 800;
+  }
 }
 
 /* Dropdown button on hover & focus */
 .yearnumber:hover,
 .yearnumber:focus {
-    background-color: #2980B9;
+  background-color: #2980b9;
 }
 
 /* The container <div> - needed to position the dropdown content */
 .yearlist {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 .yearcontent > hr {
-    margin: 0;
-    width: 350px;
-    margin-bottom: 4px;
+  width: 350px;
+  margin-bottom: 4px;
 }
 
 @media (max-width: 500px) {
-    .yearcontent > hr {
-        width: 56vw
-
-    }
+  .yearcontent > hr {
+    width: 56vw;
+  }
 }
 
 .year2023content {
-    display: block;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+  display: block;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  z-index: 1;
 }
 
 /* Dropdown Content (Hidden by Default) */
 .year2022content {
-    display: none;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+  display: none;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 .year2021content {
-    display: none;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+  display: none;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 /* Links inside the dropdown */
 .yearcontent div {
-    color: black;
-    text-decoration: none;
-    display: block;
+  color: black;
+  text-decoration: none;
+  display: block;
 }
 
 /* Change color of dropdown links on hover */
 .yearcontent div:hover {
-    background-color: #ddd;
+  background-color: #ddd;
 }
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {
-    display: block;
+  display: block;
 }
 
 .hide {
-    display: none;
+  display: none;
 }
 
 .fuerza {
-    font-size: 40px;
-    font-weight: bold;
-    background-color: rgb(212, 163, 163);
-    width: 320px;
-    padding: 12px 16px;
+  font-size: 40px;
+  font-weight: bold;
+  background-color: rgb(212, 163, 163);
+  width: 320px;
+  padding: 12px 16px;
 }
 
 @media (max-width: 500px) {
-    .fuerza {
-        font-size: 3vh;
-        width: 48vw;
-    }
+  .fuerza {
+    font-size: 3vh;
+    width: 48vw;
+  }
 }
 
 .categoria {
-    font-size: 32px;
-    padding-left: 16px;
-    padding-top: 4px;
-    padding-bottom: 4px;
+  font-size: 32px;
+  padding-left: 16px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 @media (max-width: 500px) {
-    .categoria {
-        font-size: 2.3vh;
-    }
+  .categoria {
+    font-size: 2.3vh;
+  }
 }
 
-.categoria>ul {
-    font-size: 20px;
-    list-style-type: none;
-    margin-top: 10px;
-    margin-bottom: 10px;
+.categoria > ul {
+  font-size: 20px;
+  list-style-type: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
-
 
 @media (max-width: 500px) {
-    .categoria>ul {
-        font-size: 1.5vh;
-    }
+  .categoria > ul {
+    font-size: 1.5vh;
+  }
 }
 .firstplace {
-    list-style-image: url("palmares/images/goldmedal.png");
+  list-style-image: url("palmares/images/goldmedal.png");
 }
 .secondplace {
-    list-style-image: url("palmares/images/silvermedal.png");
+  list-style-image: url("palmares/images/silvermedal.png");
 }
 .thirdplace {
-    list-style-image: url("palmares/images/bronzemedal.png");
+  list-style-image: url("palmares/images/bronzemedal.png");
 }
 .fourthplace {
-    list-style-image: url("palmares/images/fourth.png");
+  list-style-image: url("palmares/images/fourth.png");
 }
-.footerpalmares {
-    background-color: black;
-    height: 80px;
-    width: 100%;
+.footerTest {
+  width: 100%;
+  height: 300px;
+  background-color: brown;
 }

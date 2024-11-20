@@ -1,72 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="../style.css" />
     <title>Nuestros Equipos</title>
-</head>
+  </head>
 
-<body>
+  <body>
+    <!-- MOBILE MENU -->
     <div class="header">
-        <div class="dropdown">
-
-            <button class="dropbtn">Menu
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="../index.html">Home</a>
-                <a href="../equipos/index.html">Equipos</a>
-                <a href="../palmares/index.html">Palmarés</a>
-                <a href="../index.html#fotos">Fotos</a>
-                <a href="../index.html#contacto">Contacto</a>
-            </div>
-
+      <div class="dropdown">
+        <button class="dropbtn">
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a class="homeMobile"></a>
+          <a class="equiposMobile"></a>
+          <a class="palmaresMobile"></a>
+          <a class="fotosMobile"></a>
+          <a class="contactoMobile"></a>
         </div>
-        <ul class="listleft">
-            <a href="../index.html">
-                <li>Home</li>
-            </a>
-            <a href="../palmares/index.html">
-                <li>Palmares</li>
-            </a>
-        </ul>
-        <div class="logolobos">
-            <img src="../images/loboslogo.jpg">
-        </div>
-        <ul class="listright">
-            <a href="../index.html#fotos">
-                <li>Fotos</li>
-            </a>
-            <a href="../index.html#contacto">
-                <li>Contacto</li>
-            </a>
-        </ul>
+      </div>
+
+      <!-- DESKTOP MENU -->
+      <ul class="listleft">
+        <a class="equiposDesktop"> </a>
+        <a class="palmaresDesktop"> </a>
+      </ul>
+      <a class="homeDesktop">
+        <div class="logoLobosContainer"></div>
+      </a>
+      <ul class="listright">
+        <a class="fotosDesktop"> </a>
+        <a class="contactoDesktop"> </a>
+      </ul>
     </div>
+
     <div class="pushwrapper">
-        <div class="teamscontainer">
-            <div class="equipomixtocontainer">
-                <span class="leyendaequipomixto">Mixto</span>
-                <a href="equipomixto/index.html"><img class="equiposimg" src="../equipos/images/Mixto.jpg"></a>
-
-            </div>
-            <div class="equipofemenilcontainer">
-                <span class="leyendaequipofemenil">Femenil</span>
-                <a href="equipofemenil/index.html"><img class="equiposimg" src="../equipos/images/femenil.jpg"></a>
-
-            </div>
-            <div class="equipovaronilcontainer">
-                <span class="leyendaequipovaronil">Varonil</span>
-                <a href="equipovaronil/index.html"><img class="equiposimg" src="../equipos/images/varonil.jpg"></a>
-
-            </div>
+      <div class="teamscontainer">
+        <div class="equipomixtocontainer">
+          <span class="leyendaequipomixto">Mixto</span>
+          <a href="equipomixto/index.html"
+            ><img class="equiposimg" src="../equipos/images/Mixto.jpg"
+          /></a>
         </div>
-        <footer>
-            <!-- //redes -->
-        </footer>
+        <div class="equipofemenilcontainer">
+          <span class="leyendaequipofemenil">Femenil</span>
+          <a href="equipofemenil/index.html"
+            ><img class="equiposimg" src="../equipos/images/femenil.jpg"
+          /></a>
+        </div>
+        <div class="equipovaronilcontainer">
+          <span class="leyendaequipovaronil">Varonil</span>
+          <a href="equipovaronil/index.html"
+            ><img class="equiposimg" src="../equipos/images/varonil.jpg"
+          /></a>
+        </div>
+      </div>
+      <footer>
+        <!-- //redes -->
+      </footer>
     </div>
-
-</body>
-
+  </body>
+  <script src="../scripts/navbar.js"></script>
 </html>
