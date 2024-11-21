@@ -396,6 +396,40 @@ footer {
 
 /* ROSTER JUGADORES */
 
+.equiposWrapperContainer {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-color: gray;
+}
+
+.playercard {
+  grid-template-columns: 1fr 5fr 3fr 5fr 1fr;
+  grid-template-rows: 0.2fr 1fr 1.2fr;
+  background-color: olive;
+  height: 46%;
+  width: 45%;
+}
+
+.playercardhr {
+  border: none;
+  height: 5px;
+  background-color: rgb(205, 249, 243);
+  width: 100%;
+}
+
+.playercardInfo {
+  display: flex;
+  flex-direction: column;
+  grid-column-start: 4;
+  grid-row-start: 2;
+}
+
+.playercardFoto {
+  grid-column-start: 2;
+  grid-row-start: 3;
+}
+
 .equiposwrapper {
   display: flex;
   flex-direction: column;
