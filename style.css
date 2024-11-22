@@ -1,8 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Gabarito&family=Quicksand&display=swap");
 
+@font-face {
+  font-family: "AmericanCaptain";
+
+  src: url(fonts/American\ Captain.ttf);
+
+  font-weight: normal;
+
+  font-style: normal;
+}
+
 body {
-  font-family: "Gabarito", cursive;
+  font-family: "QuickSand";
+  font-weight: bold;
   margin: 0;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .dropdown {
@@ -85,9 +101,10 @@ body {
 .header > ul {
   display: flex;
   gap: 80px;
-  font-size: 2vmin;
+  font-size: 1.3rem;
   list-style-type: none;
   padding-top: 20px;
+  height: 2rem;
 }
 
 @media (max-width: 500px) {
@@ -98,7 +115,7 @@ body {
 
 .header > ul > a {
   text-decoration: none;
-  color: white;
+  color: #ededed;
 }
 
 .logoLobosContainer {
@@ -108,7 +125,7 @@ body {
 
 .logoLobosContainer > img:nth-child(1) {
   height: auto;
-  width: 40%;
+  width: 35%;
 }
 
 .topcontainer {
@@ -120,6 +137,8 @@ body {
   flex-grow: 1;
   justify-content: center;
   align-items: center;
+  /* background-image: url(images/lobos.png);
+  background-size: contain; */
 }
 
 @media (max-width: 500px) {
@@ -198,6 +217,7 @@ body {
   font-size: 2vw;
   padding-top: 4%;
   padding-bottom: 4%;
+  text-align: justify;
 }
 
 @media (max-width: 500px) {
@@ -397,24 +417,33 @@ footer {
 /* ROSTER JUGADORES */
 
 .equiposWrapperContainer {
-  display: flex;
+  display: grid;
   justify-content: center;
   height: 100vh;
   background-color: gray;
 }
 
 .playercard {
+  font-family: "americancaptain";
   grid-template-columns: 1fr 5fr 3fr 5fr 1fr;
   grid-template-rows: 0.2fr 1fr 1.2fr;
-  background-color: olive;
-  height: 46%;
-  width: 45%;
+  background-color: #ededed;
+  height: 27rem;
+  width: 37rem;
+
+  box-shadow: 0px 0px 15px 5px #000000;
+}
+
+.cancelIconContainer {
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
 }
 
 .playercardhr {
   border: none;
-  height: 5px;
-  background-color: rgb(205, 249, 243);
+  height: 2px;
+  background-color: #e30613;
   width: 100%;
 }
 
@@ -423,6 +452,16 @@ footer {
   flex-direction: column;
   grid-column-start: 4;
   grid-row-start: 2;
+  font-size: 1.5rem;
+}
+
+.playercardName {
+  font-weight: bold;
+  font-size: 2.3rem;
+}
+
+.playercardPosition {
+  font-size: 1.9rem;
 }
 
 .playercardFoto {
@@ -506,6 +545,7 @@ footer {
   transition: 0.6s ease-out;
   box-shadow: 0 1px 10px wheat;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 @media (max-width: 500px) {
@@ -661,10 +701,12 @@ footer {
 }
 
 .midsectiontitulo {
-  color: white;
+  font-family: "americancaptain";
+  color: #ededed;
   text-align: center;
   font-size: 120px;
-  text-shadow: #000 1px 0 20px;
+  max-width: 960px;
+  text-shadow: 0px 0px 30px #000000;
 }
 
 @media (max-width: 500px) {
@@ -689,6 +731,7 @@ footer {
 }
 
 .years {
+  font-family: "gabarito";
   display: flex;
   flex-direction: column;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -706,6 +749,7 @@ footer {
 
 /* Dropdown Button */
 .yearnumber {
+  font-family: "americancaptain";
   background-color: #0f0f0f;
   color: #eadfb5;
   padding: 16px;
@@ -783,6 +827,7 @@ footer {
 }
 
 .fuerza {
+  font-family: "americancaptain";
   font-size: 40px;
   font-weight: bold;
   background-color: #2a2c2d;
