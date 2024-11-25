@@ -22,20 +22,24 @@
           <a class="homeMobile"></a>
           <a class="equiposMobile"></a>
           <a class="palmaresMobile"></a>
+          <a class="uneteMobile"></a>
+          <a class="valoresMobile"></a>
           <a class="fotosMobile"></a>
           <a class="contactoMobile"></a>
         </div>
       </div>
-
       <!-- DESKTOP MENU -->
+
       <ul class="listleft">
         <a class="equiposDesktop"> </a>
         <a class="palmaresDesktop"> </a>
+        <a class="uneteDesktop"> </a>
       </ul>
       <a class="homeDesktop">
         <div class="logoLobosContainer"></div>
       </a>
       <ul class="listright">
+        <a class="valoresDesktop"> </a>
         <a class="fotosDesktop"> </a>
         <a class="contactoDesktop"> </a>
       </ul>
@@ -49,7 +53,61 @@
           <div class="years">
             <div class="yearlist">
               <button
-                onclick="close2023menu()"
+                onclick="close2024menu()"
+                class="yearnumber yearnumber2024"
+              >
+                2024
+              </button>
+              <div id="Dropdown2024" class="year2024content yearcontent">
+                <div class="fuerza">Primera Fuerza</div>
+
+                <div class="primeraFuerza2024Container">
+                  <div class="categoria">
+                    Mixto
+                    <ul>
+                      <li class="firstplace">1er lugar</li>
+                    </ul>
+                  </div>
+                  <div class="categoria">
+                    Femenil
+                    <ul>
+                      <li class="fourthplace">4to lugar</li>
+                    </ul>
+                  </div>
+                  <div class="categoria">
+                    Varonil
+                    <ul>
+                      <li class="firstplace">1er lugar</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="fuerza">Segunda Fuerza</div>
+
+                <div class="segundaFuerza2024Container">
+                  <div class="categoria">
+                    Mixto
+                    <ul>
+                      <li class="secondplace">2do lugar</li>
+                    </ul>
+                  </div>
+                  <div class="categoria">
+                    Femenil
+                    <ul>
+                      <li>-</li>
+                    </ul>
+                  </div>
+                  <div class="categoria">
+                    Varonil
+                    <ul>
+                      <li class="">7mo lugar</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="yearlist">
+              <button
+                onclick="open2023menu()"
                 class="yearnumber yearnumber2023"
               >
                 2023
@@ -181,8 +239,11 @@
     <script>
       /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
-      function close2023menu() {
-        document.getElementById("Dropdown2023").classList.toggle("hide");
+      function close2024menu() {
+        document.getElementById("Dropdown2024").classList.toggle("hide");
+      }
+      function open2023menu() {
+        document.getElementById("Dropdown2023").classList.toggle("show");
       }
       function open2022menu() {
         document.getElementById("Dropdown2022").classList.toggle("show");
