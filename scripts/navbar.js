@@ -6,13 +6,17 @@ const dropdownContent = document.querySelector(".dropdown-content");
 const homeMobile = document.querySelector(".homeMobile");
 const equiposMobile = document.querySelector(".equiposMobile");
 const palmaresMobile = document.querySelector(".palmaresMobile");
+const uneteMobile = document.querySelector(".uneteMobile");
+const valoresMobile = document.querySelector(".valoresMobile");
 const fotosMobile = document.querySelector(".fotosMobile");
 const contactoMobile = document.querySelector(".contactoMobile");
 
 const listleft = document.querySelector(".listleft");
 const equiposDesktop = document.querySelector(".equiposDesktop");
 const palmaresDesktop = document.querySelector(".palmaresDesktop");
+const uneteDesktop = document.querySelector(".uneteDesktop");
 const listright = document.querySelector(".listright");
+const valoresDesktop = document.querySelector(".valoresDesktop");
 const fotosDesktop = document.querySelector(".fotosDesktop");
 const contactoDesktop = document.querySelector(".contactoDesktop");
 const homeDesktop = document.querySelector(".homeDesktop");
@@ -24,11 +28,15 @@ dropbtn.textContent = "Menu";
 homeMobile.textContent = "Home";
 equiposMobile.textContent = "Equipos";
 palmaresMobile.textContent = "Palmarés";
+uneteMobile.textContent = "Únete";
+valoresMobile.textContent = "Valores";
 fotosMobile.textContent = "Fotos";
 contactoMobile.textContent = "Contacto";
 
 equiposDesktop.textContent = "Equipos";
 palmaresDesktop.textContent = "Palmarés";
+uneteDesktop.textContent = "Únete";
+valoresDesktop.textContent = "Valores";
 fotosDesktop.textContent = "Fotos";
 contactoDesktop.textContent = "Contacto";
 

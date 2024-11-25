@@ -791,8 +791,19 @@ footer {
   }
 }
 
-.year2023content {
+.categoria > ul {
+  padding: 0;
+}
+
+.year2024content {
   display: block;
+  background-color: #1a1a1a;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.year2023content {
+  display: none;
   background-color: #1a1a1a;
   min-width: 160px;
   z-index: 1;
@@ -850,6 +861,20 @@ footer {
 }
 
 .segundaFuerza2023Container {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.primeraFuerza2024Container {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.segundaFuerza2024Container {
   display: flex;
   justify-content: space-around;
   padding-top: 1.5rem;
