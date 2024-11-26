@@ -213,7 +213,6 @@ body {
 .historiatext {
   width: 88%;
   font-family: "Quicksand", sans-serif;
-  font-weight: 200;
   font-size: 2vw;
   padding-top: 4%;
   padding-bottom: 4%;
@@ -937,4 +936,86 @@ footer {
   width: 100%;
   height: 300px;
   background-color: brown;
+}
+
+/* UNETE */
+
+.midSectionWrapper {
+  display: grid;
+  grid-template-rows: 11rem 40rem 25rem 11rem 40rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  background-color: gray;
+  height: 245vh;
+  width: 100vw;
+  background-image: url(images/lobosbgaltern2UPSCALED.jpeg);
+}
+
+.uneteHeroContainer {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 7;
+  color: #ededed;
+  text-shadow: 0px 0px 15px #000;
+  font-size: 4rem;
+  font-family: "americancaptain";
+}
+
+.uneteHero {
+  max-width: 38rem;
+}
+
+.uneteInfoContainer {
+  grid-row-start: 3;
+  grid-column-start: 1;
+  grid-column-end: 7;
+  background-color: #ededed;
+  box-shadow: 0px 7px 20px 1px #000000 inset;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+}
+
+.uneteInfo {
+  grid-row-start: 2;
+  grid-row-end: 2;
+  font-size: 2rem;
+  text-align: justify;
+  font-style: italic;
+  padding-right: 3rem;
+  padding-left: 3rem;
+}
+
+.uneteBeneficiosHeroContainer {
+  grid-row-start: 4;
+  grid-column-start: 4;
+}
+
+.beneficiosHero {
+  color: #ededed;
+  font-size: 4rem;
+  text-shadow: 0px 0px 15px #000;
+  font-family: "americancaptain";
+  padding-top: 6rem;
+}
+
+.beneficiosContainer {
+  /* background-color: #ededed; */
+  grid-row-start: 5;
+  grid-column-start: 1;
+  grid-column-end: 7;
+}
+
+.beneficiosList {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  list-style-type: none;
+  font-size: 1.5rem;
+  width: 70rem;
+  gap: 1.8rem;
+  text-shadow: 0px 0px 6px #000;
 }
