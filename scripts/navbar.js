@@ -68,7 +68,7 @@ if (
   contactoDesktop.href = "../../index.html#contacto";
   logoLobos.src = "../../images/logo-lobos.png";
   console.log("YEAAAH BUDDY");
-} else if (window.location.pathname.includes("/lobosweb/equipos")) {
+} else if (window.location.pathname.includes("/equipos")) {
   homeMobile.href = "../index.html";
   homeDesktop.href = "../index.html";
   equiposMobile.href = "index.html";
@@ -84,7 +84,7 @@ if (
   contactoMobile.href = "../index.html#contacto";
   contactoDesktop.href = "../index.html#contacto";
   logoLobos.src = "../images/logo-lobos.png";
-} else if (window.location.pathname.includes("/lobosweb/palmares/")) {
+} else if (window.location.pathname.includes("/palmares/")) {
   homeMobile.href = "../index.html";
   homeDesktop.href = "../index.html";
   equiposMobile.href = "../equipos/index.html";
@@ -101,7 +101,7 @@ if (
   contactoDesktop.href = "../index.html#contacto";
   logoLobos.src = "../images/logo-lobos.png";
   console.log("palmares");
-} else if (window.location.pathname.includes("/lobosweb/unete/")) {
+} else if (window.location.pathname.includes("/unete/")) {
   homeMobile.href = "../index.html";
   homeDesktop.href = "../index.html";
   equiposMobile.href = "../equipos/index.html";
@@ -118,7 +118,7 @@ if (
   contactoDesktop.href = "../index.html#contacto";
   logoLobos.src = "../images/logo-lobos.png";
   console.log("palmares");
-} else if (window.location.pathname.includes("/lobosweb/valores/")) {
+} else if (window.location.pathname.includes("/valores/")) {
   homeMobile.href = "../index.html";
   homeDesktop.href = "../index.html";
   equiposMobile.href = "../equipos/index.html";
