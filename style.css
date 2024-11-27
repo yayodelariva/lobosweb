@@ -12,7 +12,7 @@
 
 body {
   font-family: "QuickSand";
-  font-weight: bold;
+  font-weight: normal;
   margin: 0;
 }
 
@@ -942,7 +942,7 @@ footer {
 
 .midSectionWrapper {
   display: grid;
-  grid-template-rows: 11rem 40rem 25rem 11rem 40rem;
+  grid-template-rows: 16rem 30rem 25rem 15rem 40rem;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   background-color: gray;
   height: 245vh;
@@ -953,7 +953,7 @@ footer {
 .uneteHeroContainer {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1.8fr 1fr 1fr 1fr 1fr 1fr;
   grid-row-start: 2;
   grid-row-end: 2;
   grid-column-start: 1;
@@ -1004,6 +1004,7 @@ footer {
 
 .beneficiosContainer {
   /* background-color: #ededed; */
+  background-color: #00000055;
   grid-row-start: 5;
   grid-column-start: 1;
   grid-column-end: 7;
@@ -1017,5 +1018,45 @@ footer {
   font-size: 1.5rem;
   width: 70rem;
   gap: 1.8rem;
-  text-shadow: 0px 0px 6px #000;
+  text-shadow: 0px 0px 4px #000;
+}
+
+/* VALORES */
+
+.midSectionWrapperValores {
+  display: grid;
+  grid-template-rows: 14rem 8rem 52rem 25rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-image: url(images/lobosbgalternblack.jpeg);
+  height: 245vh;
+  width: 100vw;
+}
+
+.tituloValores {
+  font-size: 5rem;
+  text-align: center;
+  font-family: "americancaptain";
+  color: #ededed;
+  text-shadow: 0px 0px 8px #000;
+  grid-row-start: 2;
+  grid-column-start: 2;
+}
+
+.infoValores {
+  font-size: 1.5rem;
+
+  text-align: justify;
+  color: #ededed;
+  text-shadow: 0 0 4px black;
+  background-color: #00000055;
+  grid-row-start: 3;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  padding-top: 2rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.boldtext {
+  font-weight: 800;
 }
