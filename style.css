@@ -19,6 +19,7 @@ body {
 .contentWrapper {
   display: flex;
   flex-direction: column;
+  background-color: black;
 }
 
 .dropdown {
@@ -121,6 +122,7 @@ body {
 .logoLobosContainer {
   display: flex;
   justify-content: center;
+  padding-top: 1.2rem;
 }
 
 .logoLobosContainer > img:nth-child(1) {
@@ -128,10 +130,19 @@ body {
   width: 35%;
 }
 
+.topContainerWrapper {
+  height: 100vh;
+  width: 100vw;
+}
+
 .topcontainer {
-  display: flex;
-  max-width: 1920;
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: 1fr 1fr 1fr 4fr 1fr 1fr 1fr;
+  grid-auto-rows: auto;
+
   width: 100%;
+  height: 100vh;
   margin-top: 0;
   flex-shrink: 0;
   flex-grow: 1;
@@ -141,60 +152,41 @@ body {
   background-size: contain; */
 }
 
-@media (max-width: 500px) {
-  .topcontainer {
-    display: flex;
-    max-width: 1920;
-    width: 100%;
-    margin-top: 0;
-    flex-shrink: 0;
-    flex-grow: 1;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
+.topcontainer > img {
+  grid-row-start: 1;
+  grid-row-end: 7;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  width: 100vw;
+  height: 100vh;
 }
 
-.slogan {
-  position: absolute;
-  padding-bottom: 150px;
-  font-size: 10vmin;
-  color: beige;
+.sloganFirstPart {
+  grid-row-start: 3;
+  grid-column-start: 2;
+  z-index: 3;
+  font-family: "americancaptain";
+  font-size: 4rem;
+  text-shadow: 1px 1px 6px #e30613;
+  color: #ededed;
+}
+
+.sloganContainer {
+  grid-row-start: 5;
+  grid-column-start: 4;
+  z-index: 3;
+  font-family: "americancaptain";
+  font-size: 4rem;
+  text-shadow: 1px 1px 6px #e30613;
+  color: #ededed;
 }
 
 @media (max-width: 500px) {
   .slogan {
-    position: absolute;
     top: 37%;
     padding-bottom: 150px;
     font-size: 25vmin;
     color: beige;
-  }
-}
-
-.since {
-  position: absolute;
-  font-size: 16px;
-  color: beige;
-}
-
-@media (max-width: 500px) {
-  .since {
-    position: absolute;
-    font-size: 12px;
-    color: beige;
-  }
-}
-
-.topcontainer > img {
-  width: inherit;
-  height: auto;
-}
-
-@media (max-width: 500px) {
-  .topcontainer > img {
-    height: 100%;
-    object-fit: cover;
   }
 }
 
@@ -405,12 +397,6 @@ body {
     top: 76.5%;
     font-size: 6vh;
   }
-}
-
-footer {
-  background-color: yellow;
-  height: 80px;
-  width: 100%;
 }
 
 /* ROSTER JUGADORES */
@@ -932,11 +918,6 @@ footer {
 .fourthplace {
   list-style-image: url("palmares/images/fourth.png");
 }
-.footerTest {
-  width: 100%;
-  height: 300px;
-  background-color: brown;
-}
 
 /* UNETE */
 
@@ -945,8 +926,6 @@ footer {
   grid-template-rows: 16rem 30rem 25rem 15rem 40rem;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   background-color: gray;
-  height: 245vh;
-  width: 100vw;
   background-image: url(images/lobosbgaltern2UPSCALED.jpeg);
 }
 
@@ -1025,11 +1004,9 @@ footer {
 
 .midSectionWrapperValores {
   display: grid;
-  grid-template-rows: 14rem 8rem 52rem 25rem;
+  grid-template-rows: 14rem 8rem 52rem;
   grid-template-columns: 1fr 1fr 1fr;
   background-image: url(images/lobosbgalternblack.jpeg);
-  height: 245vh;
-  width: 100vw;
 }
 
 .tituloValores {
@@ -1059,4 +1036,67 @@ footer {
 
 .boldtext {
   font-weight: 800;
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #d9d9d9cc;
+  gap: 2rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.logosContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.logoAdomex {
+  width: 150px;
+  height: auto;
+}
+
+.logoAdomex > img {
+  width: 80%;
+  height: auto;
+}
+
+.logoFMDB {
+  width: 150px;
+  height: auto;
+}
+
+.logoFMDB > img {
+  width: 73%;
+  height: auto;
+}
+
+footer > hr {
+  background-color: #e30613;
+  border: none;
+  width: 30%;
+  height: 1px;
+}
+
+.siteMapList > ul {
+  display: flex;
+  list-style-type: none;
+  gap: 1rem;
+}
+
+.siteMapList > ul > li {
+  padding-right: 1rem;
+  border-right: 1px solid black;
+}
+
+.siteMapList > ul li:last-child {
+  border-right: none;
+}
+
+.siteMap .siteByContainer {
+  font-size: 0.5rem;
 }
