@@ -923,8 +923,8 @@ body {
 
 .midSectionWrapper {
   display: grid;
-  grid-template-rows: 16rem 30rem 25rem 15rem 40rem;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 16rem 30rem 25rem 15rem 33rem 16rem;
+  grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
   background-color: gray;
   background-image: url(images/lobosbgaltern2UPSCALED.jpeg);
 }
@@ -992,12 +992,33 @@ body {
 .beneficiosList {
   display: flex;
   flex-direction: column;
-  color: white;
+  color: #ededed;
   list-style-type: none;
   font-size: 1.5rem;
   width: 70rem;
   gap: 1.8rem;
   text-shadow: 0px 0px 4px #000;
+}
+
+.manadaContainer {
+  grid-row-start: 6;
+  grid-column-start: 3;
+  gap: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.manadaText {
+  color: #ededed;
+  text-shadow: 0px 0px 8px #000;
+  font-size: 5rem;
+  font-family: "americancaptain";
+}
+
+.whatsappIcon {
+  color: #25d366;
+  font-size: 5rem;
 }
 
 /* VALORES */
@@ -1048,38 +1069,61 @@ footer {
   gap: 2rem;
   padding-top: 4rem;
   padding-bottom: 4rem;
+  font-family: "gabarito";
+  font-weight: lighter;
 }
 
 .logosContainer {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .logoAdomex {
-  width: 150px;
+  width: 7.5rem;
   height: auto;
 }
 
 .logoAdomex > img {
-  width: 80%;
+  width: inherit;
   height: auto;
 }
 
 .logoFMDB {
-  width: 150px;
+  width: 6.5rem;
   height: auto;
 }
 
 .logoFMDB > img {
-  width: 73%;
+  width: inherit;
+  height: auto;
+}
+
+.logoWDBF {
+  width: 18rem;
+  height: auto;
+}
+
+.logoWDBF > img {
+  width: inherit;
+  height: auto;
+}
+
+.logoCodeme {
+  width: 6.5rem;
+  height: auto;
+}
+
+.logoCodeme > img {
+  width: inherit;
   height: auto;
 }
 
 footer > hr {
   background-color: #e30613;
   border: none;
-  width: 30%;
-  height: 1px;
+  width: 38rem;
+  height: 0.09rem;
 }
 
 .siteMapList > ul {
