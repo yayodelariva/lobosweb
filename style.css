@@ -19,7 +19,6 @@ body {
 .contentWrapper {
   display: flex;
   flex-direction: column;
-  background-color: black;
 }
 
 .dropdown {
@@ -1066,63 +1065,157 @@ footer {
   flex-direction: column;
   align-items: center;
   background-color: #d9d9d9cc;
-  gap: 2rem;
+  gap: 4rem;
   padding-top: 4rem;
   padding-bottom: 4rem;
   font-family: "gabarito";
   font-weight: lighter;
 }
 
-.logosContainer {
+.logosContainerTop {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  width: 80rem;
 }
 
 .logoAdomex {
-  width: 7.5rem;
+  width: 6.8rem;
   height: auto;
 }
 
 .logoAdomex > img {
   width: inherit;
   height: auto;
+  filter: grayscale(100%);
+  transition: ease-in-out 0.4s;
+}
+
+.logoAdomex > img:hover {
+  filter: grayscale(0%);
+  transition: ease-in-out 0.4s;
 }
 
 .logoFMDB {
-  width: 6.5rem;
+  width: 5.2rem;
   height: auto;
 }
 
 .logoFMDB > img {
   width: inherit;
   height: auto;
+  filter: grayscale(100%);
+  transition: ease-in-out 0.4s;
 }
 
-.logoWDBF {
-  width: 18rem;
+.logoFMDB > img:hover {
+  filter: grayscale(0%);
+  transition: ease-in-out 0.4s;
+}
+
+.logoIztapalapa {
+  width: 6.1rem;
   height: auto;
 }
 
-.logoWDBF > img {
+.logoIztapalapa > img {
   width: inherit;
   height: auto;
+  filter: grayscale(100%);
+  transition: ease-in-out 0.4s;
+}
+.logoIztapalapa > img:hover {
+  filter: grayscale(0%);
+  transition: ease-in-out 0.4s;
 }
 
 .logoCodeme {
-  width: 6.5rem;
+  width: 5.5rem;
   height: auto;
 }
 
 .logoCodeme > img {
   width: inherit;
   height: auto;
+  filter: grayscale(100%);
+  transition: ease-in-out 0.4s;
+}
+
+.logoCodeme > img:hover {
+  filter: grayscale(0%);
+  transition: ease-in-out 0.4s;
+}
+
+.logoLhasa {
+  width: 4rem;
+  height: auto;
+}
+
+.logoLhasa > img {
+  width: inherit;
+  height: auto;
+  filter: grayscale(100%);
+  transition: ease-in-out 0.4s;
+}
+
+.logoLhasa > img:hover {
+  filter: grayscale(0%);
+  transition: ease-in-out 0.4s;
+}
+
+.logoTlalpan {
+  width: 6.5rem;
+  height: auto;
+}
+
+.logoTlalpan > img {
+  width: inherit;
+  height: auto;
+  filter: grayscale(100%);
+  transition: ease-in-out 0.4s;
+}
+
+.logoTlalpan > img:hover {
+  filter: grayscale(0%);
+  transition: ease-in-out 0.4s;
+}
+
+.logoWDBF {
+  width: 12rem;
+  height: auto;
+}
+
+.logoWDBF > img {
+  width: inherit;
+  height: auto;
+  filter: grayscale(100%);
+  transition: ease-in-out 0.4s;
+}
+.logoWDBF > img:hover {
+  filter: grayscale(0%);
+  transition: ease-in-out 0.4s;
+}
+
+.logoHit {
+  width: 9.5rem;
+  height: auto;
+}
+
+.logoHit > img {
+  width: inherit;
+  height: auto;
+  filter: grayscale(100%);
+  transition: ease-in-out 0.4s;
+}
+.logoHit > img:hover {
+  filter: grayscale(0%);
+  transition: ease-in-out 0.4s;
 }
 
 footer > hr {
   background-color: #e30613;
   border: none;
-  width: 38rem;
+  width: 50rem;
   height: 0.09rem;
 }
 
@@ -1132,15 +1225,26 @@ footer > hr {
   gap: 1rem;
 }
 
-.siteMapList > ul > li {
+.siteMapList > ul > a {
+  text-decoration: none;
+  color: black;
+}
+
+.siteMapList > ul > a:hover {
+  color: #e30613;
+}
+
+.siteMapList > ul > a {
   padding-right: 1rem;
   border-right: 1px solid black;
 }
 
-.siteMapList > ul li:last-child {
+.siteMapList > ul > a:last-child {
   border-right: none;
 }
 
-.siteMap .siteByContainer {
-  font-size: 0.5rem;
+.siteByContainer {
+  text-decoration: none;
+  color: black;
+  font-size: 0.8rem;
 }
