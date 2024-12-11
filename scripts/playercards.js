@@ -21,6 +21,7 @@ const playercardInstagram = document.querySelector(".playercardInstagram");
 const playercardFoto = document.querySelector(".playercardFoto");
 const playercardNameTag = document.createElement("div");
 const cancelIcon = document.querySelector(".cancelIconContainer");
+const luisPortrait = document.querySelector("#luisDeLaRiva");
 
 class playercard {
   constructor(
@@ -80,7 +81,7 @@ const luisDeLaRiva = new playercard(
   "Husky, Guerreros Jaguar, Mexicas",
   "8",
   "@luisdelariva11",
-  "../images/players/Luis.png"
+  "../images/players/11_Luis_de_la_Riva_Pérez.jpg"
 );
 
 const barbaraFuentes = new playercard(
@@ -94,7 +95,8 @@ const barbaraFuentes = new playercard(
   "Diestro",
   "Huskys",
   "1",
-  "@_barbtender_"
+  "@_barbtender_",
+  "../images/players/8_Barbara Fuentes.jpg"
 );
 
 const gianniToro = new playercard(
@@ -108,10 +110,11 @@ const gianniToro = new playercard(
   "Diestro",
   "Club Gauss / Vaquitas Marinas / Mexicas Cloth",
   "2",
-  "@giannitm007"
+  "@giannitm007",
+  "../images/players/7_Gianni Toro.jpg"
 );
 
-const armandoTellez = new playercard(
+const danielTellez = new playercard(
   "2 Armando Daniel Téllez Pallares",
   "Lateral",
   "Dani",
@@ -122,10 +125,11 @@ const armandoTellez = new playercard(
   "Diestro",
   "Cat Dodgeball, Blasters, Ahuizotl, TlaloCloth",
   "3",
-  "@danieltp2000"
+  "@danieltp2000",
+  "../images/players/13_Daniel Tellez.jpg"
 );
 
-const joseLeon = new playercard(
+const fernandoLeon = new playercard(
   "12 José Fernando León Martínez",
   "Extremo",
   "León",
@@ -136,7 +140,8 @@ const joseLeon = new playercard(
   "Diestro",
   "Tlalocloth",
   "1",
-  "@feer._mtz"
+  "@feer._mtz",
+  "../images/players/12_Fernando Leon.jpg"
 );
 
 const farrellEstrada = new playercard(
@@ -150,7 +155,8 @@ const farrellEstrada = new playercard(
   "Diestro",
   "Oozma Kappa | Vaquitas Marinas",
   "1",
-  "@farrell_eo"
+  "@farrell_eo",
+  "../images/players/10_Farrell Estrada Ornelas.jpg"
 );
 
 const ceciliaRodriguez = new playercard(
@@ -164,7 +170,8 @@ const ceciliaRodriguez = new playercard(
   "Diestro",
   "Quetzales, Tic Tac Cloc",
   "1",
-  "@blue.sunflower._"
+  "@blue.sunflower._",
+  "../images/players/2_Cecilia Rodriguez (Pinky).jpg"
 );
 
 const enriqueHuato = new playercard(
@@ -178,7 +185,8 @@ const enriqueHuato = new playercard(
   "Diestro",
   "Ahuizotl Alebrijes Clothstars",
   "4",
-  "@huato82"
+  "@huato82",
+  "../images/players/7_Enrique Huato.jpg"
 );
 
 const shelsyEstrada = new playercard(
@@ -192,10 +200,11 @@ const shelsyEstrada = new playercard(
   "Diestro",
   "Oozma Kappa / Euler / Ballbarians",
   "3",
-  "@shelsy_ornelas"
+  "@shelsy_ornelas",
+  "../images/players/18_Shelsy Estrada Ornelas.jpg"
 );
 
-const kurtRandy = new playercard(
+const randyCastillo = new playercard(
   "25 Kurt Randy Aguayo Castillo",
   "Extremo",
   "Randy",
@@ -206,7 +215,8 @@ const kurtRandy = new playercard(
   "Diestro",
   "Mugis, Quetzales y Tic Tac Cloth",
   "3",
-  "@randy_cast1"
+  "@randy_cast1",
+  "../images/players/25_Randy Castillo.jpg"
 );
 
 const edgarGalicia = new playercard(
@@ -220,10 +230,11 @@ const edgarGalicia = new playercard(
   "Diestro",
   "Club Gauss/Vaquitas Marinas/Clothstars",
   "3",
-  "@eddie.galicia"
+  "@eddie.galicia",
+  "../images/players/9_Edgar Galicia.jpg"
 );
 
-const blancaEstela = new playercard(
+const estelaGalavis = new playercard(
   "10 Blanca Estela Santos Galavis",
   "Extremo",
   "Estela",
@@ -234,7 +245,8 @@ const blancaEstela = new playercard(
   "Diestro",
   "Cat Dodgeball, Oozma Kappa, Astromelias, Euler Femenil y Trooper Cloth",
   "2",
-  "@estela.esg5"
+  "@estela.esg5",
+  "../images/players/10_Estela Galavis.jpg"
 );
 
 const deniseMejia = new playercard(
@@ -248,7 +260,8 @@ const deniseMejia = new playercard(
   "Diestro",
   "Alebrijes, Sirens, Tlalocloth",
   "1",
-  "@deni_mejia"
+  "@deni_mejia",
+  "../images/players/8_Denise Mejía.jpg"
 );
 
 const danielaCruz = new playercard(
@@ -262,7 +275,8 @@ const danielaCruz = new playercard(
   "Diestro",
   "2, mixto-Gauss femenil-Sirens",
   "3",
-  "@dani_aitana06"
+  "@dani_aitana06",
+  "../images/players/24_Daniela Aitana Cruz.jpg"
 );
 
 const rogelioMorales = new playercard(
@@ -276,10 +290,11 @@ const rogelioMorales = new playercard(
   "Diestro",
   "Hokusai, Mandalorians, Mexicas",
   "3",
-  "@roymsa"
+  "@roymsa",
+  "../images/players/3_Rogelio Morales.jpg"
 );
 
-const sandraAguayo = new playercard(
+const paolaCastillo = new playercard(
   "1 / 11 Sandra Paola Aguayo Castillo",
   "Extremo",
   "Pao",
@@ -290,7 +305,8 @@ const sandraAguayo = new playercard(
   "Diestro",
   "Sirenas, Alebrijes y Tlalocloth",
   "3",
-  "@_pao_castillo__"
+  "@_pao_castillo__",
+  "../images/players/1_Paola Castillo.jpg"
 );
 
 const carlosDeLaRiva = new playercard(
@@ -304,7 +320,8 @@ const carlosDeLaRiva = new playercard(
   "Diestro",
   "Huskys, Guerreros Jaguares, Mexicas",
   "1",
-  ""
+  "",
+  "../images/players/Coach_Carlos de la Riva (Pato).jpg"
 );
 
 const cesarArellano = new playercard(
@@ -318,7 +335,8 @@ const cesarArellano = new playercard(
   "Diestro",
   "Mexicas, Ahuizotl",
   "2",
-  ""
+  "",
+  "../images/players/55_César Arellano.jpg"
 );
 
 const sabrinaHuerta = new playercard(
@@ -332,7 +350,8 @@ const sabrinaHuerta = new playercard(
   "Diestro",
   "PinUp Rebels, Mexicas",
   "2",
-  "@Sabrixxa_55"
+  "@Sabrixxa_55",
+  "../images/players/55_Sabrina Huerta.jpg"
 );
 
 const susanaGutierrez = new playercard(
@@ -346,7 +365,8 @@ const susanaGutierrez = new playercard(
   "Diestro",
   "Alebrijes, Pin Up Rebels, Clothstars",
   "2",
-  "@suguza8"
+  "@suguza8",
+  "../images/players/18_Susana Gutierrez.jpg"
 );
 
 const franciscoRivera = new playercard(
@@ -360,7 +380,8 @@ const franciscoRivera = new playercard(
   "Diestro",
   "Blasters, Guerreros Jaguar",
   "Cero",
-  "@Freddlechuga"
+  "@Freddlechuga",
+  "../images/players/19_Francisco Rivera.jpg"
 );
 
 const rocioHernandez = new playercard(
@@ -374,7 +395,8 @@ const rocioHernandez = new playercard(
   "Diestro",
   "Mapaches/Astromelias",
   "1",
-  "@rocio.uchiha.11"
+  "@rocio.uchiha.11",
+  "../images/players/11_Rocio_Hernandez.jpg"
 );
 
 const saraCeron = new playercard(
@@ -388,7 +410,8 @@ const saraCeron = new playercard(
   "Diestro",
   "Lobos",
   "Ninguna",
-  "@nanabloodstone"
+  "@nanabloodstone",
+  "../images/players/7_Sara_Ceron.jpg"
 );
 
 const lennySandoval = new playercard(
@@ -402,7 +425,8 @@ const lennySandoval = new playercard(
   "Diestro",
   "Quetzales",
   "1",
-  "@leninger7"
+  "@leninger7",
+  "../images/players/15_Lenny Sandoval.JPG"
 );
 
 const leonardoSegura = new playercard(
@@ -416,7 +440,8 @@ const leonardoSegura = new playercard(
   "Diestro",
   "Rebel Deadlock",
   "0",
-  "@axelsfla"
+  "@axelsfla",
+  "../images/players/3_Leonardo_Segura.jpg"
 );
 
 const jensenFernandez = new playercard(
@@ -430,7 +455,8 @@ const jensenFernandez = new playercard(
   "Diestro",
   "Mugis, Oozma Kappa",
   "2",
-  "@J.ensn"
+  "@J.ensn",
+  "../images/players/22_Jensen_Fernandez.jpg"
 );
 
 const gabrielSanchez = new playercard(
@@ -444,7 +470,8 @@ const gabrielSanchez = new playercard(
   "Diestro",
   "No",
   "1",
-  "@gabo_sanm"
+  "@gabo_sanm",
+  "../images/players/21_Hebert_Gabriel.jpg"
 );
 
 const alejandroDorantes = new playercard(
@@ -458,7 +485,8 @@ const alejandroDorantes = new playercard(
   "Diestro",
   "Quetzales",
   "2",
-  "@alejandro.dorantes92"
+  "@alejandro.dorantes92",
+  "../images/players/5_Alejandro_Dorantes.jpg"
 );
 
 roster.addEventListener("click", handleClickedPlayercard);
@@ -476,17 +504,89 @@ function handleClickedPlayercard(e) {
     case "luisDeLaRiva":
       luisDeLaRiva.generatePlayerCard();
       break;
-    case "franciscoRivera":
-      franciscoRivera.generatePlayerCard();
+    case "barbaraFuentes":
+      barbaraFuentes.generatePlayerCard();
       break;
-    case "edgarGalicia":
-      edgarGalicia.generatePlayerCard();
+    case "gianniToro":
+      gianniToro.generatePlayerCard();
       break;
-    case "reginaBadillo":
-      reginaBadillo.generatePlayerCard();
+    case "danielTellez":
+      danielTellez.generatePlayerCard();
       break;
     case "fernandoLeon":
       fernandoLeon.generatePlayerCard();
       break;
+    case "farrellEstrada":
+      farrellEstrada.generatePlayerCard();
+      break;
+    case "ceciliaRodriguez":
+      ceciliaRodriguez.generatePlayerCard();
+      break;
+    case "enriqueHuato":
+      enriqueHuato.generatePlayerCard();
+      break;
+    case "shelsyEstrada":
+      shelsyEstrada.generatePlayerCard();
+      break;
+    case "randyCastillo":
+      randyCastillo.generatePlayerCard();
+      break;
+    case "edgarGalicia":
+      edgarGalicia.generatePlayerCard();
+      break;
+    case "estelaGalavis":
+      estelaGalavis.generatePlayerCard();
+      break;
+    case "deniseMejia":
+      deniseMejia.generatePlayerCard();
+      break;
+    case "danielaCruz":
+      danielaCruz.generatePlayerCard();
+      break;
+    case "rogelioMorales":
+      rogelioMorales.generatePlayerCard();
+      break;
+    case "paolaCastillo":
+      paolaCastillo.generatePlayerCard();
+      break;
+    case "carlosDeLaRiva":
+      carlosDeLaRiva.generatePlayerCard();
+      break;
+    case "cesarArellano":
+      cesarArellano.generatePlayerCard();
+      break;
+    case "sabrinaHuerta":
+      sabrinaHuerta.generatePlayerCard();
+      break;
+    case "susanaGutierrez":
+      susanaGutierrez.generatePlayerCard();
+      break;
+    case "franciscoRivera":
+      franciscoRivera.generatePlayerCard();
+      break;
+    case "rocioHernandez":
+      rocioHernandez.generatePlayerCard();
+      break;
+    case "saraCeron":
+      saraCeron.generatePlayerCard();
+      break;
+    case "lennySandoval":
+      lennySandoval.generatePlayerCard();
+      break;
+    case "leonardoSegura":
+      leonardoSegura.generatePlayerCard();
+      break;
+    case "jensenFernandez":
+      jensenFernandez.generatePlayerCard();
+      break;
+    case "gabrielSanchez":
+      gabrielSanchez.generatePlayerCard();
+      break;
+    case "alejandroDorantes":
+      alejandroDorantes.generatePlayerCard();
+      break;
   }
 }
+
+//DOM STUFF - PLAYER PORTRAITS
+generateDom();
