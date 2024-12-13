@@ -1,7 +1,8 @@
 const equiposWrapperContainer = document.querySelector(
   ".equiposWrapperContainer"
 );
-const roster = document.querySelector("#roster");
+const roster = document.querySelectorAll("#roster");
+const playerWrapper = document.querySelectorAll(".playerWrapper");
 const equiposWrapper = document.querySelector(".equiposwrapper");
 const player = document.querySelector(".player");
 const playerName = document.querySelector(".playerName");
@@ -81,7 +82,7 @@ const luisDeLaRiva = new playercard(
   "Husky, Guerreros Jaguar, Mexicas",
   "8",
   "@luisdelariva11",
-  "../images/players/11_Luis_de_la_Riva_Pérez.jpg"
+  "../images/players/portraits/luisDeLaRivaPortrait.jpg"
 );
 
 const barbaraFuentes = new playercard(
@@ -96,7 +97,7 @@ const barbaraFuentes = new playercard(
   "Huskys",
   "1",
   "@_barbtender_",
-  "../images/players/8_Barbara Fuentes.jpg"
+  "../images/players/portraits/barbaraFuentesPortrait.jpg"
 );
 
 const gianniToro = new playercard(
@@ -426,7 +427,7 @@ const lennySandoval = new playercard(
   "Quetzales",
   "1",
   "@leninger7",
-  "../images/players/15_Lenny Sandoval.JPG"
+  "../images/players/15_Lenny Sandoval.jpg"
 );
 
 const leonardoSegura = new playercard(
@@ -489,13 +490,19 @@ const alejandroDorantes = new playercard(
   "../images/players/5_Alejandro_Dorantes.jpg"
 );
 
-roster.addEventListener("click", handleClickedPlayercard);
+playerWrapper.forEach((a) =>
+  a.addEventListener("click", handleClickedPlayercard)
+);
 cancelIcon.addEventListener("click", function () {
   playercardDOM.style.display = "none";
   equiposWrapper.style.display = "flex";
+  if (playercardFoto.hasChildNodes()) {
+    playercardFoto.removeChild(playercardFoto.lastChild);
+  }
 });
 
 function handleClickedPlayercard(e) {
+  console.log("click");
   equiposWrapperContainer.style.alignItems = "center";
   equiposWrapper.style.display = "none";
   playercardDOM.style.display = "grid";
@@ -585,8 +592,10 @@ function handleClickedPlayercard(e) {
     case "alejandroDorantes":
       alejandroDorantes.generatePlayerCard();
       break;
+    default:
+      equiposWrapperContainer.style.alignItems = "center";
+      equiposWrapper.style.display = "flex";
+      playercardDOM.style.display = "none";
+      break;
   }
 }
-
-//DOM STUFF - PLAYER PORTRAITS
-generateDom();
