@@ -10,15 +10,15 @@ const playerAge = document.querySelector(".playerAge");
 const playercardDOM = document.querySelector(".playercard");
 const playercardName = document.querySelector(".playercardName");
 const playercardPosition = document.querySelector(".playercardPosition");
-const playercardNickname = document.querySelector(".playercardNickname");
-const playercardHand = document.querySelector(".playercardHand");
-const playercardBall = document.querySelector(".playercardBall");
-const playercardCategory = document.querySelector(".playercardCategory");
-const playercardTeams = document.querySelector(".playercardTeams");
-const playercardHeight = document.querySelector(".playercardHeight");
-const playercardYears = document.querySelector(".playercardYears");
-const playercardDraft = document.querySelector(".playercardDraft");
-const playercardInstagram = document.querySelector(".playercardInstagram");
+const playercardNickname = document.querySelector(".nicknameText");
+const playercardHand = document.querySelector(".handText");
+const playercardBall = document.querySelector(".ballText");
+const playercardCategory = document.querySelector(".categoryText");
+const playercardTeams = document.querySelector(".teamsText");
+const playercardHeight = document.querySelector(".heightText");
+const playercardYears = document.querySelector(".yearsText");
+const playercardDraft = document.querySelector(".draftText");
+const playercardInstagram = document.querySelector(".instagramText");
 const playercardFoto = document.querySelector(".playercardFoto");
 const playercardNameTag = document.createElement("div");
 const cancelIcon = document.querySelector(".cancelIconContainer");
@@ -82,13 +82,13 @@ const luisDeLaRiva = new playercard(
   "Husky, Guerreros Jaguar, Mexicas",
   "8",
   "@luisdelariva11",
-  "../images/players/portraits/luisDeLaRivaPortrait.jpg"
+  "../images/players/playercards/luisDeLaRivaPlayercard.jpg"
 );
 
 const barbaraFuentes = new playercard(
   "8 Barbara Fuentes Flores",
   "Extremo",
-  "Fuentes",
+  '"Fuentes"',
   "Ambas",
   "1.58m",
   "Femenil",
@@ -103,7 +103,7 @@ const barbaraFuentes = new playercard(
 const gianniToro = new playercard(
   "7 Gianni Toro Miranda",
   "Extremo",
-  "Toro",
+  '"Toro"',
   "Ambas",
   "1.73m",
   "Varonil",
@@ -112,13 +112,13 @@ const gianniToro = new playercard(
   "Club Gauss / Vaquitas Marinas / Mexicas Cloth",
   "2",
   "@giannitm007",
-  "../images/players/7_Gianni Toro.jpg"
+  "../images/players/portraits/gianniToroPortrait.jpg"
 );
 
 const danielTellez = new playercard(
-  "2 Armando Daniel Téllez Pallares",
+  "2 Armando Daniel TÉllez Pallares",
   "Lateral",
-  "Dani",
+  '"Dani"',
   "Ambas",
   "1.76m",
   "Mixto",
@@ -127,13 +127,13 @@ const danielTellez = new playercard(
   "Cat Dodgeball, Blasters, Ahuizotl, TlaloCloth",
   "3",
   "@danieltp2000",
-  "../images/players/13_Daniel Tellez.jpg"
+  "../images/players/portraits/danielTellezPortrait.jpg"
 );
 
 const fernandoLeon = new playercard(
-  "12 José Fernando León Martínez",
+  "12 JosÉ Fernando LeÓn MartÍnez",
   "Extremo",
-  "León",
+  '"LeÓn"',
   "Ambas",
   "172cm",
   "Mixto",
@@ -142,13 +142,13 @@ const fernandoLeon = new playercard(
   "Tlalocloth",
   "1",
   "@feer._mtz",
-  "../images/players/12_Fernando Leon.jpg"
+  "../images/players/playercards/fernandoLeonPlayercard.jpg"
 );
 
 const farrellEstrada = new playercard(
   "10 Farrell Estrada Ornelas",
   "Lateral",
-  "F. Estrada",
+  '"F. Estrada"',
   "Ambas",
   "1.70m",
   "Mixto",
@@ -157,13 +157,13 @@ const farrellEstrada = new playercard(
   "Oozma Kappa | Vaquitas Marinas",
   "1",
   "@farrell_eo",
-  "../images/players/10_Farrell Estrada Ornelas.jpg"
+  "../images/players/portraits/farrellEstradaPortrait.jpg"
 );
 
 const ceciliaRodriguez = new playercard(
-  "2 Cecilia Rodríguez de la Vega Isaza",
+  "2 Cecilia RodrÍguez de la Vega Isaza",
   "Extremo",
-  "Pinky",
+  '"Pinky"',
   "Ambas",
   "1.56m",
   "Femenil",
@@ -172,13 +172,13 @@ const ceciliaRodriguez = new playercard(
   "Quetzales, Tic Tac Cloc",
   "1",
   "@blue.sunflower._",
-  "../images/players/2_Cecilia Rodriguez (Pinky).jpg"
+  "../images/players/portraits/ceciliaRodriguezPortrait.jpg"
 );
 
 const enriqueHuato = new playercard(
   "7 Enrique Huato Montes",
   "Extremo",
-  "Huato",
+  '"Huato"',
   "Ambas",
   "1.80m",
   "Mixto",
@@ -187,13 +187,13 @@ const enriqueHuato = new playercard(
   "Ahuizotl Alebrijes Clothstars",
   "4",
   "@huato82",
-  "../images/players/7_Enrique Huato.jpg"
+  "../images/players/playercards/enriqueHuatoPlayercards.jpg"
 );
 
 const shelsyEstrada = new playercard(
   "18 Shelsy Estrada Ornelas",
   "Extremo",
-  "Ornelas",
+  '"Ornelas"',
   "Ambas",
   "1.58m",
   "Mixto",
@@ -202,13 +202,13 @@ const shelsyEstrada = new playercard(
   "Oozma Kappa / Euler / Ballbarians",
   "3",
   "@shelsy_ornelas",
-  "../images/players/18_Shelsy Estrada Ornelas.jpg"
+  "../images/players/playercards/shelsyEstradaPlayercard.jpg"
 );
 
 const randyCastillo = new playercard(
   "25 Kurt Randy Aguayo Castillo",
   "Extremo",
-  "Randy",
+  '"Randy"',
   "Ambas",
   "1.74m",
   "Mixto",
@@ -217,13 +217,13 @@ const randyCastillo = new playercard(
   "Mugis, Quetzales y Tic Tac Cloth",
   "3",
   "@randy_cast1",
-  "../images/players/25_Randy Castillo.jpg"
+  "../images/players/portraits/randyCastilloPortrait.jpg"
 );
 
 const edgarGalicia = new playercard(
   "9 Edgar Galicia",
   "Extremo",
-  "Eddie",
+  '"Eddie"',
   "Ambas",
   "1.72m",
   "Mixto",
@@ -232,13 +232,13 @@ const edgarGalicia = new playercard(
   "Club Gauss/Vaquitas Marinas/Clothstars",
   "3",
   "@eddie.galicia",
-  "../images/players/9_Edgar Galicia.jpg"
+  "../images/players/portraits/edgarGaliciaPortrait.jpg"
 );
 
 const estelaGalavis = new playercard(
   "10 Blanca Estela Santos Galavis",
   "Extremo",
-  "Estela",
+  '"Estela"',
   "Ambas",
   "1.52m",
   "Femenil",
@@ -247,13 +247,13 @@ const estelaGalavis = new playercard(
   "Cat Dodgeball, Oozma Kappa, Astromelias, Euler Femenil y Trooper Cloth",
   "2",
   "@estela.esg5",
-  "../images/players/10_Estela Galavis.jpg"
+  "../images/players/playercards/estelaGalavisPlayercard.jpg"
 );
 
 const deniseMejia = new playercard(
-  "8 Denise Angélica Mejía González",
+  "8 Denise AngÉlica MejÍa GonzÁlez",
   "Extremo",
-  "Den",
+  '"Den"',
   "Ambas",
   "1.60m",
   "Mixto",
@@ -262,13 +262,13 @@ const deniseMejia = new playercard(
   "Alebrijes, Sirens, Tlalocloth",
   "1",
   "@deni_mejia",
-  "../images/players/8_Denise Mejía.jpg"
+  "../images/players/portraits/deniseMejiaPortrait.jpg"
 );
 
 const danielaCruz = new playercard(
   "14 Daniela Aitana Cruz Llanos",
   "Extremo",
-  "Danny",
+  '"Danny"',
   "Ambas",
   "1.67m",
   "Femenil",
@@ -277,13 +277,13 @@ const danielaCruz = new playercard(
   "2, mixto-Gauss femenil-Sirens",
   "3",
   "@dani_aitana06",
-  "../images/players/24_Daniela Aitana Cruz.jpg"
+  "../images/players/playercards/danielaCruzPlayercard.jpg"
 );
 
 const rogelioMorales = new playercard(
-  "3 Rogelio Morales Sánchez",
+  "3 Rogelio Morales SÁnchez",
   "Extremo",
-  "Roy",
+  '"Roy"',
   "Ambas",
   "1.76m",
   "Mixto",
@@ -292,13 +292,13 @@ const rogelioMorales = new playercard(
   "Hokusai, Mandalorians, Mexicas",
   "3",
   "@roymsa",
-  "../images/players/3_Rogelio Morales.jpg"
+  "../images/players/portraits/rogelioMoralesPortrait.jpg"
 );
 
 const paolaCastillo = new playercard(
   "1 / 11 Sandra Paola Aguayo Castillo",
   "Extremo",
-  "Pao",
+  '"Pao"',
   "Ambas",
   "1.69m",
   "Femenil",
@@ -307,13 +307,13 @@ const paolaCastillo = new playercard(
   "Sirenas, Alebrijes y Tlalocloth",
   "3",
   "@_pao_castillo__",
-  "../images/players/1_Paola Castillo.jpg"
+  "../images/players/portraits/paolaCastilloPortrait.jpg"
 );
 
 const carlosDeLaRiva = new playercard(
   "23 Carlos Emilio de la Riva Morales",
   "Extremo",
-  "Pato",
+  '"Pato"',
   "Ambas",
   "1.80m",
   "Mixto",
@@ -322,13 +322,13 @@ const carlosDeLaRiva = new playercard(
   "Huskys, Guerreros Jaguares, Mexicas",
   "1",
   "",
-  "../images/players/Coach_Carlos de la Riva (Pato).jpg"
+  "../images/players/portraits/carlosDeLaRivaPortrait.jpg"
 );
 
 const cesarArellano = new playercard(
-  "5 César Alejandro Arellano Ruíz",
+  "5 CÉsar Alejandro Arellano RuÍz",
   "Extremo",
-  "Arellano / Alex",
+  '"Arellano / Alex"',
   "Ambas",
   "1.75m",
   "Mixto",
@@ -337,13 +337,13 @@ const cesarArellano = new playercard(
   "Mexicas, Ahuizotl",
   "2",
   "",
-  "../images/players/55_César Arellano.jpg"
+  "../images/players/playercards/cesarArellanoPlayercard.jpg"
 );
 
 const sabrinaHuerta = new playercard(
   "55 Sabrina Selene Huerta Monroy",
   "Extremo",
-  "Sabrix",
+  '"Sabrix"',
   "Ambas",
   "1.69m",
   "Mixto",
@@ -352,13 +352,13 @@ const sabrinaHuerta = new playercard(
   "PinUp Rebels, Mexicas",
   "2",
   "@Sabrixxa_55",
-  "../images/players/55_Sabrina Huerta.jpg"
+  "../images/players/portraits/sabrinaHuertaPortrait.jpg"
 );
 
 const susanaGutierrez = new playercard(
-  "8 Susana Ximena Gutiérrez Alanis",
+  "8 Susana Ximena GutiÉrrez Alanis",
   "Extremo",
-  "Susy",
+  '"Susy"',
   "Ambas",
   "1.65m",
   "Mixto",
@@ -367,13 +367,13 @@ const susanaGutierrez = new playercard(
   "Alebrijes, Pin Up Rebels, Clothstars",
   "2",
   "@suguza8",
-  "../images/players/18_Susana Gutierrez.jpg"
+  "../images/players/portraits/susanaGutierrezPortrait.jpg"
 );
 
 const franciscoRivera = new playercard(
-  "19 Francisco Rivera Ramírez",
+  "19 Francisco Rivera RamÍrez",
   "Extremo",
-  "Fred",
+  '"Fred"',
   "Ambas",
   "1.74m",
   "Mixto",
@@ -382,13 +382,13 @@ const franciscoRivera = new playercard(
   "Blasters, Guerreros Jaguar",
   "Cero",
   "@Freddlechuga",
-  "../images/players/19_Francisco Rivera.jpg"
+  "../images/players/portraits/franciscoRiveraPortrait.jpg"
 );
 
 const rocioHernandez = new playercard(
-  "11 Rocio Guadalupe Hernández Hernández",
+  "11 Rocio Guadalupe HernÁndez HernÁndez",
   "Extremo",
-  "Uchiha",
+  '"Uchiha"',
   "Ambas",
   "1.54m",
   "Mixto",
@@ -397,13 +397,13 @@ const rocioHernandez = new playercard(
   "Mapaches/Astromelias",
   "1",
   "@rocio.uchiha.11",
-  "../images/players/11_Rocio_Hernandez.jpg"
+  "../images/players/portraits/rocioHernandezPortrait.jpg"
 );
 
 const saraCeron = new playercard(
-  "7 Sara Flora María Cerón Garrido",
+  "7 Sara Flora MarÍa CerÓn Garrido",
   "Extremo",
-  "Nana",
+  '"Nana"',
   "Ambas",
   "1.60m",
   "Mixto",
@@ -412,13 +412,13 @@ const saraCeron = new playercard(
   "Lobos",
   "Ninguna",
   "@nanabloodstone",
-  "../images/players/7_Sara_Ceron.jpg"
+  "../images/players/portraits/saraCeronPortrait.jpg"
 );
 
 const lennySandoval = new playercard(
   "15 Lenny Elizabeth Sandoval Sanchez",
   "Extremo",
-  "Lenny",
+  '"Lenny"',
   "Ambas",
   "1.55m",
   "Mixto",
@@ -427,13 +427,13 @@ const lennySandoval = new playercard(
   "Quetzales",
   "1",
   "@leninger7",
-  "../images/players/15_Lenny Sandoval.jpg"
+  "../images/players/portraits/lennySandovalPortrait.jpg"
 );
 
 const leonardoSegura = new playercard(
   "3 Leonardo Axel Segura Flores",
   "Extremo",
-  "Axel",
+  '"Axel"',
   "Ambas",
   "1.7m",
   "Mixto",
@@ -442,13 +442,13 @@ const leonardoSegura = new playercard(
   "Rebel Deadlock",
   "0",
   "@axelsfla",
-  "../images/players/3_Leonardo_Segura.jpg"
+  "../images/players/portraits/leonardoSeguraPortrait.jpg"
 );
 
 const jensenFernandez = new playercard(
   "22 Jensen Fernandez",
   "Extremo",
-  "Jensen",
+  '"Jensen"',
   "Ambas",
   "170cm",
   "Mixto",
@@ -457,13 +457,13 @@ const jensenFernandez = new playercard(
   "Mugis, Oozma Kappa",
   "2",
   "@J.ensn",
-  "../images/players/22_Jensen_Fernandez.jpg"
+  "../images/players/portraits/jensenFernandezPortrait.jpg"
 );
 
 const gabrielSanchez = new playercard(
-  "21 Hebert Gabriel Sánchez Martínez",
+  "21 Hebert Gabriel SÁnchez MartÍnez",
   "Extremo",
-  "Gabo jefe",
+  '"Gabo jefe"',
   "Ambas",
   "1.73m",
   "Mixto",
@@ -472,13 +472,13 @@ const gabrielSanchez = new playercard(
   "No",
   "1",
   "@gabo_sanm",
-  "../images/players/21_Hebert_Gabriel.jpg"
+  "../images/players/portraits/gabrielSanchezPortrait.jpg"
 );
 
 const alejandroDorantes = new playercard(
   "5 Alejandro Dorantes",
   "Extremo",
-  "Dorantes",
+  '"Dorantes"',
   "Ambas",
   "1.80m",
   "Mixto",
@@ -487,19 +487,13 @@ const alejandroDorantes = new playercard(
   "Quetzales",
   "2",
   "@alejandro.dorantes92",
-  "../images/players/5_Alejandro_Dorantes.jpg"
+  "../images/players/portraits/alejandroDorantesPortrait.jpg"
 );
 
 playerWrapper.forEach((a) =>
   a.addEventListener("click", handleClickedPlayercard)
 );
-cancelIcon.addEventListener("click", function () {
-  playercardDOM.style.display = "none";
-  equiposWrapper.style.display = "flex";
-  if (playercardFoto.hasChildNodes()) {
-    playercardFoto.removeChild(playercardFoto.lastChild);
-  }
-});
+cancelIcon.addEventListener("click", closePlayercard);
 
 function handleClickedPlayercard(e) {
   console.log("click");
@@ -597,5 +591,13 @@ function handleClickedPlayercard(e) {
       equiposWrapper.style.display = "flex";
       playercardDOM.style.display = "none";
       break;
+  }
+}
+
+function closePlayercard() {
+  playercardDOM.style.display = "none";
+  equiposWrapper.style.display = "flex";
+  if (playercardFoto.hasChildNodes()) {
+    playercardFoto.removeChild(playercardFoto.lastChild);
   }
 }
