@@ -53,7 +53,7 @@ if (
   logoTlalpan.src = "../../images/logosfooter/logoTlalpan.png";
   logoFMDB.src = "../../images/logosfooter/FMDB-Rojo-V.png";
   logoCodeme.src = "../../images/logosfooter/codeme_logo.jpg";
-  logoHit.src = "../../images/logosfooter/logo-hit-morado.png";
+  logoHit.src = "../../images/logosfooter/logoHit.png";
   logoLhasa.src = "../../images/logosfooter/logoLhasa.png";
   logoIztapalapa.src = "../../images/logosfooter/logoIztapalapa.jpeg";
   logoAdomex.src = "../../images/logosfooter/adomex-cuadrado.png";
@@ -79,7 +79,7 @@ if (
   logoTlalpan.src = "../images/logosfooter/logoTlalpan.png";
   logoFMDB.src = "../images/logosfooter/FMDB-Rojo-V.png";
   logoCodeme.src = "../images/logosfooter/codeme_logo.jpg";
-  logoHit.src = "../images/logosfooter/logo-hit-morado.png";
+  logoHit.src = "../images/logosfooter/logoHit.png";
   logoLhasa.src = "../images/logosfooter/logoLhasa.png";
   logoIztapalapa.src = "../images/logosfooter/logoIztapalapa.jpeg";
   logoAdomex.src = "../images/logosfooter/adomex-cuadrado.png";
@@ -105,7 +105,7 @@ if (
   logoTlalpan.src = "../images/logosfooter/logoTlalpan.png";
   logoFMDB.src = "../images/logosfooter/FMDB-Rojo-V.png";
   logoCodeme.src = "../images/logosfooter/codeme_logo.jpg";
-  logoHit.src = "../images/logosfooter/logo-hit-morado.png";
+  logoHit.src = "../images/logosfooter/logoHit.png";
   logoLhasa.src = "../images/logosfooter/logoLhasa.png";
   logoIztapalapa.src = "../images/logosfooter/logoIztapalapa.jpeg";
   logoAdomex.src = "../images/logosfooter/adomex-cuadrado.png";
@@ -131,7 +131,7 @@ if (
   logoTlalpan.src = "../images/logosfooter/logoTlalpan.png";
   logoFMDB.src = "../images/logosfooter/FMDB-Rojo-V.png";
   logoCodeme.src = "../images/logosfooter/codeme_logo.jpg";
-  logoHit.src = "../images/logosfooter/logo-hit-morado.png";
+  logoHit.src = "../images/logosfooter/logoHit.png";
   logoLhasa.src = "../images/logosfooter/logoLhasa.png";
   logoIztapalapa.src = "../images/logosfooter/logoIztapalapa.jpeg";
   logoAdomex.src = "../images/logosfooter/adomex-cuadrado.png";
@@ -157,7 +157,7 @@ if (
   logoTlalpan.src = "../images/logosfooter/logoTlalpan.png";
   logoFMDB.src = "../images/logosfooter/FMDB-Rojo-V.png";
   logoCodeme.src = "../images/logosfooter/codeme_logo.jpg";
-  logoHit.src = "../images/logosfooter/logo-hit-morado.png";
+  logoHit.src = "../images/logosfooter/logoHit.png";
   logoLhasa.src = "../images/logosfooter/logoLhasa.png";
   logoIztapalapa.src = "../images/logosfooter/logoIztapalapa.jpeg";
   logoAdomex.src = "../images/logosfooter/adomex-cuadrado.png";
@@ -183,7 +183,7 @@ if (
   logoTlalpan.src = "images/logosfooter/logoTlalpan.png";
   logoFMDB.src = "images/logosfooter/FMDB-Rojo-V.png";
   logoCodeme.src = "images/logosfooter/codeme_logo.jpg";
-  logoHit.src = "images/logosfooter/logo-hit-morado.png";
+  logoHit.src = "images/logosfooter/logoHit.png";
   logoLhasa.src = "images/logosfooter/logoLhasa.png";
   logoIztapalapa.src = "images/logosfooter/logoIztapalapa.jpeg";
   logoAdomex.src = "images/logosfooter/adomex-cuadrado.png";
