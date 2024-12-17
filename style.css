@@ -413,19 +413,20 @@ body {
 
 .playercard {
   font-family: "americancaptain";
-  grid-template-columns: 1fr 5fr 3fr 5fr 1fr;
-  grid-template-rows: 0.2fr 1fr 1.2fr;
   background-color: #ededed;
-  height: 27rem;
-  width: 37rem;
-
   box-shadow: 0px 0px 15px 5px #000000;
+  padding-bottom: 1.5rem;
 }
 
 .cancelIconContainer {
   height: 24px;
   width: 24px;
   cursor: pointer;
+}
+
+.fotoInfoContainer {
+  display: flex;
+  gap: 4rem;
 }
 
 .playercardhr {
@@ -438,28 +439,53 @@ body {
 .playercardInfo {
   display: flex;
   flex-direction: column;
-  grid-column-start: 4;
-  grid-row-start: 2;
+  flex-grow: 1;
   font-size: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .playercardName {
   font-weight: bold;
-  font-size: 2.3rem;
+  font-size: 3.3rem;
+}
+
+.positionStatsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .playercardPosition {
-  font-size: 1.9rem;
+  font-size: 2.9rem;
+}
+
+.playercardStats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.playercardStat {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.playercardTitle {
+  color: red;
 }
 
 .playercardFoto {
-  grid-column-start: 2;
-  grid-row-start: 3;
+  display: grid;
+  flex-grow: 3;
+  max-width: 21rem;
+  grid-template-rows: 1fr;
+  padding-left: 1.5rem;
 }
 
 .playercardFoto > img {
-  width: 10rem;
+  width: 100%;
   height: auto;
+  grid-row-start: 2;
 }
 
 .equiposwrapper {
@@ -612,6 +638,7 @@ body {
   font-weight: 700;
   color: #ddd;
   text-align: center;
+  width: 12rem;
 }
 
 .edad {
