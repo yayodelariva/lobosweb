@@ -39,70 +39,70 @@ class Player {
 const luisDeLaRivaPortrait = new Player(
   "Luis Gabriel de la Riva Pérez",
   document.querySelector("#luisDeLaRiva"),
-  "../images/players/portraits/luisDeLaRivaPortrait.jpg",
+  "../../images/players/portraits/luisDeLaRivaPortrait.jpg",
   "luisDeLaRiva"
 );
 
 const barbaraFuentesPortrait = new Player(
   "Barbara Fuentes Flores",
   document.querySelector("#barbaraFuentes"),
-  "../images/players/portraits/barbaraFuentesPortrait.jpg",
+  "../../images/players/portraits/barbaraFuentesPortrait.jpg",
   "barbaraFuentes"
 );
 
 const edgarGaliciaPortrait = new Player(
   "Edgar Galicia",
   document.querySelector("#edgarGalicia"),
-  "../images/players/portraits/edgarGaliciaPortrait.jpg",
+  "../../images/players/portraits/edgarGaliciaPortrait.jpg",
   "edgarGalicia"
 );
 
 const gianniToroPortrait = new Player(
   "Gianni Toro Miranda",
   document.querySelector("#gianniToro"),
-  "../images/players/portraits/gianniToroPortrait.jpg",
+  "../../images/players/portraits/gianniToroPortrait.jpg",
   "gianniToro"
 );
 
 const danielTellezPortrait = new Player(
   "Armando Daniel Téllez Pallares",
   document.querySelector("#danielTellez"),
-  "../images/players/portraits/danielTellezPortrait.jpg",
+  "../../images/players/portraits/danielTellezPortrait.jpg",
   "danielTellez"
 );
 
 const paolaCastilloPortrait = new Player(
   "Sandra Paola Aguayo Castillo",
   document.querySelector("#paolaCastillo"),
-  "../images/players/portraits/paolaCastilloPortrait.jpg",
+  "../../images/players/portraits/paolaCastilloPortrait.jpg",
   "paolaCastillo"
 );
 
 const randyCastilloPortrait = new Player(
   "Kurt Randy Aguayo Castillo",
   document.querySelector("#randyCastillo"),
-  "../images/players/portraits/randyCastilloPortrait.jpg",
+  "../../images/players/portraits/randyCastilloPortrait.jpg",
   "randyCastillo"
 );
 
 const fernandoLeonPortrait = new Player(
   "José Fernando León Martínez",
   document.querySelector("#fernandoLeon"),
-  "../images/players/portraits/fernandoLeonPortrait.jpg",
+  "../../images/players/portraits/fernandoLeonPortrait.jpg",
   "fernandoLeon"
 );
 
 const farrellEstradaPortrait = new Player(
   "Farrel Estrada Ornelas",
   document.querySelector("#farrellEstrada"),
-  "../images/players/portraits/farrellEstradaPortrait.jpg",
+  "../../images/players/portraits/farrellEstradaPortrait.jpg",
   "farrellEstrada"
 );
 
 const sabrinaHuertaPortrait = new Player(
   "Sabrina Selene Huerta Monroy",
   document.querySelector("#sabrinaHuerta"),
-  "../images/players/portraits/sabrinaHuertaPortrait.jpg",
+  "../../images/players/portraits/sabrinaHuertaPortrait.jpg",
   "sabrinaHuerta"
 );
 

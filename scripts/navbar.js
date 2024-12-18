@@ -48,9 +48,32 @@ contactoDesktop.textContent = "Contacto";
 
 // NAVBAR PATHING FUNTIONALITY
 if (
-  window.location.pathname.includes("/equipofemenil/") ||
-  window.location.pathname.includes("/equipomixto/") ||
-  window.location.pathname.includes("/equipovaronil/")
+  window.location.pathname.includes("/equipos/foam/foamfemenil") ||
+  window.location.pathname.includes("/equipos/cloth/clothfemenil") ||
+  window.location.pathname.includes("/equipos/foam/foammixto") ||
+  window.location.pathname.includes("/equipos/cloth/clothmixto") ||
+  window.location.pathname.includes("/equipos/foam/foamvaronil") ||
+  window.location.pathname.includes("/equipos/cloth/clothvaronil")
+) {
+  homeMobile.href = "../../../index.html";
+  homeDesktop.href = "../../../index.html";
+  equiposMobile.href = "../../index.html";
+  equiposDesktop.href = "../../index.html";
+  palmaresMobile.href = "../../../palmares/index.html";
+  palmaresDesktop.href = "../../../palmares/index.html";
+  uneteMobile.href = "../../../unete/index.html";
+  uneteDesktop.href = "../../../unete/index.html";
+  valoresMobile.href = "../../../valores/index.html";
+  valoresDesktop.href = "../../../valores/index.html";
+  fotosMobile.href = "../../../index.html#fotos";
+  fotosDesktop.href = "../../../index.html#fotos";
+  contactoMobile.href = "../../../index.html#contacto";
+  contactoDesktop.href = "../../../index.html#contacto";
+  logoLobos.src = "../../../images/logo-lobos.png";
+  console.log("YEAAAH BUDDY");
+} else if (
+  window.location.pathname.includes("/equipos/foam") ||
+  window.location.pathname.includes("/equipos/cloth")
 ) {
   homeMobile.href = "../../index.html";
   homeDesktop.href = "../../index.html";

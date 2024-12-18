@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../../../style.css" />
+    <title>Equipos Mixtos de Cloth</title>
+  </head>
+
+  <body>
+    <div class="contentWrapper">
+      <!-- MOBILE MENU -->
+      <div class="header">
+        <div class="dropdown">
+          <button class="dropbtn">
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a class="homeMobile"></a>
+            <a class="equiposMobile"></a>
+            <a class="palmaresMobile"></a>
+            <a class="uneteMobile"></a>
+            <a class="valoresMobile"></a>
+            <a class="fotosMobile"></a>
+            <a class="contactoMobile"></a>
+          </div>
+        </div>
+        <!-- DESKTOP MENU -->
+
+        <ul class="listleft">
+          <a class="equiposDesktop"> </a>
+          <a class="palmaresDesktop"> </a>
+          <a class="uneteDesktop"> </a>
+        </ul>
+        <a class="homeDesktop">
+          <div class="logoLobosContainer"></div>
+        </a>
+        <ul class="listright">
+          <a class="valoresDesktop"> </a>
+          <a class="fotosDesktop"> </a>
+          <a class="contactoDesktop"> </a>
+        </ul>
+      </div>
+
+      <div class="equiposWrapperContainer">
+        <div class="equiposwrapper">
+          <div class="tituloequipo">Equipos Varoniles</div>
+          <div class="wrapperrosterA">
+            <div class="titulorosterA">Equipo A</div>
+            <div id="roster" class="rosterA">
+              <div id="luisDeLaRiva"></div>
+              <div id="barbaraFuentes"></div>
+              <div id="edgarGalicia"></div>
+              <div id="gianniToro"></div>
+              <div id="danielTellez"></div>
+            </div>
+          </div>
+          <div class="wrapperrosterB">
+            <div class="titulorosterB">Equipo B</div>
+            <div id="roster" class="rosterB">
+              <div id="paolaCastillo"></div>
+              <div id="randyCastillo"></div>
+              <div id="fernandoLeon"></div>
+              <div id="farrellEstrada"></div>
+              <div id="sabrinaHuerta"></div>
+            </div>
+          </div>
+        </div>
+        <div class="playercardContainer">
+          <div class="playercard" style="display: none">
+            <div class="cancelIconContainer">
+              <img src="../../icons/close.png" alt="" />
+            </div>
+            <div class="fotoInfoContainer">
+              <div class="playercardFoto"></div>
+              <div class="playercardInfo">
+                <div class="playercardName"></div>
+                <hr class="playercardhr" />
+                <div class="positionStatsContainer">
+                  <div class="playercardPosition"></div>
+                  <div class="playercardStats">
+                    <div class="playercardNickname playercardStat">
+                      <div class="nicknameTitle playercardTitle">
+                        NOMBRE EN PLAYERA:
+                      </div>
+                      <div class="nicknameText"></div>
+                    </div>
+                    <div class="playercardHand playercardStat">
+                      <div class="handTitle playercardTitle">LATERALIDAD:</div>
+                      <div class="handText"></div>
+                    </div>
+                    <div class="playercardBall playercardStat">
+                      <div class="ballTitle playercardTitle">
+                        BALON PREFERIDO:
+                      </div>
+                      <div class="ballText"></div>
+                    </div>
+                    <div class="playercardCategory playercardStat">
+                      <div class="categoryTitle playercardTitle">
+                        RAMA PREFERIDA:
+                      </div>
+                      <div class="categoryText"></div>
+                    </div>
+                    <div class="playercardTeams playercardStat">
+                      <div class="teamsTitle playercardTitle">
+                        EQUIPOS EN LIGA:
+                      </div>
+                      <div class="teamsText"></div>
+                    </div>
+                    <div class="playercardHeight playercardStat">
+                      <div class="heightTitle playercardTitle">ALTURA:</div>
+                      <div class="heightText"></div>
+                    </div>
+                    <div class="playercardYears playercardStat">
+                      <div class="yearsTitle playercardTitle">
+                        AÑOS JUGANDO:
+                      </div>
+                      <div class="yearsText"></div>
+                    </div>
+                    <div class="playercardDraft playercardStat">
+                      <div class="draftTitle playercardTitle">
+                        VECES SELECCIONADO NACIONAL:
+                      </div>
+                      <div class="draftText"></div>
+                    </div>
+                    <div class="playercardInstagram playercardStat">
+                      <div class="instagramTitle playercardTitle">
+                        INSTAGRAM:
+                      </div>
+                      <div class="instagramText"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="logosContainerTop">
+          <a class="logoTlalpan"></a>
+          <a class="logoFMDB"></a>
+          <a class="logoCodeme"></a>
+          <a class="logoHit"></a>
+          <a class="logoLhasa"></a>
+          <a class="logoIztapalapa"></a>
+          <a class="logoAdomex"></a>
+          <a class="logoWDBF" href=""></a>
+        </div>
+
+        <hr />
+        <div class="siteMapList">
+          <ul>
+            <a class="equiposFooter"></a>
+            <a class="palmaresFooter"></a>
+            <a class="uneteFooter"></a>
+            <a class="valoresFooter"></a>
+            <a class="fotosFooter"></a>
+            <a class="contactoFooter"></a>
+            <a class="avisoFooter"></a>
+          </ul>
+        </div>
+        <a class="siteByContainer"></a>
+      </footer>
+    </div>
+  </body>
+  <script src="../../../scripts/navbar.js"></script>
+  <script src="domClothMixto.js"></script>
+  <script src="../../../scripts/playercards.js"></script>
+  <script src="../../../scripts/footer.js"></script>
+</html>

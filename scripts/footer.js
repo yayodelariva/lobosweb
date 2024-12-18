@@ -36,11 +36,42 @@ avisoFooter.textContent = "Aviso de Privacidad";
 siteBy.textContent = "site by yayodelariva";
 
 // FOOTER PATHING
-
 if (
-  window.location.pathname.includes("/equipofemenil/") ||
-  window.location.pathname.includes("/equipomixto/") ||
-  window.location.pathname.includes("/equipovaronil/")
+  window.location.pathname.includes("/equipos/foam/foamfemenil") ||
+  window.location.pathname.includes("/equipos/cloth/clothfemenil") ||
+  window.location.pathname.includes("/equipos/foam/foammixto") ||
+  window.location.pathname.includes("/equipos/cloth/clothmixto") ||
+  window.location.pathname.includes("/equipos/foam/foamvaronil") ||
+  window.location.pathname.includes("/equipos/cloth/clothvaronil")
+) {
+  equiposFooter.href = "../../index.html";
+  palmaresFooter.href = "../../../palmares/index.html";
+  uneteFooter.href = "../../../unete/index.html";
+  valoresFooter.href = "../../../valores/index.html";
+  fotosFooter.href = "../../../index.html#fotos";
+  contactoFooter.href = "../../../index.html#contacto";
+  avisoFooter.href = "../../../privacy.html";
+  siteBy.href = "https://www.github.com/yayodelariva";
+  logoTlalpan.src = "../../../images/logosfooter/logoTlalpan.png";
+  logoFMDB.src = "../../../images/logosfooter/FMDB-Rojo-V.png";
+  logoCodeme.src = "../../../images/logosfooter/codeme_logo.jpg";
+  logoHit.src = "../../../images/logosfooter/logoHit.png";
+  logoLhasa.src = "../../../images/logosfooter/logoLhasa.png";
+  logoIztapalapa.src = "../../../images/logosfooter/logoIztapalapa.jpeg";
+  logoAdomex.src = "../../../images/logosfooter/adomex-cuadrado.png";
+  logoWDBF.src = "../../../images/logosfooter/WDBF_logo.png";
+  logoTlalpanContainer.href = "https://alcaldiatlalpan.mx/";
+  logoFMDBContainer.href =
+    "https://www.facebook.com/federacionmexicanadedodgeball";
+  logoCodemeContainer.href = "https://www.codeme.com.mx/";
+  logoHitContainer.href = "https://www.instagram.com/hitdodgeballgear/";
+  logoLhasaContainer.href = "https://www.facebook.com/AguaLhasa";
+  logoIztapalapaContainer.href = "https://www.iztapalapa.cdmx.gob.mx";
+  logoAdomexContainer.href = "https://www.adomexdodgeball.com/";
+  logoWDBFContainer.href = "https://worlddodgeballfederation.com/";
+} else if (
+  window.location.pathname.includes("/equipos/foam") ||
+  window.location.pathname.includes("/equipos/cloth")
 ) {
   equiposFooter.href = "../index.html";
   palmaresFooter.href = "../../palmares/index.html";

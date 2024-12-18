@@ -306,12 +306,18 @@ body {
   gap: 120px;
 }
 
+.teamsWrapper {
+  display: flex;
+  justify-content: center;
+  height: 95vh;
+}
+
 .teamscontainer {
   display: flex;
-  /* flex-direction: column; */
   align-items: center;
-  justify-content: space-around;
-  padding-top: 200px;
+  justify-content: center;
+  width: 75rem;
+  gap: 7rem;
 }
 
 @media (max-width: 500px) {
@@ -328,21 +334,19 @@ body {
 .equiposimg {
   width: 100%;
   height: auto;
-  border-radius: 20px;
 }
 
-.equipomixtocontainer {
+.foamContainer {
   display: flex;
   flex-direction: column;
   position: relative;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 20rem;
 }
 
-.leyendaequipomixto {
-  position: absolute;
-  top: 76.5%;
-  font-size: 4vw;
-  height: 22%;
-
+.leyendaFoam {
+  font-size: 4rem;
   background: linear-gradient(rgba(255, 255, 255, 0), rgb(117, 117, 117));
 }
 
@@ -354,18 +358,18 @@ body {
   }
 }
 
-.equipofemenilcontainer {
+.clothContainer {
   display: flex;
   flex-direction: column;
   position: relative;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 20rem;
 }
 
-.leyendaequipofemenil {
-  position: absolute;
-  top: 78.8%;
-  font-size: 4vw;
+.leyendaCloth {
+  font-size: 4rem;
   background: linear-gradient(rgba(255, 255, 255, 0), rgb(117, 117, 117));
-  height: 20.5%;
 }
 
 @media (max-width: 500px) {
@@ -376,26 +380,29 @@ body {
   }
 }
 
-.equipovaronilcontainer {
+/* CATEGORIAS */
+
+.categoriaContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  gap: 6rem;
+}
+
+.categoria {
   display: flex;
   flex-direction: column;
   position: relative;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 20rem;
 }
 
-.leyendaequipovaronil {
-  position: absolute;
-  top: 76.5%;
-  font-size: 4vw;
+.leyenda {
+  font-size: 4rem;
   background: linear-gradient(rgba(255, 255, 255, 0), rgb(117, 117, 117));
-  height: 22%;
-}
-
-@media (max-width: 500px) {
-  .leyendaequipovaronil {
-    position: absolute;
-    top: 76.5%;
-    font-size: 6vh;
-  }
+  width: 100%;
 }
 
 /* ROSTER JUGADORES */
