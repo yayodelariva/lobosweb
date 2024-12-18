@@ -546,7 +546,6 @@ body {
 
 .rosterA {
   display: grid;
-  height: 500px;
   grid-template-columns: repeat(4, 1fr);
   gap: 50px;
 }
