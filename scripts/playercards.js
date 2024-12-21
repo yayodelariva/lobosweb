@@ -7,6 +7,7 @@ const equiposWrapper = document.querySelector(".equiposwrapper");
 const player = document.querySelector(".player");
 const playerName = document.querySelector(".playerName");
 const playerAge = document.querySelector(".playerAge");
+const playercardContainer = document.querySelector(".playercardContainer");
 const playercardDOM = document.querySelector(".playercard");
 const playercardName = document.querySelector(".playercardName");
 const playercardPosition = document.querySelector(".playercardPosition");
@@ -500,6 +501,7 @@ cancelIcon.addEventListener("click", closePlayercard);
 
 function handleClickedPlayercard(e) {
   console.log("click");
+  playercardContainer.style.display = "block";
   equiposWrapperContainer.style.alignItems = "center";
   equiposWrapper.style.display = "none";
   playercardDOM.style.display = "grid";
@@ -599,6 +601,7 @@ function handleClickedPlayercard(e) {
 }
 
 function closePlayercard() {
+  playercardContainer.style.display = "none";
   playercardDOM.style.display = "none";
   equiposWrapper.style.display = "flex";
   if (playercardFoto.hasChildNodes()) {

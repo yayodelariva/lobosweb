@@ -310,6 +310,7 @@ body {
   display: flex;
   justify-content: center;
   height: 95vh;
+  background-image: url(images/lobosbgaltern2UPSCALED.jpeg);
 }
 
 .teamscontainer {
@@ -334,20 +335,24 @@ body {
 .equiposimg {
   width: 100%;
   height: auto;
+  filter: grayscale(100);
 }
 
 .foamContainer {
   display: flex;
   flex-direction: column;
   position: relative;
+  background-color: wheat;
   border: 2px solid black;
   border-radius: 10px;
   width: 20rem;
+  text-align: center;
 }
 
 .leyendaFoam {
   font-size: 4rem;
   background: linear-gradient(rgba(255, 255, 255, 0), rgb(117, 117, 117));
+  border-radius: 7px;
 }
 
 @media (max-width: 500px) {
@@ -365,11 +370,14 @@ body {
   border: 2px solid black;
   border-radius: 10px;
   width: 20rem;
+  background-color: wheat;
+  text-align: center;
 }
 
 .leyendaCloth {
   font-size: 4rem;
   background: linear-gradient(rgba(255, 255, 255, 0), rgb(117, 117, 117));
+  border-radius: 7px;
 }
 
 @media (max-width: 500px) {
@@ -397,12 +405,15 @@ body {
   border: 2px solid black;
   border-radius: 10px;
   width: 20rem;
+  background-color: #799b92b2;
+  text-align: center;
 }
 
 .leyenda {
   font-size: 4rem;
   background: linear-gradient(rgba(255, 255, 255, 0), rgb(117, 117, 117));
   width: 100%;
+  border-radius: 8px;
 }
 
 /* ROSTER JUGADORES */
@@ -410,10 +421,12 @@ body {
 .equiposWrapperContainer {
   display: grid;
   justify-content: center;
-  background-color: gray;
+  background-color: black;
+  background-image: url(images/equiposbg.jpg);
 }
 
 .playercardContainer {
+  display: none;
   padding-top: 16rem;
   padding-bottom: 16rem;
 }
@@ -499,8 +512,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 200px;
-  padding-bottom: 80px;
+  padding-top: 15rem;
+  padding-bottom: 10rem;
+  font-family: "americancaptain";
 }
 
 @media (max-width: 500px) {
@@ -515,9 +529,11 @@ body {
 }
 
 .tituloequipo {
-  font-size: 100px;
-  padding-bottom: 80px;
+  font-size: 6rem;
+  padding-bottom: 2rem;
   text-align: center;
+  color: #ededed;
+  text-shadow: 0px 0px 16px #000000;
 }
 
 @media (max-width: 500px) {
@@ -530,11 +546,14 @@ body {
 .wrapperrosterA {
   display: flex;
   flex-direction: column;
+  padding-bottom: 5rem;
 }
 
 .titulorosterA {
-  font-size: 80px;
-  padding-bottom: 15px;
+  font-size: 4.5rem;
+  padding-bottom: 1rem;
+  color: #ededed;
+  text-shadow: 0px 0px 16px #000000;
 }
 
 @media (max-width: 500px) {
@@ -658,8 +677,10 @@ body {
 }
 
 .titulorosterB {
-  font-size: 80px;
-  padding-bottom: 15px;
+  font-size: 4.5rem;
+  padding-bottom: 1rem;
+  color: #ededed;
+  text-shadow: 0px 0px 16px #000000;
 }
 
 @media (max-width: 500px) {
@@ -671,7 +692,6 @@ body {
 
 .rosterB {
   display: grid;
-  height: 500px;
   grid-template-columns: repeat(4, 1fr);
   gap: 50px;
 }
@@ -679,7 +699,6 @@ body {
 @media (max-width: 500px) {
   .rosterB {
     display: grid;
-    height: 245px;
     grid-template-columns: repeat(3, 1fr);
     gap: 22px;
   }
@@ -916,11 +935,15 @@ body {
   padding-bottom: 1.5rem;
 }
 
-.categoria {
+.categoriaPalmares {
   font-size: 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 20rem;
+  background-color: #2c44538f;
 }
 
 @media (max-width: 500px) {
@@ -929,12 +952,13 @@ body {
   }
 }
 
-.categoria > ul {
+.categoriaPalmares > ul {
   font-size: 20px;
   list-style-type: none;
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+  padding-left: 0;
 }
 
 @media (max-width: 500px) {
