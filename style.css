@@ -220,7 +220,7 @@ body {
 .fotosmaincontainer {
   display: flex;
   justify-content: center;
-  background-image: url(images/lobos2.png);
+  background-image: url(images/lobosbgaltern2UPSCALEDflippedH.png);
   object-fit: cover;
 }
 
@@ -276,25 +276,56 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  font-family: "americancaptain";
   padding-top: 50px;
   padding-bottom: 50px;
   gap: 20px;
-  color: blueviolet;
+  background-color: #020202;
+  color: #ededed;
 }
 
 .entrenacontainer {
-  font-size: 60px;
+  font-size: 7rem;
 }
 
-.contacto {
+.redesSocialesWrapper {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 55%;
 }
 
-.contacto > ul {
+.redesSocialesWrapper > ul {
+  display: flex;
   list-style-type: none;
+  padding-left: 0;
+  gap: 2rem;
+}
+
+.contactoIcon {
+  font-size: 5rem;
+  text-decoration: none;
+}
+
+.facebookIconContacto {
+  color: #ededed;
+}
+
+.whatsappIconContacto {
+  color: #ededed;
+}
+
+.instagramIconContacto {
+  color: #ededed;
+}
+
+.facebookIconContacto:hover {
+  color: #1877f2;
+}
+
+.whatsappIconContacto:hover {
+  color: #25d366;
+}
+
+.instagramIconContacto:hover {
+  color: #f56040;
 }
 
 /* ///NUESTROS EQUIPOS/// */

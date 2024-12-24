@@ -42,197 +42,197 @@ class Player {
 }
 
 const alejandroDorantesPortrait = new Player(
-  "Alejandro Dorantes",
+  "ALEJANDRO DORANTES",
   document.querySelector("#alejandroDorantes"),
   "../../images/players/portraits/alejandroDorantesPortrait.jpg",
   "alejandroDorantes"
 );
 
 const barbaraFuentesPortrait = new Player(
-  "Barbara Fuentes Flores",
+  "BARBARA FUENTES FLORES",
   document.querySelector("#barbaraFuentes"),
   "../../images/players/portraits/barbaraFuentesPortrait.jpg",
   "barbaraFuentes"
 );
 
 const carlosDeLaRivaPortrait = new Player(
-  "Carlos Emilio de la Riva Morales",
+  "CARLOS EMILIO DE LA RIVA MORALES",
   document.querySelector("#carlosDeLaRiva"),
   "../../images/players/portraits/carlosDeLaRivaPortrait.jpg",
   "carlosDeLaRiva"
 );
 
 const ceciliaRodriguezPortrait = new Player(
-  "Cecilia Rodríguez de la Vega Isaza",
+  "CECILIA RODRÍGUEZ DE LA VEGA ISAZA",
   document.querySelector("#ceciliaRodriguez"),
   "../../images/players/portraits/ceciliaRodriguezPortrait.jpg",
   "ceciliaRodriguez"
 );
 
 const cesarArellanoPortrait = new Player(
-  "César Alejandro Arellano Ruíz",
+  "CÉSAR ALEJANDRO ARELLANO RUÍZ",
   document.querySelector("#cesarArellano"),
   "../../images/players/portraits/cesarArellanoPortrait.jpg",
   "cesarArellano"
 );
 
 const danielaCruzPortrait = new Player(
-  "Daniela Aitana Cruz Llanos",
+  "DANIELA AITANA CRUZ LLANOS",
   document.querySelector("#danielaCruz"),
   "../../images/players/portraits/danielaCruzPortrait.jpg",
   "danielaCruz"
 );
 
 const danielTellezPortrait = new Player(
-  "Armando Daniel Téllez Pallares",
+  "ARMANDO DANIEL TÉLLEZ PALLARES",
   document.querySelector("#danielTellez"),
   "../../images/players/portraits/danielTellezPortrait.jpg",
   "danielTellez"
 );
 
 const deniseMejiaPortrait = new Player(
-  "Denise Angélica Mejía González",
+  "DENISE ANGÉLICA MEJÍA GONZÁLEZ",
   document.querySelector("#deniseMejia"),
   "../../images/players/portraits/deniseMejiaPortrait.jpg",
   "deniseMejia"
 );
 
 const edgarGaliciaPortrait = new Player(
-  "Edgar Galicia",
+  "EDGAR GALICIA",
   document.querySelector("#edgarGalicia"),
   "../../images/players/portraits/edgarGaliciaPortrait.jpg",
   "edgarGalicia"
 );
 
 const enriqueHuatoPortrait = new Player(
-  "Enrique Huato Montes",
+  "ENRIQUE HUATO MONTES",
   document.querySelector("#enriqueHuato"),
   "../../images/players/portraits/enriqueHuatoPortrait.jpg",
   "enriqueHuato"
 );
 
 const estelaGalavisPortrait = new Player(
-  "Blanca Estela Santos Galavis",
+  "BLANCA ESTELA SANTOS GALAVIS",
   document.querySelector("#estelaGalavis"),
   "../../images/players/portraits/estelaGalavisPortrait.jpg",
   "estelaGalavis"
 );
 
 const farrellEstradaPortrait = new Player(
-  "Farrel Estrada Ornelas",
+  "FARREL ESTRADA ORNELAS",
   document.querySelector("#farrellEstrada"),
   "../../images/players/portraits/farrellEstradaPortrait.jpg",
   "farrellEstrada"
 );
 
 const fernandoLeonPortrait = new Player(
-  "José Fernando León Martínez",
+  "JOSÉ FERNANDO LEÓN MARTÍNEZ",
   document.querySelector("#fernandoLeon"),
   "../../images/players/portraits/fernandoLeonPortrait.jpg",
   "fernandoLeon"
 );
 
 const franciscoRiveraPortrait = new Player(
-  "Francisco Rivera Ramírez",
+  "FRANCISCO RIVERA RAMÍREZ",
   document.querySelector("#franciscoRivera"),
   "../../images/players/portraits/franciscoRiveraPortrait.jpg",
   "franciscoRivera"
 );
 
 const gabrielSanchezPortrait = new Player(
-  "Hebert Gabriel Sánchez Martínez",
+  "HEBERT GABRIEL SÁNCHEZ MARTÍNEZ",
   document.querySelector("#gabrielSanchez"),
   "../../images/players/portraits/gabrielSanchezPortrait.jpg",
   "gabrielSanchez"
 );
 
 const gianniToroPortrait = new Player(
-  "Gianni Toro Miranda",
+  "GIANNI TORO MIRANDA",
   document.querySelector("#gianniToro"),
   "../../images/players/portraits/gianniToroPortrait.jpg",
   "gianniToro"
 );
 
 const jensenFernandezPortrait = new Player(
-  "Jensen Fernandez",
+  "JENSEN FERNANDEZ",
   document.querySelector("#jensenFernandez"),
   "../../images/players/portraits/jensenFernandezPortrait.jpg",
   "jensenFernandez"
 );
 
 const lennySandovalPortrait = new Player(
-  "Lenny Elizabeth Sandoval Sánchez",
+  "LENNY ELIZABETH SANDOVAL SÁNCHEZ",
   document.querySelectorAll("[id='lennySandoval']"),
   "../../images/players/portraits/lennySandovalPortrait.jpg",
   "lennySandoval"
 );
 
 const leonardoSeguraPortrait = new Player(
-  "Leonardo Axel Segura Flores",
+  "LEONARDO AXEL SEGURA FLORES",
   document.querySelector("#leonardoSegura"),
   "../../images/players/portraits/leonardoSeguraPortrait.jpg",
   "leonardoSegura"
 );
 
 const luisDeLaRivaPortrait = new Player(
-  "Luis Gabriel de la Riva Pérez",
+  "LUIS GABRIEL DE LA RIVA PÉREZ",
   document.querySelector("#luisDeLaRiva"),
   "../../images/players/portraits/luisDeLaRivaPortrait.jpg",
   "luisDeLaRiva"
 );
 
 const paolaCastilloPortrait = new Player(
-  "Sandra Paola Aguayo Castillo",
+  "SANDRA PAOLA AGUAYO CASTILLO",
   document.querySelector("#paolaCastillo"),
   "../../images/players/portraits/paolaCastilloPortrait.jpg",
   "paolaCastillo"
 );
 
 const randyCastilloPortrait = new Player(
-  "Kurt Randy Aguayo Castillo",
+  "KURT RANDY AGUAYO CASTILLO",
   document.querySelector("#randyCastillo"),
   "../../images/players/portraits/randyCastilloPortrait.jpg",
   "randyCastillo"
 );
 
 const rocioHernandezPortrait = new Player(
-  "Rocío Guadalupe Hernández Hernández",
+  "ROCÍO GUADALUPE HERNÁNDEZ HERNÁNDEZ",
   document.querySelectorAll("#rocioHernandez"),
   "../../images/players/portraits/placeholderfemale.jpg",
   "rocioHernandez"
 );
 
 const rogelioMoralesPortrait = new Player(
-  "Rogelio Morales Sánchez",
+  "ROGELIO MORALES SÁNCHEZ",
   document.querySelector("#rogelioMorales"),
   "../../images/players/portraits/rogelioMoralesPortrait.jpg",
   "rogelioMorales"
 );
 
 const sabrinaHuertaPortrait = new Player(
-  "Sabrina Selene Huerta Monroy",
+  "SABRINA SELENE HUERTA MONROY",
   document.querySelector("#sabrinaHuerta"),
   "../../images/players/portraits/sabrinaHuertaPortrait.jpg",
   "sabrinaHuerta"
 );
 
 const saraCeronPortrait = new Player(
-  "Sara Flora María Cerón Garrido",
-  document.querySelector("#saraCeron"),
-  "../../images/players/portraits/saraCeronPortrait.jpg",
+  "SARA FLORA MARÍA CERÓN GARRIDO",
+  document.querySelectorAll("[id='saraCeron']"),
+  "../../images/players/portraits/placeholderfemale.jpg",
   "saraCeron"
 );
 
 const shelsyEstradaPortrait = new Player(
-  "Shelsy Estrada Ornelas",
+  "SHELSY ESTRADA ORNELAS",
   document.querySelector("#shelsyEstrada"),
   "../../images/players/portraits/shelsyEstradaPortrait.jpg",
   "shelsyEstrada"
 );
 
 const susanaGutierrezPortrait = new Player(
-  "Susana Ximena Gutiérrez Alanis",
-  document.querySelector("#susanaGutierrez"),
+  "SUSANA XIMENA GUTIÉRREZ ALANIS",
+  document.querySelectorAll("[id='susanaGutierrez']"),
   "../../images/players/portraits/susanaGutierrezPortrait.jpg",
   "susanaGutierrez"
 );
