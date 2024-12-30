@@ -251,3 +251,5 @@ farrellEstradaPortrait.generateDom();
 randyCastilloPortrait.generateDom();
 franciscoRiveraPortrait.generateDom();
 leonardoSeguraPortrait.generateDom();
+//COACH
+carlosDeLaRivaPortrait.generateDom();

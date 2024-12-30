@@ -544,7 +544,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding-top: 15rem;
-  padding-bottom: 10rem;
+  padding-bottom: 5.7rem;
   font-family: "americancaptain";
 }
 
@@ -705,6 +705,7 @@ body {
 .wrapperrosterB {
   display: flex;
   flex-direction: column;
+  padding-bottom: 5rem;
 }
 
 .titulorosterB {
@@ -733,6 +734,24 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 22px;
   }
+}
+
+.wrappercoach {
+  display: flex;
+  flex-direction: column;
+}
+
+.titulocoach {
+  font-size: 4.5rem;
+  padding-bottom: 1rem;
+  color: #ededed;
+  text-shadow: 0px 0px 16px #000000;
+}
+
+.rosterCoach {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
 }
 
 /* ///PALMARES/// */

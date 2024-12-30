@@ -254,3 +254,6 @@ gianniToroPortrait.generateDom();
 fernandoLeonPortrait.generateDom();
 danielTellezPortrait.generateDom();
 gabrielSanchezPortrait.generateDom();
+
+//COACH
+carlosDeLaRivaPortrait.generateDom();

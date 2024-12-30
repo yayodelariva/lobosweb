@@ -250,3 +250,5 @@ cesarArellanoPortrait.generateDom();
 gianniToroPortrait.generateDom();
 //LOBOS NEGROS
 gabrielSanchezPortrait.generateDom();
+//COACH
+carlosDeLaRivaPortrait.generateDom();

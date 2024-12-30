@@ -257,3 +257,6 @@ franciscoRiveraPortrait.generateDom();
 leonardoSeguraPortrait.generateDom();
 rogelioMoralesPortrait.generateDom();
 jensenFernandezPortrait.generateDom();
+
+//COACH
+carlosDeLaRivaPortrait.generateDom();
