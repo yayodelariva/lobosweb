@@ -16,6 +16,12 @@ body {
   margin: 0;
 }
 
+.contentWrapperHome {
+  display: flex;
+  flex-direction: column;
+  background-color: #151515;
+}
+
 .contentWrapper {
   display: flex;
   flex-direction: column;
@@ -37,7 +43,6 @@ body {
 .dropdown .dropbtn {
   font-size: 16px;
   position: relative;
-  left: 70%;
   border: none;
   outline: none;
   color: white;
@@ -60,11 +65,10 @@ body {
   display: none;
   position: absolute;
   z-index: 2;
-  background-color: #f9f9f9;
+  background-color: #ededed;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   left: 0%;
-  top: 102%;
   width: 100%;
 }
 
@@ -98,6 +102,12 @@ body {
   margin-top: 0;
 }
 
+@media (max-width: 1080px) {
+  .header {
+    justify-content: center;
+  }
+}
+
 .header > ul {
   display: flex;
   gap: 80px;
@@ -105,6 +115,14 @@ body {
   list-style-type: none;
   padding-top: 20px;
   height: 2rem;
+}
+
+@media (max-width: 1080px) {
+  .header > ul {
+    font-size: 1.2rem;
+    gap: 1rem;
+    padding-left: 0;
+  }
 }
 
 @media (max-width: 500px) {
@@ -124,9 +142,23 @@ body {
   padding-top: 1.2rem;
 }
 
+@media (max-width: 1080px) {
+  .logoLobosContainer {
+    width: 10rem;
+    height: auto;
+  }
+}
+
 .logoLobosContainer > img:nth-child(1) {
   height: auto;
   width: 35%;
+}
+
+@media (max-width: 1080px) {
+  .logoLobosContainer > img:nth-child(1) {
+    height: auto;
+    width: 45%;
+  }
 }
 
 .topContainerWrapper {
@@ -151,6 +183,19 @@ body {
   background-size: contain; */
 }
 
+@media (max-width: 1080px) {
+  .topcontainer {
+    height: 28em;
+  }
+}
+
+@media (max-width: 500px) {
+  .topcontainer {
+    height: 26vh;
+    padding-top: 4rem;
+  }
+}
+
 .topcontainer > img {
   grid-row-start: 1;
   grid-row-end: 7;
@@ -158,6 +203,18 @@ body {
   grid-column-end: 4;
   width: 100vw;
   height: 100vh;
+}
+
+@media (max-width: 1080px) {
+  .topcontainer > img {
+    height: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .topcontainer > img {
+    height: fit-content;
+  }
 }
 
 .sloganFirstPart {
@@ -247,10 +304,24 @@ body {
   gap: 40px;
 }
 
+@media (max-width: 1080px) {
+  .fotostodas {
+    display: none;
+    gap: 40px;
+  }
+}
+
 @media (max-width: 500px) {
   .fotostodas {
     display: none;
     gap: 40px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .primeras3 {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -286,6 +357,12 @@ body {
 
 .entrenacontainer {
   font-size: 7rem;
+}
+
+@media (max-width: 500px) {
+  .entrenacontainer {
+    font-size: 4rem;
+  }
 }
 
 .redesSocialesWrapper {
@@ -337,11 +414,42 @@ body {
   gap: 120px;
 }
 
+.teamsCategoryWrapper {
+  display: flex;
+  justify-content: center;
+  height: 95vh;
+  background-image: url(images/lobosbgaltern2UPSCALED.jpeg);
+}
+
+@media (max-width: 1080px) {
+  .teamsCategoryWrapper {
+    height: 47em;
+  }
+}
+
+@media (max-width: 500px) {
+  .teamsCategoryWrapper {
+    height: 73em;
+  }
+}
+
 .teamsWrapper {
   display: flex;
   justify-content: center;
   height: 95vh;
   background-image: url(images/lobosbgaltern2UPSCALED.jpeg);
+}
+
+@media (max-width: 1080px) {
+  .teamsWrapper {
+    height: 41em;
+  }
+}
+
+@media (max-width: 500px) {
+  .teamsWrapper {
+    height: 114em;
+  }
 }
 
 .teamscontainer {
@@ -352,14 +460,24 @@ body {
   gap: 7rem;
 }
 
+@media (max-width: 1080px) {
+  .teamscontainer {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .teamscontainer {
+    gap: 2rem;
+  }
+}
+
 @media (max-width: 500px) {
   .teamscontainer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    padding-top: 22%;
-    gap: 2%;
+    gap: 4rem;
   }
 }
 
@@ -378,6 +496,19 @@ body {
   border-radius: 10px;
   width: 20rem;
   text-align: center;
+}
+
+@media (min-width: 600px) {
+  .foamContainer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: wheat;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 35%;
+    text-align: center;
+  }
 }
 
 .leyendaFoam {
@@ -405,6 +536,19 @@ body {
   text-align: center;
 }
 
+@media (min-width: 600px) {
+  .clothContainer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: wheat;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 35%;
+    text-align: center;
+  }
+}
+
 .leyendaCloth {
   font-size: 4rem;
   background: linear-gradient(rgba(255, 255, 255, 0), rgb(117, 117, 117));
@@ -429,6 +573,16 @@ body {
   gap: 6rem;
 }
 
+@media (max-width: 500px) {
+  .categoriaContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+  }
+}
+
 .categoria {
   display: flex;
   flex-direction: column;
@@ -440,11 +594,23 @@ body {
   text-align: center;
 }
 
+@media (min-width: 600px) {
+  .categoria {
+    width: 20%;
+  }
+}
+
 .leyenda {
   font-size: 4rem;
   background: linear-gradient(rgba(255, 255, 255, 0), rgb(117, 117, 117));
   width: 100%;
   border-radius: 8px;
+}
+
+@media (min-width: 600px) {
+  .leyenda {
+    font-size: 2.7em;
+  }
 }
 
 /* ROSTER JUGADORES */
@@ -480,6 +646,14 @@ body {
   gap: 4rem;
 }
 
+@media (max-width: 500px) {
+  .fotoInfoContainer {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+}
+
 .playercardhr {
   border: none;
   height: 2px;
@@ -493,6 +667,12 @@ body {
   flex-grow: 1;
   font-size: 1.5rem;
   padding-right: 1.5rem;
+}
+
+@media (max-width: 500px) {
+  .playercardInfo {
+    padding-right: 0;
+  }
 }
 
 .playercardName {
@@ -548,14 +728,20 @@ body {
   font-family: "americancaptain";
 }
 
+@media (max-width: 1080px) {
+  .equiposwrapper {
+    padding-top: 9rem;
+  }
+}
+
 @media (max-width: 500px) {
   .equiposwrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 15%;
+    width: 100vw;
+    padding-top: 10rem;
     padding-bottom: 0;
-    background-color: gray;
   }
 }
 
@@ -569,7 +755,7 @@ body {
 
 @media (max-width: 500px) {
   .tituloequipo {
-    font-size: 5vh;
+    font-size: 6vh;
     padding-bottom: 10%;
   }
 }
@@ -578,6 +764,11 @@ body {
   display: flex;
   flex-direction: column;
   padding-bottom: 5rem;
+}
+
+@media (max-width: 500px) {
+  .wrapperrosterA {
+  }
 }
 
 .titulorosterA {
@@ -589,8 +780,8 @@ body {
 
 @media (max-width: 500px) {
   .titulorosterA {
-    font-size: 2vh;
-    padding-bottom: 30px;
+    font-size: 5vh;
+    padding-bottom: 2rem;
   }
 }
 
@@ -600,13 +791,19 @@ body {
   gap: 50px;
 }
 
+@media (max-width: 1080px) {
+  .rosterA {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+}
+
 @media (max-width: 500px) {
   .rosterA {
     display: grid;
-    height: 245px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 22px;
-    margin-bottom: 10%;
   }
 }
 
@@ -621,16 +818,17 @@ body {
   border-radius: 10px;
   cursor: pointer;
 }
-
 @media (max-width: 500px) {
-  .player {
-    max-width: 95px;
-    height: 103px;
+  .playerWrapper {
+    width: 10.5rem;
+    height: 11.3rem;
     display: flex;
     align-items: flex-end;
     position: relative;
     transition: 0.6s ease-out;
     box-shadow: 0 1px 10px wheat;
+    border-radius: 10px;
+    cursor: pointer;
   }
 }
 
@@ -672,9 +870,9 @@ body {
 }
 
 @media (max-width: 500px) {
-  .player > img {
+  .playerWrapper > img {
     position: absolute;
-    width: 95px;
+    width: 10.5rem;
     height: auto;
     border-radius: 10px;
   }
@@ -717,8 +915,8 @@ body {
 
 @media (max-width: 500px) {
   .titulorosterB {
-    font-size: 2vh;
-    padding-bottom: 30px;
+    font-size: 5vh;
+    padding-bottom: 2rem;
   }
 }
 
@@ -728,11 +926,20 @@ body {
   gap: 50px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1080px) {
   .rosterB {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 22px;
+  }
+}
+
+@media (max-width: 500px) {
+  .rosterB {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    margin-bottom: 10%;
   }
 }
 
@@ -754,17 +961,29 @@ body {
   gap: 50px;
 }
 
+@media (max-width: 1080px) {
+  .rosterCoach {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+}
+
+@media (max-width: 500px) {
+  .rosterCoach {
+    display: grid;
+    height: 245px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    margin-bottom: 10%;
+  }
+}
+
 /* ///PALMARES/// */
 
 .wrapmidsecfooter {
   display: flex;
   flex-direction: column;
-}
-
-@media (max-width: 500px) {
-  .wrapmidsecfooter {
-    gap: 49vh;
-  }
 }
 
 .midsectioncontainer {
@@ -781,12 +1000,27 @@ body {
   padding-bottom: 10rem;
 }
 
+@media (max-width: 1080px) {
+  .midsectioncontent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10rem;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 5rem;
+  }
+}
+
 @media (max-width: 500px) {
   .midsectioncontent {
-    border: 6px solid black;
-    width: 81%;
-    padding: 0;
-    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10rem;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 5rem;
   }
 }
 
@@ -829,10 +1063,14 @@ body {
   color: #eadfb5;
 }
 
+@media (max-width: 1080px) {
+  .years {
+    width: 36em;
+  }
+}
+
 @media (max-width: 500px) {
   .years {
-    display: flex;
-    flex-direction: column;
     width: 20rem;
   }
 }
@@ -843,19 +1081,12 @@ body {
   background-color: #0f0f0f;
   color: #eadfb5;
   padding: 16px;
-  font-size: 48px;
+  font-size: 3.2em;
   font-weight: 800;
   border: none;
   cursor: pointer;
   width: 100%;
   text-align: start;
-}
-
-@media (max-width: 500px) {
-  .yearnumber {
-    font-size: 3vh;
-    font-weight: 800;
-  }
 }
 
 /* Dropdown button on hover & focus */
@@ -986,7 +1217,7 @@ body {
 }
 
 .categoriaPalmares {
-  font-size: 32px;
+  font-size: 1.2em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -996,14 +1227,8 @@ body {
   background-color: #2c44538f;
 }
 
-@media (max-width: 500px) {
-  .categoria {
-    font-size: 2.3vh;
-  }
-}
-
 .categoriaPalmares > ul {
-  font-size: 20px;
+  font-size: 0.9em;
   list-style-type: none;
   display: flex;
   flex-direction: column;
@@ -1018,15 +1243,19 @@ body {
 }
 .firstplace {
   list-style-image: url("palmares/images/goldmedal.png");
+  list-style-position: inside;
 }
 .secondplace {
   list-style-image: url("palmares/images/silvermedal.png");
+  list-style-position: inside;
 }
 .thirdplace {
   list-style-image: url("palmares/images/bronzemedal.png");
+  list-style-position: inside;
 }
 .fourthplace {
   list-style-image: url("palmares/images/fourth.png");
+  list-style-position: inside;
 }
 
 /* UNETE */
@@ -1037,6 +1266,20 @@ body {
   grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
   background-color: gray;
   background-image: url(images/lobosbgaltern2UPSCALED.jpeg);
+}
+
+@media (max-width: 1080px) {
+  .midSectionWrapper {
+    grid-template-rows: 10rem 18rem 35rem 12rem 38rem 26rem;
+    grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .midSectionWrapper {
+    display: block;
+    width: 100vw;
+  }
 }
 
 .uneteHeroContainer {
@@ -1051,6 +1294,20 @@ body {
   text-shadow: 0px 0px 15px #000;
   font-size: 4rem;
   font-family: "americancaptain";
+}
+
+@media (max-width: 1080px) {
+  .uneteHeroContainer {
+    display: block;
+  }
+}
+
+@media (max-width: 500px) {
+  .uneteHeroContainer {
+    display: block;
+    padding-top: 11rem;
+    padding-bottom: 4rem;
+  }
 }
 
 .uneteHero {
@@ -1068,6 +1325,14 @@ body {
   grid-template-columns: 1fr;
 }
 
+@media (max-width: 500px) {
+  .uneteInfoContainer {
+    display: block;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
 .uneteInfo {
   grid-row-start: 2;
   grid-row-end: 2;
@@ -1076,6 +1341,12 @@ body {
   font-style: italic;
   padding-right: 3rem;
   padding-left: 3rem;
+}
+
+@media (max-width: 500px) {
+  .uneteInfo {
+    font-size: 2.6vh;
+  }
 }
 
 .uneteBeneficiosHeroContainer {
@@ -1099,6 +1370,12 @@ body {
   grid-column-end: 7;
 }
 
+@media (max-width: 500px) {
+  .beneficiosContainer {
+    padding-bottom: 2rem;
+  }
+}
+
 .beneficiosList {
   display: flex;
   flex-direction: column;
@@ -1110,6 +1387,22 @@ body {
   text-shadow: 0px 0px 4px #000;
 }
 
+@media (max-width: 1080px) {
+  .beneficiosList {
+    flex-wrap: wrap;
+    width: 100vw;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .beneficiosList {
+    flex-wrap: wrap;
+    width: 100vw;
+    padding-left: 0;
+  }
+}
+
 .manadaContainer {
   grid-row-start: 6;
   grid-column-start: 3;
@@ -1117,6 +1410,29 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 1080px) {
+  .manadaContainer {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    background-color: #00000055;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .manadaContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #00000055;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 }
 
 .manadaText {
@@ -1138,6 +1454,20 @@ body {
   grid-template-rows: 14rem 8rem 52rem;
   grid-template-columns: 1fr 1fr 1fr;
   background-image: url(images/lobosbgalternblack.jpeg);
+}
+
+@media (max-width: 1080px) {
+  .midSectionWrapperValores {
+    grid-template-rows: 14rem 8rem 105rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .midSectionWrapperValores {
+    display: block;
+    padding-top: 9rem;
+    padding-bottom: 3rem;
+  }
 }
 
 .tituloValores {
@@ -1165,6 +1495,20 @@ body {
   padding-right: 4rem;
 }
 
+@media (max-width: 1080px) {
+  .infoValores {
+    font-size: 1.3em;
+  }
+}
+
+@media (max-width: 500px) {
+  .infoValores {
+    font-size: 2vh;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
 .boldtext {
   font-weight: 800;
 }
@@ -1183,6 +1527,12 @@ footer {
   font-weight: lighter;
 }
 
+@media (max-width: 500px) {
+  footer {
+    gap: 1.4rem;
+  }
+}
+
 .logosContainerTop {
   display: flex;
   justify-content: space-around;
@@ -1190,9 +1540,32 @@ footer {
   width: 80rem;
 }
 
+@media (max-width: 1080px) {
+  .logosContainerTop {
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .logosContainerTop {
+    flex-wrap: wrap;
+    width: 19rem;
+    gap: 1rem;
+  }
+}
+
 .logoAdomex {
   width: 6.8rem;
   height: auto;
+}
+
+@media (max-width: 500px) {
+  .logoAdomex {
+    width: 3.4rem;
+    height: auto;
+  }
 }
 
 .logoAdomex > img {
@@ -1212,6 +1585,13 @@ footer {
   height: auto;
 }
 
+@media (max-width: 500px) {
+  .logoFMDB {
+    width: 2.6rem;
+    height: auto;
+  }
+}
+
 .logoFMDB > img {
   width: inherit;
   height: auto;
@@ -1229,6 +1609,13 @@ footer {
   height: auto;
 }
 
+@media (max-width: 500px) {
+  .logoIztapalapa {
+    width: 2.55rem;
+    height: auto;
+  }
+}
+
 .logoIztapalapa > img {
   width: inherit;
   height: auto;
@@ -1243,6 +1630,13 @@ footer {
 .logoCodeme {
   width: 5.5rem;
   height: auto;
+}
+
+@media (max-width: 500px) {
+  .logoCodeme {
+    width: 2.75rem;
+    height: auto;
+  }
 }
 
 .logoCodeme > img {
@@ -1262,6 +1656,13 @@ footer {
   height: auto;
 }
 
+@media (max-width: 500px) {
+  .logoLhasa {
+    width: 2rem;
+    height: auto;
+  }
+}
+
 .logoLhasa > img {
   width: inherit;
   height: auto;
@@ -1277,6 +1678,13 @@ footer {
 .logoTlalpan {
   width: 6.5rem;
   height: auto;
+}
+
+@media (max-width: 500px) {
+  .logoTlalpan {
+    width: 3.25rem;
+    height: auto;
+  }
 }
 
 .logoTlalpan > img {
@@ -1296,6 +1704,13 @@ footer {
   height: auto;
 }
 
+@media (max-width: 500px) {
+  .logoWDBF {
+    width: 6rem;
+    height: auto;
+  }
+}
+
 .logoWDBF > img {
   width: inherit;
   height: auto;
@@ -1310,6 +1725,13 @@ footer {
 .logoHit {
   width: 9.5rem;
   height: auto;
+}
+
+@media (max-width: 500px) {
+  .logoHit {
+    width: 4.75rem;
+    height: auto;
+  }
 }
 
 .logoHit > img {
@@ -1330,10 +1752,32 @@ footer > hr {
   height: 0.09rem;
 }
 
+@media (max-width: 1080px) {
+  footer > hr {
+    width: 27rem;
+    height: 0.08rem;
+  }
+}
+
+@media (max-width: 500px) {
+  footer > hr {
+    width: 15rem;
+    height: 0.08rem;
+  }
+}
+
 .siteMapList > ul {
   display: flex;
   list-style-type: none;
   gap: 1rem;
+}
+
+@media (max-width: 500px) {
+  .siteMapList > ul {
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    text-align: center;
+  }
 }
 
 .siteMapList > ul > a {
@@ -1356,6 +1800,12 @@ footer > hr {
 
 .siteByContainer {
   text-decoration: none;
-  color: black;
+  color: gray;
   font-size: 0.8rem;
+}
+
+@media (max-width: 500px) {
+  .siteByContainer {
+    font-size: 0.7rem;
+  }
 }
