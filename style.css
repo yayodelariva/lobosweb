@@ -1513,6 +1513,26 @@ body {
   font-weight: 800;
 }
 
+/*PRIVACY*/
+
+.privacyWrapper {
+  padding-top: 16rem;
+  background-image: url(images/lobosbgalternblack.jpeg);
+  color: #ededed;
+}
+
+@media (max-width: 10800px) {
+  .privacyWrapper {
+    padding-top: 10rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .privacyWrapper {
+    padding-top: 10rem;
+  }
+}
+
 /* FOOTER */
 
 footer {
