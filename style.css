@@ -766,11 +766,6 @@ body {
   padding-bottom: 5rem;
 }
 
-@media (max-width: 500px) {
-  .wrapperrosterA {
-  }
-}
-
 .titulorosterA {
   font-size: 4.5rem;
   padding-bottom: 1rem;
