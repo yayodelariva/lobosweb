@@ -398,7 +398,7 @@ const rocioHernandez = new playercard(
   "Mapaches/Astromelias",
   "1",
   "@rocio.uchiha.11",
-  "../../images/players/playercards/logo-lobos.png"
+  "../../images/players/playercards/rocioHernandezPlayercard.jpeg"
 );
 
 const saraCeron = new playercard(
@@ -443,7 +443,7 @@ const leonardoSegura = new playercard(
   "Rebel Deadlock",
   "",
   "@axelsfla",
-  "../../images/players/playercards/logo-lobos.png"
+  "../../images/players/playercards/leonardoSeguraPlayercard.jpg"
 );
 
 const jensenFernandez = new playercard(
@@ -458,7 +458,7 @@ const jensenFernandez = new playercard(
   "Mugis, Oozma Kappa",
   "2",
   "@J.ensn",
-  "../../images/players/playercards/logo-lobos.png"
+  "../../images/players/playercards/jensenFernandezPlayercard.jpeg"
 );
 
 const gabrielSanchez = new playercard(
