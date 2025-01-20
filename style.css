@@ -1142,6 +1142,57 @@ body {
   z-index: 1;
 }
 
+.foamClothSeparator {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (max-width: 500px) {
+  .foamClothSeparator {
+    flex-direction: column;
+  }
+}
+
+.foamContainerPalmares {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25rem;
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  .foamContainerPalmares {
+    width: 20rem;
+  }
+}
+
+.clothContainerPalmares {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25rem;
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  .clothContainerPalmares {
+    width: 20rem;
+  }
+}
+
+.foamTitle {
+  padding-top: 0.5em;
+  font-size: 4em;
+  font-family: "americancaptain";
+}
+
+.clothTitle {
+  padding-top: 0.5em;
+  font-size: 4em;
+  font-family: "americancaptain";
+}
+
 /* Links inside the dropdown */
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
@@ -1155,10 +1206,10 @@ body {
 
 .fuerza {
   font-family: "americancaptain";
-  font-size: 40px;
+  font-size: 2em;
   font-weight: bold;
   background-color: #2a2c2d;
-  width: 320px;
+  width: 5.8em;
   padding: 12px 16px;
 }
 
@@ -1188,6 +1239,7 @@ body {
   justify-content: space-around;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+  width: 100%;
 }
 
 .segundaFuerza2024Container {
@@ -1195,6 +1247,7 @@ body {
   justify-content: space-around;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+  width: 100%;
 }
 
 .Container2022 {
@@ -1218,7 +1271,7 @@ body {
   align-items: center;
   border: 2px solid black;
   border-radius: 10px;
-  width: 20rem;
+  width: 100%;
   background-color: #2c44538f;
 }
 
