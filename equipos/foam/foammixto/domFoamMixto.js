@@ -156,7 +156,7 @@ const gianniToroPortrait = new Player(
 const jensenFernandezPortrait = new Player(
   "JENSEN FERNANDEZ",
   document.querySelector("#jensenFernandez"),
-  "../../images/players/portraits/placeholdermale.jpg",
+  "../../images/players/portraits/jensenFernandezPortrait.jpg",
   "jensenFernandez"
 );
 
@@ -170,7 +170,7 @@ const lennySandovalPortrait = new Player(
 const leonardoSeguraPortrait = new Player(
   "LEONARDO AXEL SEGURA FLORES",
   document.querySelector("#leonardoSegura"),
-  "../../images/players/portraits/placeholdermale.jpg",
+  "../../images/players/portraits/leonardoSeguraPortrait.jpg",
   "leonardoSegura"
 );
 
@@ -198,7 +198,7 @@ const randyCastilloPortrait = new Player(
 const rocioHernandezPortrait = new Player(
   "ROCÍO GUADALUPE HERNÁNDEZ HERNÁNDEZ",
   document.querySelectorAll("#rocioHernandez"),
-  "../../images/players/portraits/placeholderfemale.jpg",
+  "../../images/players/portraits/rocioHernandezPortrait.jpg",
   "rocioHernandez"
 );
 

@@ -198,7 +198,7 @@ const randyCastilloPortrait = new Player(
 const rocioHernandezPortrait = new Player(
   "ROCÍO GUADALUPE HERNÁNDEZ HERNÁNDEZ",
   document.querySelectorAll("#rocioHernandez"),
-  "../../images/players/portraits/placeholderfemale.jpg",
+  "../../images/players/portraits/rocioHernandezPortrait.jpg",
   "rocioHernandez"
 );
 
