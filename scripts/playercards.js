@@ -593,6 +593,7 @@ function handleClickedPlayercard(e) {
       alejandroDorantes.generatePlayerCard();
       break;
     default:
+      playercardContainer.style.display = "none";
       equiposWrapperContainer.style.alignItems = "center";
       equiposWrapper.style.display = "flex";
       playercardDOM.style.display = "none";
