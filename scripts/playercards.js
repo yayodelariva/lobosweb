@@ -381,9 +381,9 @@ const franciscoRivera = new playercard(
   "2",
   "Diestro",
   "Blasters, Guerreros Jaguar",
-  "Cero",
+  "",
   "@Freddlechuga",
-  "../../images/players/playercards/logo-lobos.png"
+  "../../images/players/playercards/franciscoRiveraPlayercard.jpg"
 );
 
 const rocioHernandez = new playercard(
@@ -413,7 +413,7 @@ const saraCeron = new playercard(
   "Lobos",
   "",
   "@nanabloodstone",
-  "../../images/players/playercards/logo-lobos.png"
+  "../../images/players/playercards/saraCeronPlayercard.jpg"
 );
 
 const lennySandoval = new playercard(
@@ -473,7 +473,7 @@ const gabrielSanchez = new playercard(
   "",
   "1",
   "@gabo_sanm",
-  "../../images/players/playercards/logo-lobos.png"
+  "../../images/players/playercards/gabrielSanchezPlayercard.jpg"
 );
 
 const alejandroDorantes = new playercard(
@@ -488,7 +488,7 @@ const alejandroDorantes = new playercard(
   "Quetzales",
   "2",
   "@alejandro.dorantes92",
-  "../../images/players/playercards/logo-lobos.png"
+  "../../images/players/playercards/alejandroDorantesPlayercard.jpg"
 );
 
 const icon = document.createElement("img");

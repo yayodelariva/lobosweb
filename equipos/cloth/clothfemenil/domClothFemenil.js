@@ -219,7 +219,7 @@ const sabrinaHuertaPortrait = new Player(
 const saraCeronPortrait = new Player(
   "SARA FLORA MARÍA CERÓN GARRIDO",
   document.querySelectorAll("[id='saraCeron']"),
-  "../../images/players/portraits/placeholderfemale.jpg",
+  "../../images/players/portraits/saraCeron.jpg",
   "saraCeron"
 );
 

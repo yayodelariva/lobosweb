@@ -44,7 +44,7 @@ class Player {
 const alejandroDorantesPortrait = new Player(
   "ALEJANDRO DORANTES",
   document.querySelector("#alejandroDorantes"),
-  "../../images/players/portraits/placeholdermale.jpg",
+  "../../images/players/portraits/alejandroDorantes.jpg",
   "alejandroDorantes"
 );
 
@@ -142,7 +142,7 @@ const franciscoRiveraPortrait = new Player(
 const gabrielSanchezPortrait = new Player(
   "HEBERT GABRIEL SÁNCHEZ MARTÍNEZ",
   document.querySelector("#gabrielSanchez"),
-  "../../images/players/portraits/placeholdermale.jpg",
+  "../../images/players/portraits/gabrielSanchez.jpg",
   "gabrielSanchez"
 );
 
