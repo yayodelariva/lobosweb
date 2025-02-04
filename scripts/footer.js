@@ -16,6 +16,7 @@ let logoIztapalapa = document.createElement("img");
 let logoAdomex = document.createElement("img");
 let logoWDBF = document.createElement("img");
 
+const logoContainerFooter = document.querySelector(".logosContainerTop");
 const equiposFooter = document.querySelector(".equiposFooter");
 const palmaresFooter = document.querySelector(".palmaresFooter");
 const uneteFooter = document.querySelector(".uneteFooter");
@@ -240,3 +241,17 @@ logoLhasaContainer.appendChild(logoLhasa);
 logoIztapalapaContainer.appendChild(logoIztapalapa);
 logoAdomexContainer.appendChild(logoAdomex);
 logoWDBFContainer.appendChild(logoWDBF);
+
+const logoBJContainer = document.createElement("div");
+logoBJContainer.classList.add("logoBJ");
+const logoBJ = document.createElement("img");
+logoBJ.src = "../images/logosfooter/logoBJ.png";
+logoBJContainer.appendChild(logoBJ);
+logoContainerFooter.appendChild(logoBJContainer);
+
+const logoCuauhtemocContainer = document.createElement("div");
+logoCuauhtemocContainer.classList.add("logoCuauhtemoc");
+const logoCuauhtemoc = document.createElement("img");
+logoCuauhtemoc.src = "../images/logosfooter/logoCuauhtemoc.png";
+logoCuauhtemocContainer.appendChild(logoCuauhtemoc);
+logoContainerFooter.appendChild(logoCuauhtemocContainer);
