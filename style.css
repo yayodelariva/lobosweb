@@ -458,6 +458,7 @@ body {
   justify-content: center;
   width: 75rem;
   gap: 7rem;
+  padding-top: 10em;
 }
 
 @media (max-width: 1080px) {
