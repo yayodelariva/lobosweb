@@ -458,7 +458,6 @@ body {
   justify-content: center;
   width: 75rem;
   gap: 7rem;
-  padding-top: 10em;
 }
 
 @media (max-width: 1080px) {
@@ -1311,15 +1310,22 @@ body {
 
 .midSectionWrapper {
   display: grid;
-  grid-template-rows: 16rem 30rem 25rem 15rem 33rem 16rem;
+  grid-template-rows: 16rem 34rem 25rem 15rem 33rem 16rem;
   grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
   background-color: gray;
   background-image: url(images/lobosbgaltern2UPSCALED.jpeg);
 }
 
+@media (max-width: 1297px) {
+  .midSectionWrapper {
+    grid-template-rows: 10rem 44rem 35rem 12rem 38rem 26rem;
+    grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
+  }
+}
+
 @media (max-width: 1080px) {
   .midSectionWrapper {
-    grid-template-rows: 10rem 18rem 35rem 12rem 38rem 26rem;
+    grid-template-rows: 10rem 24rem 35rem 12rem 38rem 26rem;
     grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
   }
 }
