@@ -417,7 +417,7 @@ body {
 .teamsCategoryWrapper {
   display: flex;
   justify-content: center;
-  height: 95vh;
+  height: 120vh;
   background-image: url(images/lobosbgaltern2UPSCALED.jpeg);
 }
 
