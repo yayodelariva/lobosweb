@@ -13,3 +13,4 @@ deployment:
     - "/bin/cp privacy.html $DEPLOYPATH"
     - "/bin/cp index.html $DEPLOYPATH"
     - "/bin/cp style.css $DEPLOYPATH"
+    - "/bin/cp favicon.ico $DEPLOYPATH"
