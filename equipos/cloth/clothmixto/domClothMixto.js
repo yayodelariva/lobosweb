@@ -249,6 +249,7 @@ danielaCruzPortrait.generateDom();
 deniseMejiaPortrait.generateDom();
 cesarArellanoPortrait.generateDom();
 gianniToroPortrait.generateDom();
+ceciliaRodriguezPortrait.generateDom();
 
 //LOBOS NEGROS
 fernandoLeonPortrait.generateDom();
