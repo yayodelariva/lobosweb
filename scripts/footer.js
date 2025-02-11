@@ -15,6 +15,8 @@ let logoLhasa = document.createElement("img");
 let logoIztapalapa = document.createElement("img");
 let logoAdomex = document.createElement("img");
 let logoWDBF = document.createElement("img");
+const logoBJ = document.createElement("img");
+const logoCuauhtemoc = document.createElement("img");
 
 const logoContainerFooter = document.querySelector(".logosContainerTop");
 const equiposFooter = document.querySelector(".equiposFooter");
@@ -61,6 +63,8 @@ if (
   logoIztapalapa.src = "../../../images/logosfooter/logoIztapalapa.jpeg";
   logoAdomex.src = "../../../images/logosfooter/adomex-cuadrado.png";
   logoWDBF.src = "../../../images/logosfooter/WDBF_logo.png";
+  logoCuauhtemoc.src = "../../../images/logosfooter/logoCuauhtemoc.png";
+  logoBJ.src = "../../../images/logosfooter/logoBJ.png";
   logoTlalpanContainer.href = "https://alcaldiatlalpan.mx/";
   logoFMDBContainer.href =
     "https://www.facebook.com/federacionmexicanadedodgeball";
@@ -99,6 +103,8 @@ if (
   logoIztapalapaContainer.href = "https://www.iztapalapa.cdmx.gob.mx";
   logoAdomexContainer.href = "https://www.adomexdodgeball.com/";
   logoWDBFContainer.href = "https://worlddodgeballfederation.com/";
+  logoCuauhtemoc.src = "../../images/logosfooter/logoCuauhtemoc.png";
+  logoBJ.src = "../../images/logosfooter/logoBJ.png";
 } else if (window.location.pathname.includes("/equipos")) {
   equiposFooter.href = "index.html";
   palmaresFooter.href = "../palmares/index.html";
@@ -116,6 +122,8 @@ if (
   logoIztapalapa.src = "../images/logosfooter/logoIztapalapa.jpeg";
   logoAdomex.src = "../images/logosfooter/adomex-cuadrado.png";
   logoWDBF.src = "../images/logosfooter/WDBF_logo.png";
+  logoCuauhtemoc.src = "../images/logosfooter/logoCuauhtemoc.png";
+  logoBJ.src = "../images/logosfooter/logoBJ.png";
   logoTlalpanContainer.href = "https://alcaldiatlalpan.mx/";
   logoFMDBContainer.href =
     "https://www.facebook.com/federacionmexicanadedodgeball";
@@ -142,6 +150,8 @@ if (
   logoIztapalapa.src = "../images/logosfooter/logoIztapalapa.jpeg";
   logoAdomex.src = "../images/logosfooter/adomex-cuadrado.png";
   logoWDBF.src = "../images/logosfooter/WDBF_logo.png";
+  logoCuauhtemoc.src = "../images/logosfooter/logoCuauhtemoc.png";
+  logoBJ.src = "../images/logosfooter/logoBJ.png";
   logoTlalpanContainer.href = "https://alcaldiatlalpan.mx/";
   logoFMDBContainer.href =
     "https://www.facebook.com/federacionmexicanadedodgeball";
@@ -168,6 +178,8 @@ if (
   logoIztapalapa.src = "../images/logosfooter/logoIztapalapa.jpeg";
   logoAdomex.src = "../images/logosfooter/adomex-cuadrado.png";
   logoWDBF.src = "../images/logosfooter/WDBF_logo.png";
+  logoCuauhtemoc.src = "../images/logosfooter/logoCuauhtemoc.png";
+  logoBJ.src = "../images/logosfooter/logoBJ.png";
   logoTlalpanContainer.href = "https://alcaldiatlalpan.mx/";
   logoFMDBContainer.href =
     "https://www.facebook.com/federacionmexicanadedodgeball";
@@ -194,6 +206,8 @@ if (
   logoIztapalapa.src = "../images/logosfooter/logoIztapalapa.jpeg";
   logoAdomex.src = "../images/logosfooter/adomex-cuadrado.png";
   logoWDBF.src = "../images/logosfooter/WDBF_logo.png";
+  logoCuauhtemoc.src = "../images/logosfooter/logoCuauhtemoc.png";
+  logoBJ.src = "../images/logosfooter/logoBJ.png";
   logoTlalpanContainer.href = "https://alcaldiatlalpan.mx/";
   logoFMDBContainer.href =
     "https://www.facebook.com/federacionmexicanadedodgeball";
@@ -220,6 +234,8 @@ if (
   logoIztapalapa.src = "images/logosfooter/logoIztapalapa.jpeg";
   logoAdomex.src = "images/logosfooter/adomex-cuadrado.png";
   logoWDBF.src = "images/logosfooter/WDBF_logo.png";
+  logoBJ.src = "../images/logosfooter/logoBJ.png";
+  logoCuauhtemoc.src = "../images/logosfooter/logoCuauhtemoc.png";
   logoTlalpanContainer.href = "https://alcaldiatlalpan.mx/";
   logoFMDBContainer.href =
     "https://www.facebook.com/federacionmexicanadedodgeball";
@@ -244,14 +260,12 @@ logoWDBFContainer.appendChild(logoWDBF);
 
 const logoBJContainer = document.createElement("div");
 logoBJContainer.classList.add("logoBJ");
-const logoBJ = document.createElement("img");
-logoBJ.src = "../images/logosfooter/logoBJ.png";
+
 logoBJContainer.appendChild(logoBJ);
 logoContainerFooter.appendChild(logoBJContainer);
 
 const logoCuauhtemocContainer = document.createElement("div");
 logoCuauhtemocContainer.classList.add("logoCuauhtemoc");
-const logoCuauhtemoc = document.createElement("img");
-logoCuauhtemoc.src = "../images/logosfooter/logoCuauhtemoc.png";
+
 logoCuauhtemocContainer.appendChild(logoCuauhtemoc);
 logoContainerFooter.appendChild(logoCuauhtemocContainer);
