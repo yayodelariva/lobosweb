@@ -119,7 +119,7 @@ const estelaGalavisPortrait = new Player(
 );
 
 const farrellEstradaPortrait = new Player(
-  "FARREL ESTRADA ORNELAS",
+  "FARRELL ESTRADA ORNELAS",
   document.querySelector("#farrellEstrada"),
   "../../images/players/portraits/farrellEstradaPortrait.jpg",
   "farrellEstrada"
