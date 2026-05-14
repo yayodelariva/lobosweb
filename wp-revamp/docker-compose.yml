@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: lobosweb
+      MYSQL_USER: lobos
+      MYSQL_PASSWORD: lobos2025
+      MYSQL_ROOT_PASSWORD: rootpassword
+    volumes:
+      - db_data:/var/lib/mysql
+
+  wordpress:
+    image: wordpress:latest
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - "8081:80"
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: lobos
+      WORDPRESS_DB_PASSWORD: lobos2025
+      WORDPRESS_DB_NAME: lobosweb
+    volumes:
+      - wp_data:/var/www/html
+      - ./theme:/var/www/html/wp-content/themes/lobos
+      - ./config/apache.conf:/etc/apache2/conf-enabled/lobos.conf
+
+volumes:
+  db_data:
+  wp_data:

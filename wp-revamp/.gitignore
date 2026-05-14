@@ -1,0 +1,9 @@
+# Ignore WordPress core and plugin files managed by Docker volumes
+# Only the custom theme is tracked
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Theme uploads and cache
+theme/cache/
