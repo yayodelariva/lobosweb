@@ -1111,12 +1111,88 @@ body.home-canvas .ast-page-builder-template {
     margin-bottom: 56px !important;
 }
 
+/* Title + Instagram header text on one row (relocated by animations.js) */
+.home-news-head {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    margin-bottom: 56px;
+}
+
+.home-news-head .home-news-title {
+    margin-bottom: 0 !important;
+}
+
+/* Instagram header recompacted into a "follow" pill: avatar + handle only */
+.home-news-head .sbi_header_link {
+    display: inline-flex !important;
+    align-items: center;
+    padding: 4px;
+    border: 1px solid var(--color-gray-mid);
+    border-radius: 999px;
+    background: var(--color-gray-dark);
+    text-decoration: none !important;
+    transition: border-color var(--transition), background var(--transition);
+}
+
+.home-news-head .sbi_header_link:hover {
+    border-color: var(--color-gray-light);
+    background: var(--color-black);
+}
+
+.home-news-head .sbi_header_text {
+    display: flex !important;
+    align-items: center;
+    gap: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto !important;
+}
+
+/* Keep only the avatar inside the ring so it stays centered */
+.home-news-head .sbi_header_text > *:not(.sbi_header_img) {
+    display: none !important;
+}
+
+/* Avatar → circle sized to match the heading, drop the IG-logo hover overlay */
+.home-news-head .sbi_header_img {
+    width: clamp(2.5rem, 6vw, 5rem) !important;
+    height: clamp(2.5rem, 6vw, 5rem) !important;
+    min-width: clamp(2.5rem, 6vw, 5rem);
+    margin: 0 !important;
+    flex: 0 0 auto;
+}
+
+.home-news-head .sbi_header_img img {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 50% !important;
+}
+
+.home-news-head .sbi_header_img_hover {
+    display: none !important;
+}
+
+/* Hide the handle and the multi-line bio — avatar only */
+.home-news-head .sbi_header_text h3,
+.home-news-head .sbi_header_text p {
+    display: none !important;
+}
+
+/* Leftover in-feed header (its content was lifted into the pill) */
+.home-news-feed .sb_instagram_header {
+    display: none !important;
+}
+
 .home-news-feed {
     display: flow-root; /* creates new BFC — contains any floats from Smash Balloon */
 }
 
 .home-news-feed .sbi_follow_btn,
-.home-news-feed .sbi_header {
+.home-news-feed .sbi_header,
+.home-news-feed .sbi_feedtheme_header_text {
     display: none !important;
 }
 
@@ -1614,6 +1690,19 @@ body.home-canvas .ast-page-builder-template {
     .player-detail-layout {
         grid-template-columns: 1fr;
         gap: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-news-head {
+        flex-wrap: nowrap;
+    }
+
+    /* Bigger avatar on mobile so it matches the heading text height */
+    .home-news-head .sbi_header_img {
+        width: clamp(3rem, 9vw, 3.75rem) !important;
+        height: clamp(3rem, 9vw, 3.75rem) !important;
+        min-width: clamp(3rem, 9vw, 3.75rem);
     }
 }
 

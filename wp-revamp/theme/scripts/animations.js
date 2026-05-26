@@ -14,6 +14,45 @@ document.addEventListener('DOMContentLoaded', function () {
         a.addEventListener('click', function (e) { e.preventDefault(); });
     });
 
+    // ── Home news: pull the Instagram header text onto the title row ─────────
+    var newsTitle = document.querySelector('.home-news-title');
+    if (newsTitle) {
+        var newsFeed = document.querySelector('.home-news-feed');
+
+        function moveHeaderText() {
+            // Move the whole anchor so the pill stays a link to the IG profile.
+            var sbiLink = newsFeed &&
+                (newsFeed.querySelector('.sbi_header_link') ||
+                 newsFeed.querySelector('.sbi_header_text'));
+            if (!sbiLink) return false;
+            if (newsTitle.parentNode.classList.contains('home-news-head')) return true;
+
+            var head = document.createElement('div');
+            head.className = 'home-news-head';
+            newsTitle.parentNode.insertBefore(head, newsTitle);
+            head.appendChild(newsTitle);
+
+            // Match the title's AOS reveal so the avatar animates in with it
+            sbiLink.setAttribute('data-aos', newsTitle.getAttribute('data-aos') || 'fade-up');
+            if (newsTitle.hasAttribute('data-aos-delay')) {
+                sbiLink.setAttribute('data-aos-delay', newsTitle.getAttribute('data-aos-delay'));
+            }
+            head.appendChild(sbiLink);
+            return true;
+        }
+
+        // Smash Balloon renders server-side here, but guard against late AJAX renders.
+        if (newsFeed && !moveHeaderText()) {
+            var sbiObserver = new MutationObserver(function () {
+                if (moveHeaderText()) {
+                    sbiObserver.disconnect();
+                    if (typeof AOS !== 'undefined') AOS.refreshHard();
+                }
+            });
+            sbiObserver.observe(newsFeed, { childList: true, subtree: true });
+        }
+    }
+
     // ── Mobile menu ──────────────────────────────────────────────────────────
     var mobileBtn     = document.getElementById('mobile-menu-btn');
     var mobileOverlay = document.getElementById('mobile-menu-overlay');
