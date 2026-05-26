@@ -364,7 +364,7 @@ a:hover {
     grid-template-columns: 420px 1fr;
     gap: 56px;
     align-items: start;
-    margin-bottom: 48px;
+    margin-block: clamp(24px, 5vw, 48px);
 }
 
 img.player-detail-photo,
