@@ -205,7 +205,7 @@ a:hover {
 /* ── Roster Grid ──────────────────────────────────────────────────────────── */
 
 .roster-wrapper {
-    max-width: 1200px;
+    max-width: 1360px;
     margin: 0 auto;
     padding: 100px 24px 60px;
 }
@@ -216,10 +216,84 @@ a:hover {
     text-transform: uppercase;
 }
 
+.roster-layout {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.roster-sidebar {
+    position: sticky;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    font-size: 0.9rem;
+}
+
+.roster-sidebar-heading {
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-gray-light);
+    margin: 0 0 8px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--color-gray-mid);
+}
+
+.roster-sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.roster-sidebar li a,
+.roster-sidebar li span {
+    display: block;
+    padding: 6px 10px;
+    border-radius: var(--radius);
+    color: var(--color-gray-light);
+    text-decoration: none;
+    transition: background var(--transition), color var(--transition);
+}
+
+.roster-sidebar li a:hover {
+    background: var(--color-gray-dark);
+    color: var(--color-white);
+}
+
+.roster-sidebar li.is-current span {
+    background: var(--color-accent);
+    color: var(--color-white);
+    font-weight: 600;
+    cursor: default;
+}
+
 .roster-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 24px;
+}
+
+@media (max-width: 768px) {
+    .roster-layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    .roster-sidebar {
+        position: static;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+    .roster-sidebar-group {
+        flex: 1 1 140px;
+    }
 }
 
 .player-card {
