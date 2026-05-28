@@ -13,20 +13,34 @@ Version: 1.0.0
     --color-gray-dark:   #1E1E1E;
     --color-gray-mid:    #3D3D3D;
     --color-gray-light:  #C0C0C0;
-    --color-white:       #F4F4F4;
-    --color-pure-white:  #FFFFFF;
+    --color-white:       #ededed;
+    --color-pure-white:  #ededed;
     --color-accent:      #C41E3A;   /* deep red — trophies, CTAs, highlights */
 
-    --font-display:      'Bebas Neue', sans-serif;
+    --font-display:      'American Captain', 'Bebas Neue', sans-serif;
     --font-body:         'Inter', sans-serif;
 
     --radius:            4px;
     --transition:        0.2s ease;
+
+    /* Override Astra's interactive blue (#045cb4) with the brand red so link
+       hover/focus and button-hover backgrounds use the accent, not blue. */
+    --ast-global-color-1: #C41E3A;
 }
 
-/* ── Google Fonts ─────────────────────────────────────────────────────────── */
+/* ── Fonts ────────────────────────────────────────────────────────────────── */
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap');
+
+/* American Captain — self-hosted display font for all headers (recovered from
+   the legacy site). Bebas Neue stays as the fallback in --font-display. */
+@font-face {
+    font-family: 'American Captain';
+    src: url('fonts/american-captain.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 /* ── Base ─────────────────────────────────────────────────────────────────── */
 
@@ -37,6 +51,7 @@ body.wp-child-theme-lobos {
     color: var(--color-white) !important;
     font-family: var(--font-body) !important;
 }
+
 
 h1, h2, h3, h4, h5, h6,
 .entry-title,
@@ -73,9 +88,14 @@ a:hover {
    Advanced → CSS Classes.
 */
 
+/* Scroll-to-top button — accent red instead of Astra's blue (--ast-global-color-0) */
+#ast-scroll-top {
+    background-color: var(--color-accent);
+}
+
 .claw-bg {
     background-color: var(--color-black);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cg stroke='%23ffffff' stroke-width='1' stroke-linecap='round' opacity='0.06'%3E%3Cline x1='20' y1='0' x2='0' y2='20'/%3E%3Cline x1='26' y1='0' x2='0' y2='26'/%3E%3Cline x1='32' y1='0' x2='0' y2='32'/%3E%3Cline x1='80' y1='40' x2='40' y2='80'/%3E%3Cline x1='86' y1='40' x2='40' y2='86'/%3E%3Cline x1='92' y1='40' x2='40' y2='92'/%3E%3C/g%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cg stroke='%23ededed' stroke-width='1' stroke-linecap='round' opacity='0.06'%3E%3Cline x1='20' y1='0' x2='0' y2='20'/%3E%3Cline x1='26' y1='0' x2='0' y2='26'/%3E%3Cline x1='32' y1='0' x2='0' y2='32'/%3E%3Cline x1='80' y1='40' x2='40' y2='80'/%3E%3Cline x1='86' y1='40' x2='40' y2='86'/%3E%3Cline x1='92' y1='40' x2='40' y2='92'/%3E%3C/g%3E%3C/svg%3E");
     background-repeat: repeat;
 }
 
@@ -184,7 +204,7 @@ a:hover {
 .historia-text {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: var(--color-gray-light);
+    color: #792433;
     max-width: 760px;
     margin: 0 auto;
 }
@@ -716,7 +736,7 @@ body.home-canvas .ast-page-builder-template {
     left: 50%;
     right: 50%;
     height: 1px;
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(237, 237, 237, 0.08);
     transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1), right 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -854,8 +874,13 @@ body.home-canvas .ast-page-builder-template {
     background: var(--color-white);
     border-radius: 2px;
     transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-                opacity   0.35s ease;
+                opacity   0.35s ease,
+                background 0.2s ease;
     transform-origin: center;
+}
+
+.mobile-menu-btn:hover .mobile-menu-bar {
+    background: var(--color-accent);
 }
 
 .mobile-menu-btn.open .mobile-menu-bar:nth-child(1) {
@@ -867,6 +892,39 @@ body.home-canvas .ast-page-builder-template {
 }
 .mobile-menu-btn.open .mobile-menu-bar:nth-child(3) {
     transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Close (×) button inside the overlay — the nav hamburger is painted under the
+   overlay when open, so the menu needs its own close control. */
+.mobile-menu-close {
+    position: absolute;
+    top: 24px;
+    right: 6vw;
+    width: 44px;
+    height: 44px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 2;
+}
+
+.mobile-menu-close-bar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 28px;
+    height: 2px;
+    background: var(--color-white);
+    border-radius: 2px;
+    transition: background 0.2s ease;
+}
+
+.mobile-menu-close-bar:nth-child(1) { transform: translate(-50%, -50%) rotate(45deg); }
+.mobile-menu-close-bar:nth-child(2) { transform: translate(-50%, -50%) rotate(-45deg); }
+
+.mobile-menu-close:hover .mobile-menu-close-bar {
+    background: var(--color-accent);
 }
 
 /* Full-screen overlay */
@@ -940,16 +998,65 @@ body.home-canvas .ast-page-builder-template {
 .mobile-menu-overlay.open .mobile-menu-list li:nth-child(5) a { transition-delay: 0.36s; }
 .mobile-menu-overlay.open .mobile-menu-list li:nth-child(6) a { transition-delay: 0.42s; }
 
-/* Mobile sub-menu: flatten and indent */
+/* Mobile sub-menu: hidden until the parent item is tapped */
 .mobile-menu-list .sub-menu {
     list-style: none;
-    padding: 12px 0 0;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.mobile-menu-list li.is-open > .sub-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding: 18px 0 0;
     margin: 8px 0 0;
+    animation: submenu-reveal 0.3s ease both;
+}
+
+/* Wider separation between the discipline groups (Cloth / Foam) in the Equipos
+   submenu — nested team submenus keep the tighter 18px gap above. */
+.mobile-menu-list > li.is-open > .sub-menu {
+    gap: 38px;
 }
 
 .mobile-menu-list .sub-menu li a {
     font-size: 1.4rem !important;
     color: var(--color-gray-light) !important;
+}
+
+@keyframes submenu-reveal {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Parent items in the mobile menu get a caret that flips when open */
+.mobile-menu-list li.menu-item-has-children > a {
+    /* Room so the rotated caret isn't clipped by the row's overflow:hidden */
+    padding: 0.12em 0.45em;
+}
+
+.mobile-menu-list li.menu-item-has-children > a::after {
+    content: "";
+    display: inline-block;
+    margin-left: 0.4em;
+    width: 0.32em;
+    height: 0.32em;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: translateY(-0.15em) rotate(45deg);
+    transition: transform 0.25s ease;
+}
+
+.mobile-menu-list li.menu-item-has-children.is-open > a::after {
+    transform: translateY(0.1em) rotate(-135deg);
+}
+
+/* Keep the tapped parent highlighted in red while its submenu is open */
+.mobile-menu-list li.menu-item-has-children.is-open > a {
+    color: var(--color-accent) !important;
 }
 
 .mobile-menu-list li a:hover {
@@ -1114,7 +1221,7 @@ body.home-canvas .ast-page-builder-template {
 /* ── Historia ── */
 
 .home-historia {
-    padding: 120px 8vw;
+    padding: 100px 8vw;
     background: var(--color-pure-white);
     overflow: hidden;
 }
@@ -1155,7 +1262,7 @@ body.home-canvas .ast-page-builder-template {
     font-family: var(--font-display);
     font-size: clamp(7rem, 13vw, 13rem);
     color: transparent;
-    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.1);
+    -webkit-text-stroke: 1px #792433;
     line-height: 1;
     display: block;
     letter-spacing: -0.03em;
@@ -1297,7 +1404,7 @@ body.home-canvas .ast-page-builder-template {
 
 .home-contacto {
     position: relative;
-    padding: 140px 6vw;
+    padding: 100px 6vw;
     background: var(--color-black);
     text-align: center;
     overflow: hidden;
@@ -1488,15 +1595,11 @@ body.home-canvas .ast-page-builder-template {
 }
 
 .unete-hero-title {
-    font-size: clamp(3rem, 8vw, 6rem);
+    /* Tuned down from the old single-word "Únete" — now holds the tagline sentence */
+    font-size: clamp(2.25rem, 6vw, 4.25rem);
+    line-height: 1.05;
     text-transform: uppercase;
-    margin-bottom: 24px;
-}
-
-.unete-hero-tagline {
-    font-size: 1.25rem;
-    color: var(--color-gray-light);
-    line-height: 1.6;
+    margin-bottom: 0;
 }
 
 .unete-info {
@@ -1549,6 +1652,8 @@ body.home-canvas .ast-page-builder-template {
     padding: 80px 24px;
     text-align: center;
     border-top: 1px solid var(--color-gray-mid);
+    /* Contain the pulsing ring so it can't extend the page's scroll width */
+    overflow-x: clip;
 }
 
 .unete-cta-inner {
@@ -1560,22 +1665,18 @@ body.home-canvas .ast-page-builder-template {
     gap: 32px;
 }
 
-.unete-hero-btn {
-    display: inline-block;
-    margin-top: 32px;
-}
-
 .unete-cta-text {
     font-size: clamp(2rem, 5vw, 3.5rem) !important;
 }
 
 @keyframes pulse-ring {
-    0%   { transform: scale(1);   opacity: 0.7; }
-    100% { transform: scale(1.5); opacity: 0;   }
+    0%   { transform: scale(1);                      opacity: 0.7; }
+    100% { transform: scale(var(--pulse-scale, 1.5)); opacity: 0;   }
 }
 
 .unete-cta-btn {
     position: relative;
+    --pulse-scale: 1.5;
 }
 
 .unete-cta-btn::after {
@@ -1586,6 +1687,13 @@ body.home-canvas .ast-page-builder-template {
     border: 2px solid var(--color-accent);
     animation: pulse-ring 1.8s ease-out infinite;
     pointer-events: none;
+}
+
+/* Smaller pulse on phones so the ring stays proportional within the viewport */
+@media (max-width: 640px) {
+    .unete-cta-btn {
+        --pulse-scale: 1.2;
+    }
 }
 
 /* ── Valores ──────────────────────────────────────────────────────────────── */

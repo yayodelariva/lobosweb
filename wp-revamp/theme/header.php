@@ -27,6 +27,10 @@
 
 <div class="mobile-menu-overlay" id="mobile-menu-overlay" aria-hidden="true">
     <div class="mobile-menu-noise" aria-hidden="true"></div>
+    <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Cerrar menú">
+        <span class="mobile-menu-close-bar"></span>
+        <span class="mobile-menu-close-bar"></span>
+    </button>
     <?php wp_nav_menu( [
         'theme_location' => 'primary',
         'container'      => false,

@@ -6,13 +6,11 @@ document.addEventListener('DOMContentLoaded', function () {
             ?.classList.toggle('scrolled', window.scrollY > 60);
     }, { passive: true });
 
-    // ── Disable navigation on parent menu items (Equipos / Foam / Cloth) ─────
-    document.querySelectorAll(
-        '.home-nav-menu li.menu-item-has-children > a, ' +
-        '.mobile-menu-list li.menu-item-has-children > a'
-    ).forEach(function (a) {
-        a.addEventListener('click', function (e) { e.preventDefault(); });
-    });
+    // ── Disable navigation on desktop parent menu items (hover reveals submenu) ─
+    document.querySelectorAll('.home-nav-menu li.menu-item-has-children > a')
+        .forEach(function (a) {
+            a.addEventListener('click', function (e) { e.preventDefault(); });
+        });
 
     // ── Home news: pull the Instagram header text onto the title row ─────────
     var newsTitle = document.querySelector('.home-news-title');
@@ -56,6 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // ── Mobile menu ──────────────────────────────────────────────────────────
     var mobileBtn     = document.getElementById('mobile-menu-btn');
     var mobileOverlay = document.getElementById('mobile-menu-overlay');
+    var mobileClose   = document.getElementById('mobile-menu-close');
 
     function closeMobileMenu() {
         mobileBtn.classList.remove('open');
@@ -63,6 +62,9 @@ document.addEventListener('DOMContentLoaded', function () {
         mobileOverlay.classList.remove('open');
         mobileOverlay.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
+        // Collapse any open submenus so the menu reopens in its closed state
+        mobileOverlay.querySelectorAll('.menu-item-has-children.is-open')
+            .forEach(function (li) { li.classList.remove('is-open'); });
     }
 
     if (mobileBtn && mobileOverlay) {
@@ -74,8 +76,22 @@ document.addEventListener('DOMContentLoaded', function () {
             document.body.style.overflow = isOpen ? 'hidden' : '';
         });
 
-        mobileOverlay.querySelectorAll('a').forEach(function (link) {
-            link.addEventListener('click', closeMobileMenu);
+        if (mobileClose) {
+            mobileClose.addEventListener('click', closeMobileMenu);
+        }
+
+        mobileOverlay.querySelectorAll('.mobile-menu-list a').forEach(function (link) {
+            var li = link.parentNode;
+            if (li.classList.contains('menu-item-has-children')) {
+                // Parent item: toggle its own submenu, keep the menu open
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    li.classList.toggle('is-open');
+                });
+            } else {
+                // Leaf link: navigates, so close the menu
+                link.addEventListener('click', closeMobileMenu);
+            }
         });
 
         document.addEventListener('keydown', function (e) {
@@ -160,14 +176,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // ── AOS: all other pages ──────────────────────────────────────────────────
     if (typeof AOS !== 'undefined') {
-        AOS.init({
-            duration: 700,
-            easing: 'ease-out-cubic',
-            once: true,
-            offset: 80,
-        });
-
-        // Stagger children that have data-aos-stagger on their parent
+        // Expand [data-aos-stagger] parents into per-child data-aos + staggered
+        // delays BEFORE init, so AOS registers these children in its watch list.
+        // (Adding data-aos after init only hides them via CSS — they'd never animate.)
         document.querySelectorAll('[data-aos-stagger]').forEach(function (parent) {
             var delay = parseInt(parent.dataset.aosStagger, 10) || 100;
             Array.from(parent.children).forEach(function (child, i) {
@@ -176,7 +187,12 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
 
-        AOS.refresh();
+        AOS.init({
+            duration: 700,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 80,
+        });
     }
 
     // ── Count-up on stat numbers (all pages) ─────────────────────────────────

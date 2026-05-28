@@ -2,12 +2,24 @@
 require_once __DIR__ . '/acf-seed.php';       // REMOVE after first page load
 require_once __DIR__ . '/numero-migrate.php'; // REMOVE after first page load
 
+/**
+ * Cache-busting version for a theme-owned asset: its last-modified time, so
+ * edits invalidate the browser cache without a manual theme-version bump.
+ * Falls back to the theme version if the file is missing.
+ *
+ * @param string $relative_path Path relative to the theme root, e.g. 'scripts/animations.js'.
+ */
+function lobos_asset_ver( $relative_path ) {
+    $file = get_stylesheet_directory() . '/' . ltrim( $relative_path, '/' );
+    return file_exists( $file ) ? filemtime( $file ) : wp_get_theme()->get( 'Version' );
+}
+
 add_action( 'wp_enqueue_scripts', function () {
     wp_enqueue_style(
         'lobos-style',
         get_stylesheet_uri(),
         [ 'astra-theme-css' ],
-        wp_get_theme()->get( 'Version' )
+        lobos_asset_ver( 'style.css' )
     );
 
     // Font Awesome Kit — same kit already used in the legacy static site
@@ -61,7 +73,7 @@ add_action( 'wp_enqueue_scripts', function () {
         'lobos-animations',
         get_stylesheet_directory_uri() . '/scripts/animations.js',
         [ 'aos-js', 'gsap-st' ],
-        wp_get_theme()->get( 'Version' ),
+        lobos_asset_ver( 'scripts/animations.js' ),
         true
     );
 } );
@@ -75,14 +87,14 @@ add_action( 'admin_enqueue_scripts', function ( $hook ) {
         'lobos-admin-jugador',
         get_stylesheet_directory_uri() . '/scripts/admin-jugador.js',
         [],
-        wp_get_theme()->get( 'Version' ),
+        lobos_asset_ver( 'scripts/admin-jugador.js' ),
         true
     );
 } );
 
 // Force Astra's customizer settings to match the dark theme
 add_filter( 'theme_mod_background_color', fn() => '0A0A0A' );
-add_filter( 'theme_mod_text_color',       fn() => 'F4F4F4' );
+add_filter( 'theme_mod_text_color',       fn() => 'EDEDED' );
 add_filter( 'theme_mod_header_bg_color',  fn() => '0A0A0A' );
 
 // ── Nav Menus ──────────────────────────────────────────────────────────────────
