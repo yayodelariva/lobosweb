@@ -21,7 +21,7 @@ $children = get_pages( [
                 <a href="<?php echo esc_url( get_permalink( $child->ID ) ); ?>" class="nav-card">
                     <?php if ( has_post_thumbnail( $child->ID ) ) : ?>
                         <div class="nav-card-image">
-                            <?php echo get_the_post_thumbnail( $child->ID, 'medium' ); ?>
+                            <?php echo get_the_post_thumbnail( $child->ID, 'lobos_team_card', [ 'sizes' => '(min-width: 1200px) 300px, (min-width: 768px) 30vw, 50vw' ] ); ?>
                         </div>
                     <?php endif; ?>
                     <div class="nav-card-title"><?php echo esc_html( $child->post_title ); ?></div>

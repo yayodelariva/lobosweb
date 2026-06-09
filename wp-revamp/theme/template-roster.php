@@ -87,7 +87,7 @@ unset( $group );
                         <a href="<?php the_permalink(); ?>" class="player-card">
                             <?php if ( has_post_thumbnail() ) : ?>
                                 <div class="player-portrait">
-                                    <?php the_post_thumbnail( 'medium' ); ?>
+                                    <?php the_post_thumbnail( 'lobos_player_portrait', [ 'sizes' => '(min-width: 1200px) 240px, (min-width: 768px) 22vw, 45vw' ] ); ?>
                                 </div>
                             <?php endif; ?>
                             <div class="player-name"><?php the_title(); ?></div>

@@ -14,6 +14,14 @@ function lobos_asset_ver( $relative_path ) {
     return file_exists( $file ) ? filemtime( $file ) : wp_get_theme()->get( 'Version' );
 }
 
+// Custom image sizes for the theme's image slots — hard-cropped to the display
+// aspect at a resolution that stays sharp on retina, so srcset can serve a file
+// that matches the slot without `object-fit: cover` stretching a smaller crop.
+add_action( 'after_setup_theme', function () {
+    add_image_size( 'lobos_player_portrait', 600, 800, true ); // 3:4 player cards
+    add_image_size( 'lobos_team_card',       800, 450, true ); // 16:9 nav cards
+} );
+
 add_action( 'wp_enqueue_scripts', function () {
     wp_enqueue_style(
         'lobos-style',
@@ -125,7 +133,7 @@ add_action( 'init', function () {
             'not_found'     => 'No se encontraron jugadores',
         ],
         'public'        => true,
-        'has_archive'   => true,
+        'has_archive'   => false,
         'menu_icon'     => 'dashicons-groups',
         'supports'      => [ 'title', 'thumbnail' ],
         'rewrite'       => [ 'slug' => 'jugadores' ],
