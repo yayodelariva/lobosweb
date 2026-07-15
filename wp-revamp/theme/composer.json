@@ -1,0 +1,13 @@
+{
+    "name": "lobos/theme",
+    "description": "Astra child theme for Lobos Club de Dodgeball. Composer used only to vendor dompdf for the monthly report.",
+    "type": "wordpress-theme",
+    "require": {
+        "dompdf/dompdf": "^3.0"
+    },
+    "config": {
+        "vendor-dir": "vendor",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    }
+}

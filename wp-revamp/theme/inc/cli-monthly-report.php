@@ -104,18 +104,29 @@ class LOBOS_Monthly_Report_Command {
         $d    = $this->prepare_data( $assoc_args );
         $html = $this->render_html( $d );
 
-        $tmp = wp_tempnam( 'lobos-reporte-' . sanitize_title( $d['label'] ) . '.html' );
-        // wp_tempnam appends .tmp — rename so the attachment carries an .html
-        // extension and opens in a browser instead of a text editor.
-        $file = preg_replace( '/\.tmp$/', '', $tmp ) . '.html';
+        // Bluehost has no headless Chrome / wkhtmltopdf, so we use dompdf
+        // (pure PHP) bundled under theme/vendor. See composer.json.
+        $autoload = get_stylesheet_directory() . '/vendor/autoload.php';
+        if ( ! file_exists( $autoload ) ) {
+            WP_CLI::error( "vendor/autoload.php missing at {$autoload} — run `composer install` in the theme." );
+        }
+        require_once $autoload;
+
+        $dompdf = new \Dompdf\Dompdf( [ 'defaultFont' => 'Helvetica', 'isRemoteEnabled' => false ] );
+        $dompdf->loadHtml( $html, 'UTF-8' );
+        $dompdf->setPaper( 'letter', 'portrait' );
+        $dompdf->render();
+        $pdf = $dompdf->output();
+
+        $tmp  = wp_tempnam( 'lobos-reporte-' . sanitize_title( $d['label'] ) . '.pdf' );
+        $file = preg_replace( '/\.tmp$/', '', $tmp ) . '.pdf';
         if ( $file !== $tmp ) {
             rename( $tmp, $file );
         }
-        file_put_contents( $file, $html );
+        file_put_contents( $file, $pdf );
 
         $subject = 'Lobos · Reporte mensual · ' . $d['label'];
-        $body    = "Adjunto el reporte mensual de lobosdodgeball.com correspondiente a {$d['label']}.\n\n"
-                 . "Abre el archivo HTML en el navegador para verlo con formato. Para archivarlo como PDF, usa Imprimir → Guardar como PDF.\n";
+        $body    = "Adjunto el reporte mensual de lobosdodgeball.com correspondiente a {$d['label']}.\n";
         $headers = [ 'Content-Type: text/plain; charset=UTF-8' ];
 
         $sent = wp_mail( $recipient, $subject, $body, $headers, [ $file ] );
