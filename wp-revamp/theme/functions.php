@@ -100,6 +100,35 @@ add_action( 'admin_enqueue_scripts', function ( $hook ) {
     );
 } );
 
+// ── Google Analytics (GA4) ─────────────────────────────────────────────────────
+
+define( 'LOBOS_GA4_ID', 'G-FJ91KVE9F3' );
+
+// Only the production host reports. The theme is bind-mounted into the local
+// Docker stack, so without this the dev site at localhost:8081 would fire hits
+// into the same GA4 property and pollute the stats.
+define( 'LOBOS_GA4_HOST', 'lobosdodgeball.com' );
+
+add_action( 'wp_head', function () {
+    $host = strtolower( wp_parse_url( home_url(), PHP_URL_HOST ) ?? '' );
+    if ( $host !== LOBOS_GA4_HOST && $host !== 'www.' . LOBOS_GA4_HOST ) {
+        return;
+    }
+    if ( ! LOBOS_GA4_ID || is_admin() || is_user_logged_in() ) {
+        return;
+    }
+    $id = esc_js( LOBOS_GA4_ID );
+    ?>
+<script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo rawurlencode( LOBOS_GA4_ID ); ?>"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '<?php echo $id; ?>');
+</script>
+    <?php
+}, 5 );
+
 // Force Astra's customizer settings to match the dark theme
 add_filter( 'theme_mod_background_color', fn() => '0A0A0A' );
 add_filter( 'theme_mod_text_color',       fn() => 'EDEDED' );
