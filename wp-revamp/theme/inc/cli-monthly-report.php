@@ -58,6 +58,83 @@ class LOBOS_Monthly_Report_Command {
      * @when after_wp_load
      */
     public function monthly( $args, $assoc_args ) {
+        $d = $this->prepare_data( $assoc_args );
+        $this->render_text( $d );
+
+        $output = $assoc_args['output'] ?? '';
+        if ( $output !== '' ) {
+            file_put_contents( $output, $this->render_html( $d ) );
+            WP_CLI::success( "Reporte guardado en: {$output}" );
+        }
+    }
+
+    /**
+     * Emails the monthly summary as an HTML attachment.
+     *
+     * ## OPTIONS
+     *
+     * [--to=<email>]
+     * : Recipient. Defaults to the site admin email.
+     *
+     * [--month=<yyyy-mm>]
+     * : Month to report on. Defaults to previous calendar month.
+     *
+     * [--from=<yyyy-mm-dd>]
+     * : Start date for a custom range. Requires --to-date.
+     *
+     * [--to-date=<yyyy-mm-dd>]
+     * : End date (inclusive) for a custom range. Requires --from.
+     *
+     * @when after_wp_load
+     * @subcommand email
+     */
+    public function email_report( $args, $assoc_args ) {
+        // `--to` is the recipient here; the shared prep uses `--to-date` for the
+        // range end to avoid clobbering it.
+        $recipient = $assoc_args['to'] ?? get_option( 'admin_email' );
+        if ( ! is_email( $recipient ) ) {
+            WP_CLI::error( "Invalid recipient: {$recipient}" );
+        }
+        if ( isset( $assoc_args['to-date'] ) ) {
+            $assoc_args['to'] = $assoc_args['to-date'];
+        } else {
+            unset( $assoc_args['to'] );
+        }
+
+        $d    = $this->prepare_data( $assoc_args );
+        $html = $this->render_html( $d );
+
+        $tmp = wp_tempnam( 'lobos-reporte-' . sanitize_title( $d['label'] ) . '.html' );
+        // wp_tempnam appends .tmp — rename so the attachment carries an .html
+        // extension and opens in a browser instead of a text editor.
+        $file = preg_replace( '/\.tmp$/', '', $tmp ) . '.html';
+        if ( $file !== $tmp ) {
+            rename( $tmp, $file );
+        }
+        file_put_contents( $file, $html );
+
+        $subject = 'Lobos · Reporte mensual · ' . $d['label'];
+        $body    = "Adjunto el reporte mensual de lobosdodgeball.com correspondiente a {$d['label']}.\n\n"
+                 . "Abre el archivo HTML en el navegador para verlo con formato. Para archivarlo como PDF, usa Imprimir → Guardar como PDF.\n";
+        $headers = [ 'Content-Type: text/plain; charset=UTF-8' ];
+
+        $sent = wp_mail( $recipient, $subject, $body, $headers, [ $file ] );
+
+        @unlink( $file );
+
+        if ( $sent ) {
+            WP_CLI::success( "Reporte enviado a {$recipient}." );
+        } else {
+            WP_CLI::error( "wp_mail() falló al enviar a {$recipient}." );
+        }
+    }
+
+    /**
+     * Parse --month / --from / --to args, collect every section, return the
+     * bundle the renderers consume. Extracted so `monthly` and `email` share
+     * date-range parsing and data collection verbatim.
+     */
+    private function prepare_data( array $assoc_args ): array {
         $from_arg = $assoc_args['from'] ?? '';
         $to_arg   = $assoc_args['to'] ?? '';
 
@@ -98,21 +175,13 @@ class LOBOS_Monthly_Report_Command {
 
         $this->init_ga4();
 
-        $d = [
+        return [
             'label'           => $label,
             'traffic'         => $this->collect_traffic( $start_date, $end_date, $prev_start, $prev_end ),
             'roster'          => $this->collect_roster( $start, $end ),
             'palmares'        => $this->collect_palmares( $start, $end ),
             'implementations' => $this->collect_implementations( $start_date, $end_date ),
         ];
-
-        $this->render_text( $d );
-
-        $output = $assoc_args['output'] ?? '';
-        if ( $output !== '' ) {
-            file_put_contents( $output, $this->render_html( $d ) );
-            WP_CLI::success( "Reporte guardado en: {$output}" );
-        }
     }
 
     private function fmt_date( string $ds ): string {
