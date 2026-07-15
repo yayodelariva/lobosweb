@@ -1,0 +1,139 @@
+<?php
+/**
+ * GA4 Data API v1 helper — service-account JWT auth + report queries.
+ *
+ * Ported from the sibling fmdbweb project. Configuration (set once on the
+ * server via WP-CLI):
+ *
+ *     wp option update lobos_ga4_property_id <GA4_PROPERTY_ID>
+ *     wp option update lobos_ga4_credentials_path <ABS_PATH_TO_SERVICE_ACCOUNT_JSON>
+ *
+ * Both values are server-side only and deliberately kept out of this repo,
+ * which is public. Store the service-account JSON outside the web root.
+ */
+
+class LOBOS_GA4_API {
+
+    private string $credentials_path;
+    private string $property_id;
+    private ?string $access_token = null;
+    private ?string $last_error = null;
+
+    public function __construct( string $credentials_path, string $property_id ) {
+        $this->credentials_path = $credentials_path;
+        $this->property_id      = $property_id;
+    }
+
+    public static function from_options(): ?self {
+        $path = trim( (string) get_option( 'lobos_ga4_credentials_path', '' ) );
+        $prop = trim( (string) get_option( 'lobos_ga4_property_id', '' ) );
+        if ( $path === '' || $prop === '' ) return null;
+        if ( ! file_exists( $path ) ) return null;
+        return new self( $path, $prop );
+    }
+
+    public function authenticate(): bool {
+        $creds = json_decode( file_get_contents( $this->credentials_path ), true );
+        if ( ! $creds || ! isset( $creds['client_email'], $creds['private_key'], $creds['token_uri'] ) ) {
+            $this->last_error = 'Credentials file unreadable or missing client_email/private_key/token_uri.';
+            return false;
+        }
+
+        $now     = time();
+        $header  = $this->base64url( json_encode( [ 'alg' => 'RS256', 'typ' => 'JWT' ] ) );
+        $payload = $this->base64url( json_encode( [
+            'iss'   => $creds['client_email'],
+            'scope' => 'https://www.googleapis.com/auth/analytics.readonly',
+            'aud'   => $creds['token_uri'],
+            'iat'   => $now,
+            'exp'   => $now + 3600,
+        ] ) );
+
+        $input = $header . '.' . $payload;
+        if ( ! openssl_sign( $input, $signature, $creds['private_key'], OPENSSL_ALGO_SHA256 ) ) {
+            $this->last_error = 'openssl_sign() failed.';
+            return false;
+        }
+
+        $jwt = $input . '.' . $this->base64url( $signature );
+
+        $response = wp_remote_post( $creds['token_uri'], [
+            'body'    => [
+                'grant_type' => 'urn:ietf:params:oauth:grant-type:jwt-bearer',
+                'assertion'  => $jwt,
+            ],
+            'timeout' => 15,
+        ] );
+
+        if ( is_wp_error( $response ) ) {
+            $this->last_error = $response->get_error_message();
+            return false;
+        }
+
+        $body               = json_decode( wp_remote_retrieve_body( $response ), true );
+        $this->access_token = $body['access_token'] ?? null;
+        if ( $this->access_token === null ) {
+            $this->last_error = $body['error_description'] ?? 'Token endpoint returned no access_token.';
+            return false;
+        }
+        return true;
+    }
+
+    public function run_report( array $body ): ?array {
+        if ( ! $this->access_token ) {
+            $this->last_error = 'No access token (authentication did not run or failed).';
+            return null;
+        }
+
+        $url = sprintf(
+            'https://analyticsdata.googleapis.com/v1beta/properties/%s:runReport',
+            $this->property_id
+        );
+
+        $response = wp_remote_post( $url, [
+            'headers' => [
+                'Authorization' => 'Bearer ' . $this->access_token,
+                'Content-Type'  => 'application/json',
+            ],
+            'body'    => json_encode( $body ),
+            'timeout' => 30,
+        ] );
+
+        if ( is_wp_error( $response ) ) {
+            $this->last_error = $response->get_error_message();
+            return null;
+        }
+
+        $code = (int) wp_remote_retrieve_response_code( $response );
+        if ( $code < 200 || $code >= 300 ) {
+            $decoded = json_decode( wp_remote_retrieve_body( $response ), true );
+            $msg     = $decoded['error']['message'] ?? wp_remote_retrieve_body( $response );
+            $this->last_error = sprintf( 'HTTP %d: %s', $code, $msg );
+            return null;
+        }
+
+        $this->last_error = null;
+        return json_decode( wp_remote_retrieve_body( $response ), true );
+    }
+
+    /** Last error message, or null if the last call succeeded. */
+    public function last_error(): ?string {
+        return $this->last_error;
+    }
+
+    /**
+     * Extract a simple dimension → metric map from a single-dimension report.
+     */
+    public function pluck( ?array $result, int $metric_index = 0 ): array {
+        $map = [];
+        foreach ( ( $result['rows'] ?? [] ) as $row ) {
+            $key       = $row['dimensionValues'][0]['value'] ?? '';
+            $map[$key] = (float) ( $row['metricValues'][$metric_index]['value'] ?? 0 );
+        }
+        return $map;
+    }
+
+    private function base64url( string $data ): string {
+        return rtrim( strtr( base64_encode( $data ), '+/', '-_' ), '=' );
+    }
+}

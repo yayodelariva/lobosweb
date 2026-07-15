@@ -1,6 +1,8 @@
 <?php
 require_once __DIR__ . '/acf-seed.php';       // REMOVE after first page load
 require_once __DIR__ . '/numero-migrate.php'; // REMOVE after first page load
+require_once __DIR__ . '/inc/ga4-api.php';
+require_once __DIR__ . '/inc/cli-monthly-report.php';
 
 /**
  * Cache-busting version for a theme-owned asset: its last-modified time, so
