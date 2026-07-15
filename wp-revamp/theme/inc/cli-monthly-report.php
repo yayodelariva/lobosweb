@@ -127,7 +127,10 @@ class LOBOS_Monthly_Report_Command {
 
         $subject = 'Lobos · Reporte mensual · ' . $d['label'];
         $body    = "Adjunto el reporte mensual de lobosdodgeball.com correspondiente a {$d['label']}.\n";
-        $headers = [ 'Content-Type: text/plain; charset=UTF-8' ];
+        $headers = [
+            'Content-Type: text/plain; charset=UTF-8',
+            'From: Lobos <contacto@lobosdodgeball.com>',
+        ];
 
         $sent = wp_mail( $recipient, $subject, $body, $headers, [ $file ] );
 
