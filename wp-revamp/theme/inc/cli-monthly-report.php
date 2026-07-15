@@ -13,6 +13,15 @@
  *     wp option update lobos_ga4_property_id <GA4_PROPERTY_ID>
  *     wp option update lobos_ga4_credentials_path <ABS_PATH_TO_SERVICE_ACCOUNT_JSON>
  *     wp option update lobos_report_git_dir <ABS_PATH_TO_A_CLONE_OF_THIS_REPO>
+ *
+ * The deliverable is a PDF, but `--output` writes HTML: the host has no PDF
+ * engine (no wkhtmltopdf/chromium/weasyprint) and shared hosting can't install
+ * one. So the HTML is an intermediate — render it here, then convert it with
+ * headless Chrome wherever one is available:
+ *
+ *     chrome --headless --no-pdf-header-footer --print-to-pdf=<out.pdf> file://<in.html>
+ *
+ * The stylesheet below is print-targeted for exactly that reason.
  */
 
 if ( ! defined( 'WP_CLI' ) || ! WP_CLI ) {
@@ -388,12 +397,20 @@ class LOBOS_Monthly_Report_Command {
         $html = '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8">'
             . '<title>Lobos &middot; Reporte mensual &middot; ' . $h( $d['label'] ) . '</title>'
             . '<style>'
+            // This document exists to be printed to PDF (see the class docblock),
+            // so the page box — not the viewport — sets the margins.
+            . '@page{size:letter;margin:16mm}'
             . 'body{font-family:Calibri,sans-serif;color:#1a1a1a;line-height:1.5;max-width:820px;margin:40px auto;padding:0 24px}'
+            . '@media print{body{max-width:none;margin:0;padding:0}}'
             . 'h1{font-size:22pt;color:#0A0A0A;margin-bottom:0}'
             . 'h1+p{color:#777;margin-top:4px;font-size:10pt}'
             . 'h2{font-size:14pt;color:#0A0A0A;border-bottom:2px solid #C41E3A;padding-bottom:3px;margin-top:32px}'
             . 'h3{font-size:11pt;color:#C41E3A;margin-top:18px}'
-            . 'table{border-collapse:collapse;width:100%;margin:8px 0}'
+            // Keep a heading with the block it introduces, and never split one of
+            // these short tables across a page — a stranded header row reads as
+            // an empty table.
+            . 'h2,h3{break-after:avoid}'
+            . 'table{border-collapse:collapse;width:100%;margin:8px 0;break-inside:avoid}'
             . 'th,td{border:1px solid #ccc;padding:6px 10px;text-align:left;font-size:10pt}'
             . 'th{background:#f6f3f4;color:#0A0A0A;font-weight:700}'
             . '.num{text-align:right}'
