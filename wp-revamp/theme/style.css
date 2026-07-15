@@ -1521,6 +1521,13 @@ body.home-canvas .ast-page-builder-template {
     text-transform: uppercase;
 }
 
+/* Overrides the global a:hover, which would otherwise resolve to the same
+   gray the footer text already uses and read as a dead link. */
+.home-footer-link:hover,
+.home-footer-link:focus-visible {
+    color: var(--color-white);
+}
+
 /* ── Home Responsive ─────────────────────────────────────────────────────── */
 
 @media (max-width: 900px) {
