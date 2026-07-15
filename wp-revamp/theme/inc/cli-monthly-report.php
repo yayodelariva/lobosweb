@@ -91,7 +91,6 @@ class LOBOS_Monthly_Report_Command {
 
         $d = [
             'label'           => $label,
-            'date'            => $end_date,
             'traffic'         => $this->collect_traffic( $start_date, $end_date, $prev_start, $prev_end ),
             'roster'          => $this->collect_roster( $start, $end ),
             'palmares'        => $this->collect_palmares( $start, $end ),
@@ -482,7 +481,6 @@ class LOBOS_Monthly_Report_Command {
             $html .= '<p>Sin commits en el per&iacute;odo.</p>';
         }
 
-        $html .= '<hr><p class="meta">Reporte generado autom&aacute;ticamente &middot; ' . $h( $d['date'] ) . '</p>';
         $html .= '</body></html>';
         return $html;
     }
@@ -511,7 +509,7 @@ class LOBOS_Monthly_Report_Command {
     }
 
     private function pct_change( float $cur, float $prev ): string {
-        if ( $prev == 0 ) return $cur > 0 ? '+∞' : '—';
+        if ( $prev == 0 ) return $cur > 0 ? '0' : '—';
         $p = ( $cur - $prev ) / $prev * 100;
         return sprintf( '%s%.1f%%', $p >= 0 ? '+' : '', $p );
     }
